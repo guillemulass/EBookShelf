@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "433603956486",
+    "project_id": "ebookshelf-bdf71",
+    "storage_bucket": "ebookshelf-bdf71.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:433603956486:android:89ab1d691cb4014db59887",
+        "android_client_info": {
+          "package_name": "com.gmulbat1301.ebookshelf"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDVtJI4mArLo_Sth_BKn9eInqcFvA8blZA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

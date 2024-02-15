@@ -1,0 +1,630 @@
+{
+  "name": "informacion_libro",
+  "version": 32,
+  "source-key": {
+    "type": "figma",
+    "file": "f69MssDKV0P88F2aZQS1By",
+    "node": "51:224",
+    "version": "5154307477",
+    "component-id": "9b63a26e508088dcbfc92f5acd56b534c625bd12"
+  },
+  "default": "InformacionLibro",
+  "design": {
+    "atoms": [
+      {
+        "type": "group",
+        "id": "top_level",
+        "root": "true"
+      },
+      {
+        "type": "text",
+        "id": "TituloLibro"
+      },
+      {
+        "type": "image",
+        "id": "Portada Libro"
+      },
+      {
+        "type": "group",
+        "id": "RellenablesPersonales"
+      },
+      {
+        "type": "group",
+        "id": "InformacionLibroGeneral"
+      },
+      {
+        "type": "group",
+        "id": "Frame 1"
+      },
+      {
+        "type": "text",
+        "id": "ReseñaPersonalText"
+      },
+      {
+        "type": "text",
+        "id": "Comentarios"
+      },
+      {
+        "type": "text",
+        "id": "ComentariosText"
+      },
+      {
+        "type": "text",
+        "id": "ReseñaPersonal"
+      },
+      {
+        "type": "group",
+        "id": "fluent:edit-32-regular"
+      },
+      {
+        "type": "vector",
+        "id": "Vector"
+      },
+      {
+        "type": "text",
+        "id": "Sinopsis"
+      },
+      {
+        "type": "text",
+        "id": "SinopsisText"
+      },
+      {
+        "type": "text",
+        "id": "Autor"
+      },
+      {
+        "type": "text",
+        "id": "AutorText"
+      },
+      {
+        "type": "text",
+        "id": "FechaSalida"
+      },
+      {
+        "type": "text",
+        "id": "FechaSalidaText"
+      }
+    ],
+    "modes": {
+      "InformacionLibro": {
+        "rules": [
+          {
+            "id": "top_level",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "shrink"
+              },
+              "height-constraints": {
+                "sizing-mode": "shrink"
+              }
+            },
+            "children": [
+              "TituloLibro",
+              "Portada Libro",
+              "RellenablesPersonales",
+              "InformacionLibroGeneral"
+            ],
+            "item-spacing": "24.0",
+            "clip-content": "false"
+          },
+          {
+            "id": "TituloLibro",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "330.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "shrink"
+              }
+            },
+            "font-weight": "500.0",
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "0.8509803921568627"
+            },
+            "text-content": "$TituloLibro",
+            "overflow": "visible",
+            "max-lines": "-1",
+            "text-align-vertical": "center",
+            "text-size": "34.0",
+            "line-height": "1.31884765625",
+            "typeface": "Roboto Mono"
+          },
+          {
+            "id": "Portada Libro",
+            "border-radius": "16.0",
+            "alignment": {
+              "horizontal": {
+                "attachment": "start",
+                "offset": "-2.0"
+              },
+              "vertical": {
+                "attachment": "start",
+                "offset": "-2.0"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "217.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "334.0"
+              }
+            },
+            "stroke-width": "2.0",
+            "stroke-alignment": "outside",
+            "stroke-color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "0.8509803921568627"
+            },
+            "image-content": "$PortadaLibro",
+            "scale": "cover"
+          },
+          {
+            "id": "RellenablesPersonales",
+            "padding": {
+              "left": "16.0",
+              "top": "8.0",
+              "right": "16.0",
+              "bottom": "8.0"
+            },
+            "border-radius": "16.0",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "341.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "185.0"
+              }
+            },
+            "children": [
+              "Frame 1",
+              "ReseñaPersonalText",
+              "Comentarios",
+              "ComentariosText"
+            ],
+            "item-spacing": "10.0",
+            "background-color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "0.8509803921568627"
+            },
+            "clip-content": "false"
+          },
+          {
+            "id": "InformacionLibroGeneral",
+            "padding": "8.0",
+            "border-radius": "16.0",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "344.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "shrink"
+              }
+            },
+            "children": [
+              "Sinopsis",
+              "SinopsisText",
+              "Autor",
+              "AutorText",
+              "FechaSalida",
+              "FechaSalidaText"
+            ],
+            "background-color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "0.8509803921568627"
+            }
+          },
+          {
+            "id": "Frame 1",
+            "padding": {
+              "top": "2.0"
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "shrink"
+              },
+              "height-constraints": {
+                "sizing-mode": "shrink"
+              }
+            },
+            "arrangement": "row",
+            "children": [
+              "ReseñaPersonal",
+              "fluent:edit-32-regular"
+            ],
+            "clip-content": "false"
+          },
+          {
+            "id": "ReseñaPersonalText",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "320.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "shrink"
+              }
+            },
+            "font-weight": "500.0",
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "0.0"
+            },
+            "text-content": "$ReseñaPersonalText",
+            "overflow": "visible",
+            "max-lines": "-1",
+            "text-align": "left",
+            "text-align-vertical": "center",
+            "text-size": "20.0",
+            "line-height": "1.31884765625",
+            "typeface": "Roboto Mono"
+          },
+          {
+            "id": "Comentarios",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "320.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "53.0"
+              }
+            },
+            "font-weight": "500.0",
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "0.0"
+            },
+            "text-content": "Comentarios",
+            "overflow": "visible",
+            "max-lines": "-1",
+            "text-align": "left",
+            "text-align-vertical": "center",
+            "text-size": "27.0",
+            "line-height": "1.31884765625",
+            "typeface": "Roboto Mono"
+          },
+          {
+            "id": "ComentariosText",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "320.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "shrink"
+              }
+            },
+            "font-weight": "500.0",
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "0.0"
+            },
+            "text-content": "$ComentariosText",
+            "overflow": "visible",
+            "max-lines": "-1",
+            "text-align": "left",
+            "text-align-vertical": "center",
+            "text-size": "20.0",
+            "line-height": "1.31884765625",
+            "typeface": "Roboto Mono"
+          },
+          {
+            "id": "ReseñaPersonal",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "280.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "shrink"
+              }
+            },
+            "font-weight": "500.0",
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "0.0"
+            },
+            "text-content": "Reseña personal",
+            "overflow": "visible",
+            "max-lines": "-1",
+            "text-align": "left",
+            "text-align-vertical": "center",
+            "text-size": "27.0",
+            "typeface": "Roboto Mono"
+          },
+          {
+            "id": "fluent:edit-32-regular",
+            "tap-handler": "$editTapped",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "38.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "38.0"
+              }
+            },
+            "is-structured": "false",
+            "children": [
+              "Vector"
+            ]
+          },
+          {
+            "id": "Vector",
+            "margin": {
+              "left": "2.37457275390625",
+              "top": "2.37689208984375",
+              "right": "0.62542724609375",
+              "bottom": "0.62310791015625"
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              }
+            },
+            "vector-content": "vector.svg"
+          },
+          {
+            "id": "Sinopsis",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "320.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "52.0"
+              }
+            },
+            "font-weight": "500.0",
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "0.0"
+            },
+            "text-content": "Sinopsis",
+            "overflow": "visible",
+            "max-lines": "-1",
+            "text-align": "left",
+            "text-align-vertical": "center",
+            "text-size": "28.0",
+            "line-height": "1.31884765625",
+            "typeface": "Roboto Mono"
+          },
+          {
+            "id": "SinopsisText",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "320.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "shrink"
+              }
+            },
+            "font-weight": "500.0",
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "0.0"
+            },
+            "text-content": "$SinopsisText",
+            "overflow": "visible",
+            "max-lines": "-1",
+            "text-align": "left",
+            "text-align-vertical": "center",
+            "text-size": "15.0",
+            "line-height": "1.31884765625",
+            "typeface": "Roboto Mono"
+          },
+          {
+            "id": "Autor",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "320.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "52.0"
+              }
+            },
+            "font-weight": "500.0",
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "0.0"
+            },
+            "text-content": "Autor:",
+            "overflow": "visible",
+            "max-lines": "-1",
+            "text-align": "left",
+            "text-align-vertical": "center",
+            "text-size": "28.0",
+            "line-height": "1.31884765625",
+            "typeface": "Roboto Mono"
+          },
+          {
+            "id": "AutorText",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "320.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "shrink"
+              }
+            },
+            "font-weight": "500.0",
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "0.0"
+            },
+            "text-content": "$AutorText",
+            "overflow": "visible",
+            "max-lines": "-1",
+            "text-align": "left",
+            "text-align-vertical": "center",
+            "text-size": "20.0",
+            "line-height": "1.31884765625",
+            "typeface": "Roboto Mono"
+          },
+          {
+            "id": "FechaSalida",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "320.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "52.0"
+              }
+            },
+            "font-weight": "500.0",
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "0.0"
+            },
+            "text-content": "Fecha de Salida:",
+            "overflow": "visible",
+            "max-lines": "-1",
+            "text-align": "left",
+            "text-align-vertical": "center",
+            "text-size": "28.0",
+            "line-height": "1.31884765625",
+            "typeface": "Roboto Mono"
+          },
+          {
+            "id": "FechaSalidaText",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "320.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "shrink"
+              }
+            },
+            "font-weight": "500.0",
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "0.0"
+            },
+            "text-content": "$FechaSalidaText",
+            "overflow": "visible",
+            "max-lines": "-1",
+            "text-align": "left",
+            "text-align-vertical": "center",
+            "text-size": "20.0",
+            "line-height": "1.31884765625",
+            "typeface": "Roboto Mono"
+          }
+        ]
+      }
+    }
+  },
+  "parameters": {
+    "TituloLibro": {
+      "data-type": "text",
+      "required": false,
+      "description": ""
+    },
+    "PortadaLibro": {
+      "data-type": "image",
+      "required": false,
+      "description": ""
+    },
+    "ReseñaPersonalText": {
+      "data-type": "text",
+      "required": false,
+      "description": ""
+    },
+    "ComentariosText": {
+      "data-type": "text",
+      "required": false,
+      "description": ""
+    },
+    "editTapped": {
+      "data-type": "void-callback",
+      "required": false,
+      "description": ""
+    },
+    "SinopsisText": {
+      "data-type": "text",
+      "required": false,
+      "description": ""
+    },
+    "AutorText": {
+      "data-type": "text",
+      "required": false,
+      "description": ""
+    },
+    "FechaSalidaText": {
+      "data-type": "text",
+      "required": false,
+      "description": ""
+    }
+  },
+  "previews": [
+    {
+      "design": "InformacionLibro",
+      "size": {
+        "width": 344.0,
+        "height": 1340.0
+      },
+      "parameters": {
+        "TituloLibro": "El Imperio Final",
+        "PortadaLibro": "portada_libro.png",
+        "ReseñaPersonalText": "sampletext ",
+        "ComentariosText": "sampletext ",
+        "SinopsisText": "La sociedad de Nacidos de la Bruma ha evolucionado en una fusión de  magia y tecnología en la que la economía se expande, la democracia se  enfrenta a la corrupción y la religión se convierte en una potencia  cultural cada vez más influyente, con cuatro fes distintas enfrentadas por la captación de conversos. Esta sociedad tan animada y optimista, aunque todavía tambaleante, se  enfrenta ahora a su primera amenaza de terrorismo, crímenes cuyo  objetivo es fomentar el descontento de la clase trabajadora y avivar las  llamas de los conflictos religiosos. Wax y Wayne, con la asistencia de  la adorable y brillante Marasi, deberán dar al traste con la  conspiración antes de que las revueltas civiles frenen por completo el progreso de Scadrial.  ",
+        "AutorText": "Brandon Sanderson",
+        "FechaSalidaText": "28 / 02 / 2020"
+      }
+    }
+  ],
+  "adin-component-search-paths": [],
+  "image-search-paths": [],
+  "vector-search-paths": []
+}

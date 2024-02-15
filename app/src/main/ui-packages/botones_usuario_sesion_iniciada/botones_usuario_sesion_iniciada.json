@@ -1,0 +1,410 @@
+{
+  "name": "botones_usuario_sesion_iniciada",
+  "version": 32,
+  "source-key": {
+    "type": "figma",
+    "file": "f69MssDKV0P88F2aZQS1By",
+    "node": "49:213",
+    "version": "5154227975",
+    "component-id": "428b1c3ec1e4949d32c1b7b7d843cec03b7b3fca"
+  },
+  "default": "Botones Usuario Sesion Iniciada",
+  "design": {
+    "atoms": [
+      {
+        "type": "group",
+        "id": "top_level",
+        "root": "true"
+      },
+      {
+        "type": "group",
+        "id": "Mostador Nombre Usuario"
+      },
+      {
+        "type": "group",
+        "id": "Botón Cerrar Sesion"
+      },
+      {
+        "type": "group",
+        "id": "Botón Eliminar Cuenta"
+      },
+      {
+        "type": "vector",
+        "id": "Fondo Nombre Usuario"
+      },
+      {
+        "type": "text",
+        "id": "Nombre Usuario"
+      },
+      {
+        "type": "group",
+        "id": "fluent:edit-32-regular"
+      },
+      {
+        "type": "vector",
+        "id": "Vector"
+      },
+      {
+        "type": "vector",
+        "id": "Fondo  Cerrar Sesion"
+      },
+      {
+        "type": "text",
+        "id": "Text Cerrar Sesion"
+      },
+      {
+        "type": "vector",
+        "id": "Fondo Eliminar Cuenta"
+      },
+      {
+        "type": "text",
+        "id": "Text Eliminar Cuenta"
+      }
+    ],
+    "modes": {
+      "Botones Usuario Sesion Iniciada": {
+        "rules": [
+          {
+            "id": "top_level",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "shrink"
+              },
+              "height-constraints": {
+                "sizing-mode": "shrink"
+              }
+            },
+            "children": [
+              "Mostador Nombre Usuario",
+              "Botón Cerrar Sesion",
+              "Botón Eliminar Cuenta"
+            ],
+            "item-spacing": "25.0",
+            "clip-content": "false"
+          },
+          {
+            "id": "Mostador Nombre Usuario",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "330.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "53.0"
+              }
+            },
+            "is-structured": "false",
+            "children": [
+              "Fondo Nombre Usuario",
+              "Nombre Usuario",
+              "fluent:edit-32-regular"
+            ],
+            "clip-content": "false"
+          },
+          {
+            "id": "Botón Cerrar Sesion",
+            "border-radius": "16.0",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "165.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "53.0"
+              }
+            },
+            "is-structured": "false",
+            "children": [
+              "Fondo  Cerrar Sesion",
+              "Text Cerrar Sesion"
+            ],
+            "clip-content": "false"
+          },
+          {
+            "id": "Botón Eliminar Cuenta",
+            "border-radius": "16.0",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "165.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "53.0"
+              }
+            },
+            "is-structured": "false",
+            "children": [
+              "Fondo Eliminar Cuenta",
+              "Text Eliminar Cuenta"
+            ],
+            "clip-content": "false"
+          },
+          {
+            "id": "Fondo Nombre Usuario",
+            "border-radius": "16.0",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "0.0"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "0.0"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "330.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "53.0"
+              }
+            },
+            "vector-content": "fondo_nombre_usuario.svg"
+          },
+          {
+            "id": "Nombre Usuario",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "-14.0"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "0.0"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "274.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "53.0"
+              }
+            },
+            "font-weight": "700.0",
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "0.0"
+            },
+            "text-content": "$NombreUsuarioShowed",
+            "overflow": "visible",
+            "max-lines": "-1",
+            "text-align-vertical": "center",
+            "text-size": "26.0",
+            "line-height": "1.31884765625",
+            "typeface": "Roboto Mono"
+          },
+          {
+            "id": "fluent:edit-32-regular",
+            "alignment": {
+              "horizontal": {
+                "attachment": "start",
+                "offset": "288.0"
+              },
+              "vertical": {
+                "attachment": "start",
+                "offset": "7.0"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "38.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "38.0"
+              }
+            },
+            "is-structured": "false",
+            "children": [
+              "Vector"
+            ]
+          },
+          {
+            "id": "Vector",
+            "margin": {
+              "left": "2.37451171875",
+              "top": "2.37689208984375",
+              "right": "0.62548828125",
+              "bottom": "0.62310791015625"
+            },
+            "tap-handler": "$EditTapped",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              }
+            },
+            "vector-content": "vector.svg"
+          },
+          {
+            "id": "Fondo  Cerrar Sesion",
+            "border-radius": "16.0",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "0.0"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "0.0"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "165.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "53.0"
+              }
+            },
+            "vector-content": "fondo_cerrar_sesion.svg"
+          },
+          {
+            "id": "Text Cerrar Sesion",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "0.0"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "0.0"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "165.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "53.0"
+              }
+            },
+            "font-weight": "700.0",
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "0.0"
+            },
+            "text-content": "Cerrar Sesión",
+            "overflow": "visible",
+            "max-lines": "-1",
+            "text-align-vertical": "center",
+            "text-size": "17.0",
+            "line-height": "1.31884765625",
+            "typeface": "Roboto Mono"
+          },
+          {
+            "id": "Fondo Eliminar Cuenta",
+            "border-radius": "16.0",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "0.0"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "0.0"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "165.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "53.0"
+              }
+            },
+            "vector-content": "fondo_eliminar_cuenta.svg"
+          },
+          {
+            "id": "Text Eliminar Cuenta",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "0.0"
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": "0.0"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "165.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "53.0"
+              }
+            },
+            "font-weight": "700.0",
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "0.0"
+            },
+            "text-content": "Eliminar Cuenta",
+            "overflow": "visible",
+            "max-lines": "-1",
+            "text-align-vertical": "center",
+            "text-size": "17.0",
+            "line-height": "1.31884765625",
+            "typeface": "Roboto Mono"
+          }
+        ]
+      }
+    }
+  },
+  "parameters": {
+    "NombreUsuarioShowed": {
+      "data-type": "text",
+      "required": false,
+      "description": ""
+    },
+    "EditTapped": {
+      "data-type": "void-callback",
+      "required": false,
+      "description": ""
+    }
+  },
+  "previews": [
+    {
+      "design": "Botones Usuario Sesion Iniciada",
+      "size": {
+        "width": 330.0,
+        "height": 209.0
+      },
+      "parameters": {
+        "NombreUsuarioShowed": "UserName17Char"
+      }
+    }
+  ],
+  "adin-component-search-paths": [],
+  "image-search-paths": [],
+  "vector-search-paths": []
+}

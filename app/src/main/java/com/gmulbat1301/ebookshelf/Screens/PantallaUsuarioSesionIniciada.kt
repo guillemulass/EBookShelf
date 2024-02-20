@@ -23,6 +23,9 @@ import com.gmulbat1301.ebookshelf.Routes.Routes
 import com.gmulbat1301.ebookshelf.botonesusuariosesioniniciada.BotonesUsuarioSesionIniciada
 import com.gmulbat1301.ebookshelf.headerpaginaprincipal.HeaderPaginaPrincipal
 import com.gmulbat1301.ebookshelf.headeruser.HeaderUser
+import com.google.firebase.Firebase
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.auth
 
 @Composable
 fun PantallaUsuarioSesionIniciada(
@@ -68,11 +71,14 @@ fun PantallaUsuarioSesionIniciada(
 
             Spacer(modifier = Modifier.height(50.dp))
 
+
+            val auth: FirebaseAuth = Firebase.auth
+
             BotonesUsuarioSesionIniciada(
                 Modifier
                     .width(330.dp)
                     .height(209.dp),
-                nombreUsuarioShowed = "GuilleMulas",
+                nombreUsuarioShowed = auth.currentUser?.email!!,
                 editTapped = {
                     TODO()
                 }

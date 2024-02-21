@@ -76,11 +76,7 @@ class MainActivity : ComponentActivity() {
                             )
                         }
 
-                        composable(Routes.PantallaUsuarioSesionNoIniciada.route) {
-                            PantallaUsuarioSesionNoIniciada(
-                                navController
-                            )
-                        }
+
 
                     }
                 }

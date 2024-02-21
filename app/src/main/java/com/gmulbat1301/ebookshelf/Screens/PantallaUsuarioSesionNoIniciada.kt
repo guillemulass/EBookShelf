@@ -1,4 +1,5 @@
 package com.gmulbat1301.ebookshelf.Screens
+/*
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.ScrollState
@@ -23,6 +24,7 @@ import com.gmulbat1301.ebookshelf.Routes.Routes
 import com.gmulbat1301.ebookshelf.botonesusuariosesioniniciada.BotonesUsuarioSesionIniciada
 import com.gmulbat1301.ebookshelf.botonsmall.BotonSmall
 import com.gmulbat1301.ebookshelf.headeruser.HeaderUser
+
 
 @Composable
 fun PantallaUsuarioSesionNoIniciada(
@@ -94,3 +96,5 @@ fun PantallaUsuarioSesionNoIniciada(
         }
     }
 }
+
+ */

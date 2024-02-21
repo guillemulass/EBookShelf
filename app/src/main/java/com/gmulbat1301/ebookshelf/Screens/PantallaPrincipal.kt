@@ -24,11 +24,16 @@ import com.gmulbat1301.ebookshelf.Routes.Routes
 import com.gmulbat1301.ebookshelf.botonsmall.BotonSmall
 import com.gmulbat1301.ebookshelf.headerpaginaprincipal.HeaderPaginaPrincipal
 import com.gmulbat1301.ebookshelf.cardlibro.CardLibro
+import com.google.firebase.Firebase
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.auth
 
 @Composable
 fun PantallaPrincipal(
     navController: NavHostController
 ){
+
+    val auth: FirebaseAuth = Firebase.auth
 
     Box(
         modifier = Modifier
@@ -63,15 +68,6 @@ fun PantallaPrincipal(
                         .height(65.dp),
                     userLogoTapped = {
                         navController.navigate(Routes.PantallaUsuarioSesionIniciada.route)
-                        //navController.navigate(Routes.PantallaUsuarioSesionNoIniciada.route)
-                        /*
-                        if (trueuserLoggedIn){
-                            navController.navigate(Routes.PantallaUsuarioSesionIniciada.route)
-                        } else{
-                            navController.navigate(Routes.PantallaUsuarioSesionNoIniciada.route)
-                        }
-
-                         */
                     }
                 )
             }
@@ -99,6 +95,8 @@ fun PantallaPrincipal(
                 sinopsisLibroCard = "Durante mil años han caído cenizas del cielo. Durante mil años nada ha  florecido. Durante mil años los skaa han sido esclavizados y viven en la  miseria, sumidos en un miedo inevitable. Durante mil años el Lord  Legislador ha reinado con poder absoluto, dominando gracias al terror, a  sus poderes y a su inmortalidad, ayudado por «obligadores» e «inquisidores», junto a la poderosa magia de la alomancia.",
                 imagenLibroCard = painterResource(R.drawable.card_libro_imagen_libro)
             )
+
+
 
             Spacer(modifier = Modifier.height(30.dp))
 

@@ -22,6 +22,7 @@ class MainActivity : ComponentActivity() {
 
         val logInViewModel = LogInViewModel()
         val registerViewModel = RegisterViewModel()
+        val bookControllerViewModel = BookControllerViewModel()
 
 
         setContent {
@@ -76,7 +77,12 @@ class MainActivity : ComponentActivity() {
                             )
                         }
 
-
+                        composable(Routes.PantallaCrearLibro.route) {
+                            PantallaCrearLibro(
+                                bookControllerViewModel,
+                                navController
+                            )
+                        }
 
                     }
                 }

@@ -9,6 +9,6 @@ sealed class Routes(val route : String) {
     object PantallaPrincipal: Routes("screenProyecto2")
     object PantallaInformacionLibro: Routes("PantallaInformacionLibro")
     object PantallaUsuarioSesionIniciada: Routes("PantallaUsuarioSesionIniciada")
-    object PantallaUsuarioSesionNoIniciada: Routes("PantallaUsuarioSesionNoIniciada")
+    object PantallaCrearLibro: Routes("PantallaCrearLibro")
 
 }

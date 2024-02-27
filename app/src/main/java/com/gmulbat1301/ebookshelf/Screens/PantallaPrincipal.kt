@@ -80,7 +80,7 @@ fun PantallaPrincipal(
                     .height(50.dp),
                 text = "Añadir Libro",
                 botonSmallTapped = {
-                    navController.navigate(Routes.PantallaUsuarioSesionNoIniciada.route)
+                    navController.navigate(Routes.PantallaCrearLibro.route)
                 }
             )
 
@@ -92,11 +92,9 @@ fun PantallaPrincipal(
                     .width(350.dp)
                     .clickable { navController.navigate(Routes.PantallaInformacionLibro.route) },
                 tituloLibroCard = "El Imperio Final",
-                sinopsisLibroCard = "Durante mil años han caído cenizas del cielo. Durante mil años nada ha  florecido. Durante mil años los skaa han sido esclavizados y viven en la  miseria, sumidos en un miedo inevitable. Durante mil años el Lord  Legislador ha reinado con poder absoluto, dominando gracias al terror, a  sus poderes y a su inmortalidad, ayudado por «obligadores» e «inquisidores», junto a la poderosa magia de la alomancia.",
+                sinopsisLibroCard = "Durante mil años han caído cenizas del cielo. Durante mil años nada ha florecido. Durante mil años los skaa han sido esclavizados y viven en la  miseria, sumidos en un miedo inevitable. Durante mil años el Lord  Legislador ha reinado con poder absoluto, dominando gracias al terror, a sus poderes y a su inmortalidad, ayudado por «obligadores» e «inquisidores», junto a la poderosa magia de la alomancia.",
                 imagenLibroCard = painterResource(R.drawable.card_libro_imagen_libro)
             )
-
-
 
             Spacer(modifier = Modifier.height(30.dp))
 
@@ -110,8 +108,6 @@ fun PantallaPrincipal(
                 sinopsisLibroCard = "Durante mil años han caído cenizas del cielo. Durante mil años nada ha  florecido. Durante mil años los skaa han sido esclavizados y viven en la  miseria, sumidos en un miedo inevitable. Durante mil años el Lord  Legislador ha reinado con poder absoluto, dominando gracias al terror, a  sus poderes y a su inmortalidad, ayudado por «obligadores» e «inquisidores», junto a la poderosa magia de la alomancia.",
                 imagenLibroCard = painterResource(R.drawable.card_libro_imagen_libro)
             )
-
-
 
             Spacer(modifier = Modifier.height(30.dp))
         }

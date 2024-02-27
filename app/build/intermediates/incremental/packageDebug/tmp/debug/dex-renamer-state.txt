@@ -1,4 +1,4 @@
-#Wed Feb 21 19:32:45 CET 2024
+#Tue Feb 27 19:45:00 CET 2024
 base.0=C\:\\Users\\guill\\OneDrive\\Escritorio\\ReposGit\\EBookShelf\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 base.1=C\:\\Users\\guill\\OneDrive\\Escritorio\\ReposGit\\EBookShelf\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
 base.10=C\:\\Users\\guill\\OneDrive\\Escritorio\\ReposGit\\EBookShelf\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\9\\classes.dex

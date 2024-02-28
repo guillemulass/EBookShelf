@@ -60,6 +60,10 @@
         "source": "com.gmulbat1301.ebookshelf.app-main-67:/mipmap-anydpi-v26/ic_launcher.xml"
     },
     {
+        "merged": "com.gmulbat1301.ebookshelf.app-merged_res-65:/drawable-nodpi_panel_libro_imagen_libro3.png.flat",
+        "source": "com.gmulbat1301.ebookshelf.app-relay-61:/drawable-nodpi/panel_libro_imagen_libro3.png"
+    },
+    {
         "merged": "com.gmulbat1301.ebookshelf.app-merged_res-65:/drawable-nodpi_header_pagina_principal_vector.xml.flat",
         "source": "com.gmulbat1301.ebookshelf.app-relay-61:/drawable-nodpi/header_pagina_principal_vector.xml"
     },
@@ -140,6 +144,10 @@
         "source": "com.gmulbat1301.ebookshelf.app-relay-61:/drawable-nodpi/boton_small_fondo.xml"
     },
     {
+        "merged": "com.gmulbat1301.ebookshelf.app-merged_res-65:/drawable-nodpi_panel_libro_imagen_libro2.png.flat",
+        "source": "com.gmulbat1301.ebookshelf.app-relay-61:/drawable-nodpi/panel_libro_imagen_libro2.png"
+    },
+    {
         "merged": "com.gmulbat1301.ebookshelf.app-merged_res-65:/font_relay_roboto_mono_semibold_italic.ttf.flat",
         "source": "com.gmulbat1301.ebookshelf.app-relay-61:/font/relay_roboto_mono_semibold_italic.ttf"
     },
@@ -166,6 +174,10 @@
     {
         "merged": "com.gmulbat1301.ebookshelf.app-merged_res-65:/drawable-nodpi_header_user_user_logo_body_2.xml.flat",
         "source": "com.gmulbat1301.ebookshelf.app-relay-61:/drawable-nodpi/header_user_user_logo_body_2.xml"
+    },
+    {
+        "merged": "com.gmulbat1301.ebookshelf.app-merged_res-65:/drawable-nodpi_panel_libro_image_1.png.flat",
+        "source": "com.gmulbat1301.ebookshelf.app-relay-61:/drawable-nodpi/panel_libro_image_1.png"
     },
     {
         "merged": "com.gmulbat1301.ebookshelf.app-merged_res-65:/xml_data_extraction_rules.xml.flat",
@@ -204,12 +216,20 @@
         "source": "com.gmulbat1301.ebookshelf.app-relay-61:/drawable-nodpi/header_pagina_principal_user_logo_circunference.xml"
     },
     {
+        "merged": "com.gmulbat1301.ebookshelf.app-merged_res-65:/drawable-nodpi_panel_libro_imagen_libro1.png.flat",
+        "source": "com.gmulbat1301.ebookshelf.app-relay-61:/drawable-nodpi/panel_libro_imagen_libro1.png"
+    },
+    {
         "merged": "com.gmulbat1301.ebookshelf.app-merged_res-65:/drawable-nodpi_botones_usuario_sesion_iniciada_fondo_cerrar_sesion.xml.flat",
         "source": "com.gmulbat1301.ebookshelf.app-relay-61:/drawable-nodpi/botones_usuario_sesion_iniciada_fondo_cerrar_sesion.xml"
     },
     {
         "merged": "com.gmulbat1301.ebookshelf.app-merged_res-65:/drawable-nodpi_buttons_pantalla_inicial_boton_crear_cuenta_pantalla_inicial_fondo.xml.flat",
         "source": "com.gmulbat1301.ebookshelf.app-relay-61:/drawable-nodpi/buttons_pantalla_inicial_boton_crear_cuenta_pantalla_inicial_fondo.xml"
+    },
+    {
+        "merged": "com.gmulbat1301.ebookshelf.app-merged_res-65:/drawable-nodpi_panel_libro_imagen_libro.png.flat",
+        "source": "com.gmulbat1301.ebookshelf.app-relay-61:/drawable-nodpi/panel_libro_imagen_libro.png"
     },
     {
         "merged": "com.gmulbat1301.ebookshelf.app-merged_res-65:/drawable-nodpi_header_user_user_logo_body.xml.flat",

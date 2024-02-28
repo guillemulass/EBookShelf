@@ -12,8 +12,8 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.gmulbat1301.ebookshelf.Routes.Routes
 import com.gmulbat1301.ebookshelf.Screens.*
-import com.gmulbat1301.ebookshelf.Screens.PantallaInicioSesion.LogInViewModel
-import com.gmulbat1301.ebookshelf.Screens.PantallaInicioSesion.PantallaInicioSesion
+import com.gmulbat1301.ebookshelf.Screens.LogInViewModel
+import com.gmulbat1301.ebookshelf.Screens.PantallaInicioSesion
 import com.gmulbat1301.ebookshelf.ui.theme.EBookShelfTheme
 
 class MainActivity : ComponentActivity() {
@@ -61,6 +61,7 @@ class MainActivity : ComponentActivity() {
 
                         composable(Routes.PantallaPrincipal.route) {
                             PantallaPrincipal(
+                                bookControllerViewModel,
                                 navController
                             )
                         }

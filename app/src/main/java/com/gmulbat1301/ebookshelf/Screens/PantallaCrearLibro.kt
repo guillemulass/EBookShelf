@@ -177,7 +177,9 @@ fun PantallaCrearLibro(
                 }
             )
 
-            Text(text = stateText)
+            Text(
+                text = stateText,
+                color = Color.White)
 
         }
     }

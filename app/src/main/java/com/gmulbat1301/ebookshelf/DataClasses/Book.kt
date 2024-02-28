@@ -1,6 +1,6 @@
 package com.gmulbat1301.ebookshelf.DataClasses
 
-data class Book (
+data class Book(
     val titulo: String,
     val autor: String,
     val sinopsis: String,

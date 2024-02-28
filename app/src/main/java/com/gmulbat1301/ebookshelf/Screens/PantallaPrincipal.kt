@@ -11,29 +11,65 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
 import androidx.navigation.NavHostController
+import com.gmulbat1301.ebookshelf.DataClasses.Book
 import com.gmulbat1301.ebookshelf.R
 import com.gmulbat1301.ebookshelf.Routes.Routes
 import com.gmulbat1301.ebookshelf.botonsmall.BotonSmall
 import com.gmulbat1301.ebookshelf.headerpaginaprincipal.HeaderPaginaPrincipal
-import com.gmulbat1301.ebookshelf.cardlibro.CardLibro
+import com.gmulbat1301.ebookshelf.panellibro.PanelLibro
 import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.auth
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 
 @Composable
 fun PantallaPrincipal(
+    bookControllerViewModel: BookControllerViewModel,
     navController: NavHostController
 ){
 
     val auth: FirebaseAuth = Firebase.auth
+    var booksList by remember { mutableStateOf(emptyList<Book>()) }
+
+    LaunchedEffect(Unit) {
+        val userId = auth.currentUser?.uid
+        if (userId != null) {
+            bookControllerViewModel.getData(
+                onSuccess = { books ->
+                    for (book in books) {
+                        // Guardar cada libro en Firestore
+                        bookControllerViewModel.saveData(
+                            titulo = book.titulo,
+                            autor = book.autor,
+                            sinopsis = book.sinopsis,
+                            fechaSalida = book.fechaSalida
+                        )
+                    }
+                },
+                onFailure = {
+                    println(it)
+                }
+            )
+        }
+    }
+
+
+
 
     Box(
         modifier = Modifier
@@ -50,11 +86,7 @@ fun PantallaPrincipal(
             verticalArrangement = Arrangement.Top,
             modifier = Modifier
                 .fillMaxSize()
-                .verticalScroll(
-                    ScrollState(10000),
-                    enabled = true,
-                    reverseScrolling = true
-                )
+
                 .padding(
                     top = 35.dp
                 )
@@ -84,32 +116,39 @@ fun PantallaPrincipal(
                 }
             )
 
-            Spacer(modifier = Modifier.height(30.dp))
+            ScreenWithLazyColumn(navController, booksList)
 
-            CardLibro(
-                Modifier
-                    .height(504.dp)
-                    .width(350.dp)
-                    .clickable { navController.navigate(Routes.PantallaInformacionLibro.route) },
-                tituloLibroCard = "El Imperio Final",
-                sinopsisLibroCard = "Durante mil años han caído cenizas del cielo. Durante mil años nada ha florecido. Durante mil años los skaa han sido esclavizados y viven en la  miseria, sumidos en un miedo inevitable. Durante mil años el Lord  Legislador ha reinado con poder absoluto, dominando gracias al terror, a sus poderes y a su inmortalidad, ayudado por «obligadores» e «inquisidores», junto a la poderosa magia de la alomancia.",
-                imagenLibroCard = painterResource(R.drawable.card_libro_imagen_libro)
-            )
-
-            Spacer(modifier = Modifier.height(30.dp))
-
-            CardLibro(
-                Modifier
-                    .height(504.dp)
-                    .width(350.dp)
-                    .clickable { navController.navigate(Routes.PantallaInformacionLibro.route) }
-                ,
-                tituloLibroCard = "El Imperio Final",
-                sinopsisLibroCard = "Durante mil años han caído cenizas del cielo. Durante mil años nada ha  florecido. Durante mil años los skaa han sido esclavizados y viven en la  miseria, sumidos en un miedo inevitable. Durante mil años el Lord  Legislador ha reinado con poder absoluto, dominando gracias al terror, a  sus poderes y a su inmortalidad, ayudado por «obligadores» e «inquisidores», junto a la poderosa magia de la alomancia.",
-                imagenLibroCard = painterResource(R.drawable.card_libro_imagen_libro)
-            )
-
-            Spacer(modifier = Modifier.height(30.dp))
         }
+    }
+}
+
+
+@Composable
+    fun ScreenWithLazyColumn(navController: NavController, booksList: List<Book>) {
+    Column(Modifier.padding(16.dp)) {
+        // Otros elementos de tu pantalla antes de la LazyColumn
+
+        // Spacer
+        Spacer(modifier = Modifier.height(16.dp))
+
+        // LazyColumn
+        LazyColumn(
+            verticalArrangement = Arrangement.spacedBy(30.dp)
+        ) {
+            items(booksList) { book ->
+                PanelLibro(
+                    Modifier
+                        .width(350.dp)
+                        .clickable { navController.navigate(Routes.PantallaInformacionLibro.route) },
+                    tituloLibroCard = book.titulo,
+                    sinopsisLibroCard = book.sinopsis
+                )
+            }
+        }
+
+        // Spacer
+        Spacer(modifier = Modifier.height(16.dp))
+
+        // Otros elementos de tu pantalla después de la LazyColumn
     }
 }

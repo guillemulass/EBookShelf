@@ -1,4 +1,4 @@
-package com.gmulbat1301.ebookshelf.Screens.PantallaInicioSesion
+package com.gmulbat1301.ebookshelf.Screens
 
 import android.util.Log
 import androidx.compose.runtime.getValue

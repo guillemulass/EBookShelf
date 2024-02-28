@@ -1,4 +1,4 @@
-package com.gmulbat1301.ebookshelf.Screens.PantallaInicioSesion
+package com.gmulbat1301.ebookshelf.Screens
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.ScrollState

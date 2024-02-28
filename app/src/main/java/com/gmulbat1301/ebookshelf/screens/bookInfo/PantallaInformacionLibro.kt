@@ -20,17 +20,22 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import com.gmulbat1301.ebookshelf.R
 import com.gmulbat1301.ebookshelf.Routes.Routes
+import com.gmulbat1301.ebookshelf.botonsmall.BotonSmall
 import com.gmulbat1301.ebookshelf.headergeneral.HeaderGeneral
 import com.gmulbat1301.ebookshelf.informacionlibro.InformacionLibro
 
 @Composable
 fun PantallaInformacionLibro(
+    bookInfoViewModel: BookInfoViewModel,
     navController: NavHostController,
     titulo: String,
     autor: String,
     sinopsis: String,
-    fechaSalida: String
+    fechaSalida: String,
+    resenaPersonal: String,
+    comentarios: String
 ){
+
 
     Box(
         modifier = Modifier
@@ -72,17 +77,33 @@ fun PantallaInformacionLibro(
             InformacionLibro(
                 tituloLibro = titulo,
                 portadaLibro = painterResource(R.drawable.informacion_libro_portada_libro),
-                reseAPersonalText = "Sample Text",
-                comentariosText = "Sample Text",
+                reseAPersonalText = resenaPersonal,
+                comentariosText = comentarios,
                 sinopsisText = sinopsis,
                 autorText = autor,
                 fechaSalidaText = fechaSalida,
                 editTapped = {
-                    TODO()
+                    navController.navigate(
+                        "pantallaComentarios/${titulo}/${autor}/${sinopsis}/${fechaSalida}/${resenaPersonal}/${comentarios}"
+                    )
+                        }
+            )
+
+            Spacer(modifier = Modifier.height(30.dp))
+
+            BotonSmall(
+                modifier = Modifier
+                    .width(165.dp)
+                    .height(50.dp),
+                text = "Eliminar Libro",
+                botonSmallTapped = {
+                    bookInfoViewModel.deleteData(titulo)
+                    navController.navigate(Routes.PantallaPrincipal.route)
                 }
             )
 
             Spacer(modifier = Modifier.height(30.dp))
+
         }
     }
 }

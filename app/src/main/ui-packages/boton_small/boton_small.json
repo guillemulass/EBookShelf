@@ -1,11 +1,11 @@
 {
   "name": "boton_small",
-  "version": 32,
+  "version": 33,
   "source-key": {
     "type": "figma",
     "file": "f69MssDKV0P88F2aZQS1By",
     "node": "37:38",
-    "version": "5237605889",
+    "version": "5245484319",
     "component-id": "2a0ff211d7ba72a7d2f23231e97f969c81c63beb"
   },
   "default": "BotonSmall",
@@ -31,24 +31,24 @@
           {
             "id": "top_level",
             "tap-handler": "$BotonSmallTapped",
-            "is-structured": "false",
+            "is-structured": false,
             "children": [
               "Fondo",
               "Text"
             ],
-            "clip-content": "false"
+            "clip-content": false
           },
           {
             "id": "Fondo",
-            "border-radius": "16.0",
+            "border-radius": 16.0,
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "proportional",
-                "value": "1.0"
+                "value": 1.0
               },
               "height-constraints": {
                 "sizing-mode": "proportional",
-                "value": "1.0"
+                "value": 1.0
               }
             },
             "vector-content": "fondo.svg"
@@ -58,26 +58,26 @@
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "proportional",
-                "value": "1.0"
+                "value": 1.0
               },
               "height-constraints": {
                 "sizing-mode": "proportional",
-                "value": "1.0"
+                "value": 1.0
               }
             },
-            "font-weight": "700.0",
+            "font-weight": 700.0,
             "color": {
-              "alpha": "1.0",
-              "hue": "240.0",
-              "saturation": "0.08333333333333333",
-              "value": "0.09411764705882353"
+              "alpha": 1.0,
+              "hue": 240.0,
+              "saturation": 0.08333333333333333,
+              "value": 0.09411764705882353
             },
             "text-content": "$Text",
             "overflow": "visible",
-            "max-lines": "-1",
+            "max-lines": -1,
             "text-align-vertical": "center",
-            "text-size": "17.0",
-            "line-height": "1.31884765625",
+            "text-size": 17.0,
+            "line-height": 1.31884765625,
             "typeface": "Roboto Mono"
           }
         ]

@@ -8,6 +8,7 @@ import androidx.lifecycle.viewModelScope
 import com.gmulbat1301.ebookshelf.DataClasses.UserModel
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import kotlinx.coroutines.launch
@@ -16,17 +17,21 @@ class RegisterViewModel : ViewModel() {
 
     private val auth: FirebaseAuth = Firebase.auth
     private val firestore = Firebase.firestore
-
+    private val db = FirebaseFirestore.getInstance()
 
     var username by mutableStateOf("")
         private set
     var email by mutableStateOf("")
         private set
-    var passw by mutableStateOf("")
-        private set
+    private var passw by mutableStateOf("")
 
-    fun registerUser(onSuccess : () -> Unit,
-                     onFailure:() -> Unit) {
+    fun registerUser(
+        onSuccess : () -> Unit,
+        onFailure:() -> Unit
+    ) {
+
+        saveUserName()
+
         viewModelScope.launch {
             try {
                 auth.createUserWithEmailAndPassword(email,passw).addOnCompleteListener {
@@ -44,7 +49,16 @@ class RegisterViewModel : ViewModel() {
 
     }
 
-    fun saveUser(userToAdd:UserModel) {
+    private fun saveUserName(){
+
+        // Obtener una referencia a la colección "usersBooks" para el usuario actual
+        val userBooksRef = db.collection("users").document(auth.currentUser?.email!!)
+
+        // Agregar el libro a la colección "books"
+        userBooksRef.set(username)
+    }
+
+    private fun saveUser(userToAdd:UserModel) {
         viewModelScope.launch {
             firestore.collection("Users").document(email).set(userToAdd).addOnCompleteListener {
                 println("Usuario guardado en base de datos correctamente")

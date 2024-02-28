@@ -1,11 +1,11 @@
 {
   "name": "panel_libro",
-  "version": 32,
+  "version": 33,
   "source-key": {
     "type": "figma",
     "file": "f69MssDKV0P88F2aZQS1By",
     "node": "7:89",
-    "version": "5237605889",
+    "version": "5245484319",
     "component-id": "7ce1268073770809d6459e56016f987590c2581f"
   },
   "default": "Property 1=Default",
@@ -39,13 +39,13 @@
           {
             "id": "top_level",
             "padding": {
-              "top": "8.0"
+              "top": 8.0
             },
-            "border-radius": "16.0",
+            "border-radius": 16.0,
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "proportional",
-                "value": "1.0"
+                "value": 1.0
               },
               "height-constraints": {
                 "sizing-mode": "shrink"
@@ -55,39 +55,39 @@
               "Titulo",
               "Sinopsis"
             ],
-            "item-spacing": "16.0",
+            "item-spacing": 16.0,
             "background-color": {
-              "alpha": "1.0",
-              "hue": "0.0",
-              "saturation": "0.0",
-              "value": "0.8509803921568627"
+              "alpha": 1.0,
+              "hue": 0.0,
+              "saturation": 0.0,
+              "value": 0.8509803921568627
             },
-            "clip-content": "false"
+            "clip-content": false
           },
           {
             "id": "Titulo",
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "fixed",
-                "value": "330.0"
+                "value": 330.0
               },
               "height-constraints": {
                 "sizing-mode": "shrink"
               }
             },
-            "font-weight": "500.0",
+            "font-weight": 500.0,
             "color": {
-              "alpha": "1.0",
-              "hue": "240.0",
-              "saturation": "0.08333333333333333",
-              "value": "0.09411764705882353"
+              "alpha": 1.0,
+              "hue": 240.0,
+              "saturation": 0.08333333333333333,
+              "value": 0.09411764705882353
             },
             "text-content": "$TituloLibroCard",
             "overflow": "visible",
-            "max-lines": "-1",
+            "max-lines": -1,
             "text-align-vertical": "center",
-            "text-size": "34.0",
-            "line-height": "1.31884765625",
+            "text-size": 34.0,
+            "line-height": 1.31884765625,
             "typeface": "Roboto Mono"
           },
           {
@@ -95,24 +95,24 @@
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "fixed",
-                "value": "326.0"
+                "value": 326.0
               },
               "height-constraints": {
                 "sizing-mode": "shrink"
               }
             },
             "color": {
-              "alpha": "1.0",
-              "hue": "240.0",
-              "saturation": "0.08333333333333333",
-              "value": "0.09411764705882353"
+              "alpha": 1.0,
+              "hue": 240.0,
+              "saturation": 0.08333333333333333,
+              "value": 0.09411764705882353
             },
             "text-content": "$SinopsisLibroCard",
             "overflow": "visible",
-            "max-lines": "-1",
+            "max-lines": -1,
             "text-align": "left",
-            "text-size": "15.0",
-            "line-height": "1.31884765625",
+            "text-size": 15.0,
+            "line-height": 1.31884765625,
             "typeface": "Roboto Mono"
           }
         ]
@@ -122,13 +122,13 @@
           {
             "id": "top_level",
             "padding": {
-              "top": "8.0"
+              "top": 8.0
             },
-            "border-radius": "16.0",
+            "border-radius": 16.0,
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "proportional",
-                "value": "1.0"
+                "value": 1.0
               },
               "height-constraints": {
                 "sizing-mode": "shrink"
@@ -139,39 +139,39 @@
               "Sinopsis",
               "image 1"
             ],
-            "item-spacing": "16.0",
+            "item-spacing": 16.0,
             "background-color": {
-              "alpha": "1.0",
-              "hue": "0.0",
-              "saturation": "0.0",
-              "value": "0.8509803921568627"
+              "alpha": 1.0,
+              "hue": 0.0,
+              "saturation": 0.0,
+              "value": 0.8509803921568627
             },
-            "clip-content": "false"
+            "clip-content": false
           },
           {
             "id": "Titulo",
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "fixed",
-                "value": "330.0"
+                "value": 330.0
               },
               "height-constraints": {
                 "sizing-mode": "shrink"
               }
             },
-            "font-weight": "500.0",
+            "font-weight": 500.0,
             "color": {
-              "alpha": "1.0",
-              "hue": "241.8181818181818",
-              "saturation": "0.717391304347826",
-              "value": "0.1803921568627451"
+              "alpha": 1.0,
+              "hue": 241.8181818181818,
+              "saturation": 0.717391304347826,
+              "value": 0.1803921568627451
             },
             "text-content": "$TituloLibroCard",
             "overflow": "visible",
-            "max-lines": "-1",
+            "max-lines": -1,
             "text-align-vertical": "center",
-            "text-size": "37.0",
-            "line-height": "1.31884765625",
+            "text-size": 37.0,
+            "line-height": 1.31884765625,
             "typeface": "Roboto Mono"
           },
           {
@@ -179,24 +179,24 @@
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "fixed",
-                "value": "326.0"
+                "value": 326.0
               },
               "height-constraints": {
                 "sizing-mode": "shrink"
               }
             },
             "color": {
-              "alpha": "1.0",
-              "hue": "241.8181818181818",
-              "saturation": "0.717391304347826",
-              "value": "0.1803921568627451"
+              "alpha": 1.0,
+              "hue": 241.8181818181818,
+              "saturation": 0.717391304347826,
+              "value": 0.1803921568627451
             },
             "text-content": "$SinopsisLibroCard",
             "overflow": "visible",
-            "max-lines": "-1",
+            "max-lines": -1,
             "text-align": "left",
-            "text-size": "15.0",
-            "line-height": "1.31884765625",
+            "text-size": 15.0,
+            "line-height": 1.31884765625,
             "typeface": "Roboto Mono"
           },
           {
@@ -204,11 +204,11 @@
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "fixed",
-                "value": "350.0"
+                "value": 350.0
               },
               "height-constraints": {
                 "sizing-mode": "fixed",
-                "value": "139.0"
+                "value": 139.0
               }
             },
             "image-content": "image_1.png",
@@ -221,13 +221,13 @@
           {
             "id": "top_level",
             "padding": {
-              "top": "8.0"
+              "top": 8.0
             },
-            "border-radius": "16.0",
+            "border-radius": 16.0,
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "proportional",
-                "value": "1.0"
+                "value": 1.0
               },
               "height-constraints": {
                 "sizing-mode": "shrink"
@@ -238,39 +238,39 @@
               "Sinopsis",
               "Imagen libro"
             ],
-            "item-spacing": "16.0",
+            "item-spacing": 16.0,
             "background-color": {
-              "alpha": "1.0",
-              "hue": "0.0",
-              "saturation": "0.0",
-              "value": "0.8509803921568627"
+              "alpha": 1.0,
+              "hue": 0.0,
+              "saturation": 0.0,
+              "value": 0.8509803921568627
             },
-            "clip-content": "false"
+            "clip-content": false
           },
           {
             "id": "Titulo",
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "fixed",
-                "value": "330.0"
+                "value": 330.0
               },
               "height-constraints": {
                 "sizing-mode": "shrink"
               }
             },
-            "font-weight": "500.0",
+            "font-weight": 500.0,
             "color": {
-              "alpha": "1.0",
-              "hue": "241.8181818181818",
-              "saturation": "0.717391304347826",
-              "value": "0.1803921568627451"
+              "alpha": 1.0,
+              "hue": 241.8181818181818,
+              "saturation": 0.717391304347826,
+              "value": 0.1803921568627451
             },
             "text-content": "$TituloLibroCard",
             "overflow": "visible",
-            "max-lines": "-1",
+            "max-lines": -1,
             "text-align-vertical": "center",
-            "text-size": "34.0",
-            "line-height": "1.31884765625",
+            "text-size": 34.0,
+            "line-height": 1.31884765625,
             "typeface": "Roboto Mono"
           },
           {
@@ -278,24 +278,24 @@
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "fixed",
-                "value": "326.0"
+                "value": 326.0
               },
               "height-constraints": {
                 "sizing-mode": "shrink"
               }
             },
             "color": {
-              "alpha": "1.0",
-              "hue": "241.8181818181818",
-              "saturation": "0.717391304347826",
-              "value": "0.1803921568627451"
+              "alpha": 1.0,
+              "hue": 241.8181818181818,
+              "saturation": 0.717391304347826,
+              "value": 0.1803921568627451
             },
             "text-content": "$SinopsisLibroCard",
             "overflow": "visible",
-            "max-lines": "-1",
+            "max-lines": -1,
             "text-align": "left",
-            "text-size": "15.0",
-            "line-height": "1.31884765625",
+            "text-size": 15.0,
+            "line-height": 1.31884765625,
             "typeface": "Roboto Mono"
           },
           {
@@ -303,11 +303,11 @@
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "fixed",
-                "value": "350.0"
+                "value": 350.0
               },
               "height-constraints": {
                 "sizing-mode": "fixed",
-                "value": "139.0"
+                "value": 139.0
               }
             },
             "image-content": "imagen_libro.png",
@@ -320,13 +320,13 @@
           {
             "id": "top_level",
             "padding": {
-              "top": "8.0"
+              "top": 8.0
             },
-            "border-radius": "16.0",
+            "border-radius": 16.0,
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "proportional",
-                "value": "1.0"
+                "value": 1.0
               },
               "height-constraints": {
                 "sizing-mode": "shrink"
@@ -337,39 +337,39 @@
               "Sinopsis",
               "Imagen libro"
             ],
-            "item-spacing": "16.0",
+            "item-spacing": 16.0,
             "background-color": {
-              "alpha": "1.0",
-              "hue": "0.0",
-              "saturation": "0.0",
-              "value": "0.8509803921568627"
+              "alpha": 1.0,
+              "hue": 0.0,
+              "saturation": 0.0,
+              "value": 0.8509803921568627
             },
-            "clip-content": "false"
+            "clip-content": false
           },
           {
             "id": "Titulo",
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "fixed",
-                "value": "330.0"
+                "value": 330.0
               },
               "height-constraints": {
                 "sizing-mode": "shrink"
               }
             },
-            "font-weight": "500.0",
+            "font-weight": 500.0,
             "color": {
-              "alpha": "1.0",
-              "hue": "241.8181818181818",
-              "saturation": "0.717391304347826",
-              "value": "0.1803921568627451"
+              "alpha": 1.0,
+              "hue": 241.8181818181818,
+              "saturation": 0.717391304347826,
+              "value": 0.1803921568627451
             },
             "text-content": "$TituloLibroCard",
             "overflow": "visible",
-            "max-lines": "-1",
+            "max-lines": -1,
             "text-align-vertical": "center",
-            "text-size": "34.0",
-            "line-height": "1.31884765625",
+            "text-size": 34.0,
+            "line-height": 1.31884765625,
             "typeface": "Roboto Mono"
           },
           {
@@ -377,24 +377,24 @@
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "fixed",
-                "value": "326.0"
+                "value": 326.0
               },
               "height-constraints": {
                 "sizing-mode": "shrink"
               }
             },
             "color": {
-              "alpha": "1.0",
-              "hue": "241.8181818181818",
-              "saturation": "0.717391304347826",
-              "value": "0.1803921568627451"
+              "alpha": 1.0,
+              "hue": 241.8181818181818,
+              "saturation": 0.717391304347826,
+              "value": 0.1803921568627451
             },
             "text-content": "$SinopsisLibroCard",
             "overflow": "visible",
-            "max-lines": "-1",
+            "max-lines": -1,
             "text-align": "left",
-            "text-size": "15.0",
-            "line-height": "1.31884765625",
+            "text-size": 15.0,
+            "line-height": 1.31884765625,
             "typeface": "Roboto Mono"
           },
           {
@@ -402,11 +402,11 @@
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "fixed",
-                "value": "350.0"
+                "value": 350.0
               },
               "height-constraints": {
                 "sizing-mode": "fixed",
-                "value": "169.0"
+                "value": 169.0
               }
             },
             "image-content": "imagen_libro1.png",
@@ -419,13 +419,13 @@
           {
             "id": "top_level",
             "padding": {
-              "top": "8.0"
+              "top": 8.0
             },
-            "border-radius": "16.0",
+            "border-radius": 16.0,
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "proportional",
-                "value": "1.0"
+                "value": 1.0
               },
               "height-constraints": {
                 "sizing-mode": "shrink"
@@ -436,39 +436,39 @@
               "Sinopsis",
               "Imagen libro"
             ],
-            "item-spacing": "16.0",
+            "item-spacing": 16.0,
             "background-color": {
-              "alpha": "1.0",
-              "hue": "0.0",
-              "saturation": "0.0",
-              "value": "0.8509803921568627"
+              "alpha": 1.0,
+              "hue": 0.0,
+              "saturation": 0.0,
+              "value": 0.8509803921568627
             },
-            "clip-content": "false"
+            "clip-content": false
           },
           {
             "id": "Titulo",
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "fixed",
-                "value": "330.0"
+                "value": 330.0
               },
               "height-constraints": {
                 "sizing-mode": "shrink"
               }
             },
-            "font-weight": "500.0",
+            "font-weight": 500.0,
             "color": {
-              "alpha": "1.0",
-              "hue": "241.8181818181818",
-              "saturation": "0.717391304347826",
-              "value": "0.1803921568627451"
+              "alpha": 1.0,
+              "hue": 241.8181818181818,
+              "saturation": 0.717391304347826,
+              "value": 0.1803921568627451
             },
             "text-content": "$TituloLibroCard",
             "overflow": "visible",
-            "max-lines": "-1",
+            "max-lines": -1,
             "text-align-vertical": "center",
-            "text-size": "34.0",
-            "line-height": "1.31884765625",
+            "text-size": 34.0,
+            "line-height": 1.31884765625,
             "typeface": "Roboto Mono"
           },
           {
@@ -476,24 +476,24 @@
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "fixed",
-                "value": "326.0"
+                "value": 326.0
               },
               "height-constraints": {
                 "sizing-mode": "shrink"
               }
             },
             "color": {
-              "alpha": "1.0",
-              "hue": "241.8181818181818",
-              "saturation": "0.717391304347826",
-              "value": "0.1803921568627451"
+              "alpha": 1.0,
+              "hue": 241.8181818181818,
+              "saturation": 0.717391304347826,
+              "value": 0.1803921568627451
             },
             "text-content": "$SinopsisLibroCard",
             "overflow": "visible",
-            "max-lines": "-1",
+            "max-lines": -1,
             "text-align": "left",
-            "text-size": "15.0",
-            "line-height": "1.31884765625",
+            "text-size": 15.0,
+            "line-height": 1.31884765625,
             "typeface": "Roboto Mono"
           },
           {
@@ -501,11 +501,11 @@
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "fixed",
-                "value": "350.0"
+                "value": 350.0
               },
               "height-constraints": {
                 "sizing-mode": "fixed",
-                "value": "139.0"
+                "value": 139.0
               }
             },
             "image-content": "imagen_libro2.png",
@@ -518,13 +518,13 @@
           {
             "id": "top_level",
             "padding": {
-              "top": "8.0"
+              "top": 8.0
             },
-            "border-radius": "16.0",
+            "border-radius": 16.0,
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "proportional",
-                "value": "1.0"
+                "value": 1.0
               },
               "height-constraints": {
                 "sizing-mode": "shrink"
@@ -535,39 +535,39 @@
               "Sinopsis",
               "Imagen libro"
             ],
-            "item-spacing": "16.0",
+            "item-spacing": 16.0,
             "background-color": {
-              "alpha": "1.0",
-              "hue": "0.0",
-              "saturation": "0.0",
-              "value": "0.8509803921568627"
+              "alpha": 1.0,
+              "hue": 0.0,
+              "saturation": 0.0,
+              "value": 0.8509803921568627
             },
-            "clip-content": "false"
+            "clip-content": false
           },
           {
             "id": "Titulo",
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "fixed",
-                "value": "330.0"
+                "value": 330.0
               },
               "height-constraints": {
                 "sizing-mode": "shrink"
               }
             },
-            "font-weight": "500.0",
+            "font-weight": 500.0,
             "color": {
-              "alpha": "1.0",
-              "hue": "241.8181818181818",
-              "saturation": "0.717391304347826",
-              "value": "0.1803921568627451"
+              "alpha": 1.0,
+              "hue": 241.8181818181818,
+              "saturation": 0.717391304347826,
+              "value": 0.1803921568627451
             },
             "text-content": "$TituloLibroCard",
             "overflow": "visible",
-            "max-lines": "-1",
+            "max-lines": -1,
             "text-align-vertical": "center",
-            "text-size": "34.0",
-            "line-height": "1.31884765625",
+            "text-size": 34.0,
+            "line-height": 1.31884765625,
             "typeface": "Roboto Mono"
           },
           {
@@ -575,24 +575,24 @@
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "fixed",
-                "value": "326.0"
+                "value": 326.0
               },
               "height-constraints": {
                 "sizing-mode": "shrink"
               }
             },
             "color": {
-              "alpha": "1.0",
-              "hue": "241.8181818181818",
-              "saturation": "0.717391304347826",
-              "value": "0.1803921568627451"
+              "alpha": 1.0,
+              "hue": 241.8181818181818,
+              "saturation": 0.717391304347826,
+              "value": 0.1803921568627451
             },
             "text-content": "$SinopsisLibroCard",
             "overflow": "visible",
-            "max-lines": "-1",
+            "max-lines": -1,
             "text-align": "left",
-            "text-size": "15.0",
-            "line-height": "1.31884765625",
+            "text-size": 15.0,
+            "line-height": 1.31884765625,
             "typeface": "Roboto Mono"
           },
           {
@@ -600,11 +600,11 @@
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "fixed",
-                "value": "350.0"
+                "value": 350.0
               },
               "height-constraints": {
                 "sizing-mode": "fixed",
-                "value": "159.0"
+                "value": 159.0
               }
             },
             "image-content": "imagen_libro3.png",

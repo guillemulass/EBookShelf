@@ -20,7 +20,9 @@ import com.gmulbat1301.ebookshelf.screens.register.RegisterViewModel
 import com.gmulbat1301.ebookshelf.screens.showAndCreatePages.PantallaCrearLibro
 import com.gmulbat1301.ebookshelf.screens.showAndCreatePages.PantallaPrincipal
 import com.gmulbat1301.ebookshelf.screens.*
+import com.gmulbat1301.ebookshelf.screens.bookInfo.BookInfoViewModel
 import com.gmulbat1301.ebookshelf.screens.bookInfo.PantallaInformacionLibro
+import com.gmulbat1301.ebookshelf.screens.bookInfo.PantallaComentarios
 import com.gmulbat1301.ebookshelf.screens.showAndCreatePages.BookControllerViewModel
 import com.gmulbat1301.ebookshelf.ui.theme.EBookShelfTheme
 
@@ -31,6 +33,8 @@ class MainActivity : ComponentActivity() {
         val logInViewModel = LogInViewModel()
         val registerViewModel = RegisterViewModel()
         val bookControllerViewModel = BookControllerViewModel()
+        val bookInfoViewModel = BookInfoViewModel()
+
 
 
         setContent {
@@ -75,22 +79,51 @@ class MainActivity : ComponentActivity() {
                         }
 
                         composable(
-                            Routes.PantallaInformacionLibro.route + "/{titulo}/{autor}/{sinopsis}/{fechaSalida}",
+                            Routes.PantallaInformacionLibro.route + "/{titulo}/{autor}/{sinopsis}/{fechaSalida}/{resenaPersonal}/{comentarios}",
                             arguments = listOf(
                                 navArgument("titulo") { type = NavType.StringType },
                                 navArgument("autor") { type = NavType.StringType },
                                 navArgument("sinopsis") { type = NavType.StringType },
-                                navArgument("fechaSalida") { type = NavType.StringType }
+                                navArgument("fechaSalida") { type = NavType.StringType },
+                                navArgument("resenaPersonal") { type = NavType.StringType },
+                                navArgument("comentarios") { type = NavType.StringType },
                             )
                         ) { backStackEntry ->
                             PantallaInformacionLibro(
+                                bookInfoViewModel,
                                 navController,
                                 titulo = backStackEntry.arguments?.getString("titulo") ?: "",
                                 autor = backStackEntry.arguments?.getString("autor") ?: "",
                                 sinopsis = backStackEntry.arguments?.getString("sinopsis") ?: "",
-                                fechaSalida = backStackEntry.arguments?.getString("fechaSalida") ?: ""
+                                fechaSalida = backStackEntry.arguments?.getString("fechaSalida") ?: "",
+                                resenaPersonal = backStackEntry.arguments?.getString("resenaPersonal") ?: "",
+                                comentarios = backStackEntry.arguments?.getString("comentarios") ?: ""
                             )
                         }
+
+                        composable(
+                            Routes.PantallaComentarios.route + "/{titulo}/{autor}/{sinopsis}/{fechaSalida}/{resenaPersonal}/{comentarios}",
+                            arguments = listOf(
+                                navArgument("titulo") { type = NavType.StringType },
+                                navArgument("autor") { type = NavType.StringType },
+                                navArgument("sinopsis") { type = NavType.StringType },
+                                navArgument("fechaSalida") { type = NavType.StringType },
+                                navArgument("resenaPersonal") { type = NavType.StringType },
+                                navArgument("comentarios") { type = NavType.StringType },
+                            )
+                        ) { backStackEntry ->
+                            PantallaComentarios(
+                                bookInfoViewModel,
+                                navController,
+                                titulo = backStackEntry.arguments?.getString("titulo") ?: "",
+                                autor = backStackEntry.arguments?.getString("autor") ?: "",
+                                sinopsis = backStackEntry.arguments?.getString("sinopsis") ?: "",
+                                fechaSalida = backStackEntry.arguments?.getString("fechaSalida") ?: "",
+                                resenaPersonal = backStackEntry.arguments?.getString("resenaPersonal") ?: "",
+                                comentarios = backStackEntry.arguments?.getString("comentarios") ?: ""
+                            )
+                        }
+
 
 
                         composable(Routes.PantallaUsuarioSesionIniciada.route) {

@@ -11,4 +11,6 @@ sealed class Routes(val route : String) {
     object PantallaUsuarioSesionIniciada: Routes("PantallaUsuarioSesionIniciada")
     object PantallaCrearLibro: Routes("PantallaCrearLibro")
 
+    object PantallaComentarios: Routes("PantallaComentarios")
+
 }

@@ -1,11 +1,11 @@
 {
   "name": "header_general",
-  "version": 32,
+  "version": 33,
   "source-key": {
     "type": "figma",
     "file": "f69MssDKV0P88F2aZQS1By",
     "node": "35:32",
-    "version": "5237605889",
+    "version": "5245484319",
     "component-id": "4402283e1ec3a4ad3a06d4a1a1eb6c830726fa71"
   },
   "default": "Header General",
@@ -38,22 +38,22 @@
         "rules": [
           {
             "id": "top_level",
-            "is-structured": "false",
+            "is-structured": false,
             "children": [
               "mdi:bookshelf",
               "EBookShelf",
               "ArrowBack"
             ],
-            "clip-content": "false"
+            "clip-content": false
           },
           {
             "id": "mdi:bookshelf",
             "margin": {
-              "left": "152.0",
-              "top": "64.0",
-              "right": "89.0"
+              "left": 152.0,
+              "top": 64.0,
+              "right": 89.0
             },
-            "is-structured": "false",
+            "is-structured": false,
             "children": [
               "Vector"
             ]
@@ -61,76 +61,76 @@
           {
             "id": "EBookShelf",
             "margin": {
-              "left": "64.0",
-              "bottom": "65.0"
+              "left": 64.0,
+              "bottom": 65.0
             },
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "proportional",
-                "value": "1.0"
+                "value": 1.0
               },
               "height-constraints": {
                 "sizing-mode": "proportional",
-                "value": "1.0"
+                "value": 1.0
               }
             },
-            "font-weight": "700.0",
+            "font-weight": 700.0,
             "color": {
-              "alpha": "1.0",
-              "hue": "0.0",
-              "saturation": "0.0",
-              "value": "0.8509803921568627"
+              "alpha": 1.0,
+              "hue": 0.0,
+              "saturation": 0.0,
+              "value": 0.8509803921568627
             },
             "text-content": "EBookShelf",
             "overflow": "visible",
-            "max-lines": "-1",
+            "max-lines": -1,
             "text-align-vertical": "center",
-            "text-size": "36.0",
-            "line-height": "1.31884765625",
+            "text-size": 36.0,
+            "line-height": 1.31884765625,
             "typeface": "Roboto Mono"
           },
           {
             "id": "ArrowBack",
             "margin": {
-              "left": "3.8890762329101562",
-              "top": "12.110939025878906",
-              "right": "269.88907623291016",
-              "bottom": "76.8890609741211"
+              "left": 3.8890762329101562,
+              "top": 12.110939025878906,
+              "right": 269.88907623291016,
+              "bottom": 76.8890609741211
             },
             "alignment": {
               "horizontal": {
                 "attachment": "start",
-                "offset": "0.0"
+                "offset": 0.0
               },
               "vertical": {
                 "attachment": "start",
-                "offset": "-0.0000152587890625"
+                "offset": -0.0000152587890625
               }
             },
             "tap-handler": "$ArrowBack",
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "proportional",
-                "value": "1.0"
+                "value": 1.0
               },
               "height-constraints": {
                 "sizing-mode": "proportional",
-                "value": "1.0"
+                "value": 1.0
               }
             },
             "vector-content": "arrow_back.svg"
           },
           {
             "id": "Vector",
-            "margin": "8.125",
+            "margin": 8.125,
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "proportional",
-                "value": "1.0"
+                "value": 1.0
               },
               "height-constraints": {
                 "sizing-mode": "proportional",
-                "value": "1.0"
+                "value": 1.0
               }
             },
             "vector-content": "vector.svg"

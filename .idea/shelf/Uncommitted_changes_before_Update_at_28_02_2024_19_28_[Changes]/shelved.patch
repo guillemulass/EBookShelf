@@ -1,0 +1,155 @@
+Index: app/src/main/java/com/gmulbat1301/ebookshelf/Screens/PantallaCrearLibro.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.gmulbat1301.ebookshelf.Screens\r\n\r\nimport androidx.compose.foundation.Image\r\nimport androidx.compose.foundation.ScrollState\r\nimport androidx.compose.foundation.layout.Arrangement\r\nimport androidx.compose.foundation.layout.Box\r\nimport androidx.compose.foundation.layout.Column\r\nimport androidx.compose.foundation.layout.Spacer\r\nimport androidx.compose.foundation.layout.fillMaxSize\r\nimport androidx.compose.foundation.layout.height\r\nimport androidx.compose.foundation.layout.padding\r\nimport androidx.compose.foundation.layout.width\r\nimport androidx.compose.foundation.verticalScroll\r\nimport androidx.compose.material3.OutlinedTextFieldDefaults\r\nimport androidx.compose.material3.Text\r\nimport androidx.compose.material3.TextField\r\nimport androidx.compose.runtime.Composable\r\nimport androidx.compose.runtime.getValue\r\nimport androidx.compose.runtime.mutableStateOf\r\nimport androidx.compose.runtime.remember\r\nimport androidx.compose.runtime.setValue\r\nimport androidx.compose.ui.Alignment\r\nimport androidx.compose.ui.Modifier\r\nimport androidx.compose.ui.graphics.Color\r\nimport androidx.compose.ui.layout.ContentScale\r\nimport androidx.compose.ui.res.painterResource\r\nimport androidx.compose.ui.unit.dp\r\nimport androidx.navigation.NavHostController\r\nimport com.gmulbat1301.ebookshelf.R\r\nimport com.gmulbat1301.ebookshelf.Routes.Routes\r\nimport com.gmulbat1301.ebookshelf.botonsmall.BotonSmall\r\nimport com.gmulbat1301.ebookshelf.headergeneral.HeaderGeneral\r\n\r\n@Composable\r\nfun PantallaCrearLibro(\r\n    bookControllerViewModel: BookControllerViewModel,\r\n    navController: NavHostController\r\n){\r\n\r\n    var titulo by remember { mutableStateOf(\"\") }\r\n    var autor by remember { mutableStateOf(\"\") }\r\n    var fechaSalida by remember { mutableStateOf(\"\") }\r\n    var sinopnsis by remember { mutableStateOf(\"\") }\r\n    var stateText by remember { mutableStateOf(\"\") }\r\n\r\n    Box(\r\n        modifier = Modifier\r\n            .fillMaxSize()\r\n    ) {\r\n        Image(\r\n            painter = painterResource(id = R.drawable.backgroundpaginainicial),\r\n            contentDescription = null,\r\n            modifier = Modifier.fillMaxSize(),\r\n            contentScale = ContentScale.FillBounds\r\n        )\r\n        Column(\r\n            horizontalAlignment = Alignment.CenterHorizontally,\r\n            verticalArrangement = Arrangement.Top,\r\n            modifier = Modifier\r\n                .fillMaxSize()\r\n                .verticalScroll(\r\n                    ScrollState(10000),\r\n                    enabled = true,\r\n                    reverseScrolling = true\r\n                )\r\n                .padding(\r\n                    top = 35.dp\r\n                )\r\n        ) {\r\n            Box (\r\n                Modifier.padding(end = 45.dp)\r\n            ){\r\n                HeaderGeneral(\r\n                    modifier = Modifier\r\n                        .width(306.dp)\r\n                        .height(129.dp),\r\n                    arrowBack = {\r\n                        navController.navigate(Routes.PantallaPrincipal.route)\r\n                    }\r\n                )\r\n            }\r\n\r\n            TextField (\r\n                value = titulo,\r\n                onValueChange = { newText ->\r\n                    titulo = newText\r\n                },\r\n                label = { Text(\"Titulo\") },\r\n                modifier = Modifier\r\n                    .width(330.dp)\r\n                    .padding(top = 30.dp),\r\n                colors = OutlinedTextFieldDefaults.colors(\r\n                    focusedBorderColor = Color(0xFFD9D9D9),\r\n                    unfocusedBorderColor = Color(0xFFD9D9D9),\r\n                    focusedLabelColor = Color(0xFFD9D9D9),\r\n                    unfocusedLabelColor = Color(0xFFD9D9D9),\r\n                    unfocusedTextColor = Color(0xFFD9D9D9),\r\n                    focusedTextColor = Color(0xFFD9D9D9)\r\n                ),\r\n                singleLine = false\r\n            )\r\n\r\n            TextField (\r\n                value = autor,\r\n                onValueChange = { newText ->\r\n                    autor = newText\r\n                },\r\n                label = { Text(\"Autor\") },\r\n                modifier = Modifier\r\n                    .width(330.dp)\r\n                    .padding(top = 30.dp),\r\n                colors = OutlinedTextFieldDefaults.colors(\r\n                    focusedBorderColor = Color(0xFFD9D9D9),\r\n                    unfocusedBorderColor = Color(0xFFD9D9D9),\r\n                    focusedLabelColor = Color(0xFFD9D9D9),\r\n                    unfocusedLabelColor = Color(0xFFD9D9D9),\r\n                    unfocusedTextColor = Color(0xFFD9D9D9),\r\n                    focusedTextColor = Color(0xFFD9D9D9)\r\n                ),\r\n                singleLine = false\r\n            )\r\n\r\n            TextField (\r\n                value = fechaSalida,\r\n                onValueChange = { newText ->\r\n                    fechaSalida = newText\r\n                },\r\n                label = { Text(\"Fecha Salida\") },\r\n                modifier = Modifier\r\n                    .width(330.dp)\r\n                    .padding(top = 30.dp),\r\n                colors = OutlinedTextFieldDefaults.colors(\r\n                    focusedBorderColor = Color(0xFFD9D9D9),\r\n                    unfocusedBorderColor = Color(0xFFD9D9D9),\r\n                    focusedLabelColor = Color(0xFFD9D9D9),\r\n                    unfocusedLabelColor = Color(0xFFD9D9D9),\r\n                    unfocusedTextColor = Color(0xFFD9D9D9),\r\n                    focusedTextColor = Color(0xFFD9D9D9)\r\n                ),\r\n                singleLine = false\r\n            )\r\n\r\n            TextField (\r\n                value = sinopnsis,\r\n                onValueChange = { newText ->\r\n                    sinopnsis = newText\r\n                },\r\n                label = { Text(\"Sinopnsis\") },\r\n                modifier = Modifier\r\n                    .width(330.dp)\r\n                    .padding(top = 30.dp),\r\n                colors = OutlinedTextFieldDefaults.colors(\r\n                    focusedBorderColor = Color(0xFFD9D9D9),\r\n                    unfocusedBorderColor = Color(0xFFD9D9D9),\r\n                    focusedLabelColor = Color(0xFFD9D9D9),\r\n                    unfocusedLabelColor = Color(0xFFD9D9D9),\r\n                    unfocusedTextColor = Color(0xFFD9D9D9),\r\n                    focusedTextColor = Color(0xFFD9D9D9)\r\n                ),\r\n                singleLine = false\r\n            )\r\n\r\n            Spacer(modifier = Modifier.height(30.dp))\r\n\r\n            BotonSmall(\r\n                modifier = Modifier\r\n                    .width(165.dp)\r\n                    .height(50.dp),\r\n                text = \"Crear Libro\",\r\n                botonSmallTapped = {\r\n                    stateText = if (autor.isNotEmpty() && titulo.isNotEmpty() && sinopnsis.isNotEmpty() && fechaSalida.isNotEmpty()){\r\n                        bookControllerViewModel.saveData(titulo,autor,sinopnsis,fechaSalida)\r\n                        \"$titulo Creado\"\r\n                    } else{\r\n                        \"Ningun parametro puede estar vacío\"\r\n                    }\r\n                }\r\n            )\r\n\r\n            Text(text = stateText)\r\n\r\n        }\r\n    }\r\n}
+===================================================================
+diff --git a/app/src/main/java/com/gmulbat1301/ebookshelf/Screens/PantallaCrearLibro.kt b/app/src/main/java/com/gmulbat1301/ebookshelf/Screens/PantallaCrearLibro.kt
+--- a/app/src/main/java/com/gmulbat1301/ebookshelf/Screens/PantallaCrearLibro.kt	
++++ b/app/src/main/java/com/gmulbat1301/ebookshelf/Screens/PantallaCrearLibro.kt	
+@@ -23,6 +23,7 @@
+ import androidx.compose.ui.Modifier
+ import androidx.compose.ui.graphics.Color
+ import androidx.compose.ui.layout.ContentScale
++import androidx.compose.ui.platform.LocalContext
+ import androidx.compose.ui.res.painterResource
+ import androidx.compose.ui.unit.dp
+ import androidx.navigation.NavHostController
+@@ -42,6 +43,7 @@
+     var fechaSalida by remember { mutableStateOf("") }
+     var sinopnsis by remember { mutableStateOf("") }
+     var stateText by remember { mutableStateOf("") }
++    val context = LocalContext.current
+ 
+     Box(
+         modifier = Modifier
+@@ -168,16 +170,24 @@
+                     .height(50.dp),
+                 text = "Crear Libro",
+                 botonSmallTapped = {
+-                    stateText = if (autor.isNotEmpty() && titulo.isNotEmpty() && sinopnsis.isNotEmpty() && fechaSalida.isNotEmpty()){
+-                        bookControllerViewModel.saveData(titulo,autor,sinopnsis,fechaSalida)
+-                        "$titulo Creado"
++                    if (autor.isNotEmpty() && titulo.isNotEmpty() && sinopnsis.isNotEmpty() && fechaSalida.isNotEmpty()){
++                        bookControllerViewModel.saveData(titulo,autor,sinopnsis,fechaSalida,context,
++                            onSuccess = {
++                                stateText = "$titulo Creado"
++                            }, onFailure = {
++                                stateText = "Error"
++                            })
++
+                     } else{
+-                        "Ningun parametro puede estar vacío"
++                        stateText = "Ningun parametro puede estar vacío"
+                     }
+                 }
+             )
+ 
+-            Text(text = stateText)
++            Text(text = stateText,
++                color = Color.White)
++
++
+ 
+         }
+     }
+Index: app/src/main/java/com/gmulbat1301/ebookshelf/Screens/BookControllerViewModel.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.gmulbat1301.ebookshelf.Screens\r\n\r\nimport androidx.lifecycle.ViewModel\r\nimport com.gmulbat1301.ebookshelf.DataClasses.Book\r\nimport com.google.firebase.Firebase\r\nimport com.google.firebase.auth.FirebaseAuth\r\nimport com.google.firebase.auth.auth\r\nimport com.google.firebase.firestore.FirebaseFirestore\r\n\r\nclass BookControllerViewModel: ViewModel() {\r\n\r\n\r\n\r\n    fun saveData(titulo : String, autor : String, sinopsis : String, fechaSalida : String){\r\n        val db = FirebaseFirestore.getInstance()\r\n        val auth: FirebaseAuth = Firebase.auth\r\n\r\n        val bookAdd = Book(titulo, autor, sinopsis, fechaSalida)\r\n\r\n        db.collection(\"usersBooks\").document(auth.currentUser?.email!!).set(\r\n            bookAdd\r\n        )\r\n\r\n    }\r\n\r\n    fun getData(){\r\n\r\n    }\r\n\r\n    fun deleteData(){\r\n\r\n    }\r\n\r\n}
+===================================================================
+diff --git a/app/src/main/java/com/gmulbat1301/ebookshelf/Screens/BookControllerViewModel.kt b/app/src/main/java/com/gmulbat1301/ebookshelf/Screens/BookControllerViewModel.kt
+--- a/app/src/main/java/com/gmulbat1301/ebookshelf/Screens/BookControllerViewModel.kt	
++++ b/app/src/main/java/com/gmulbat1301/ebookshelf/Screens/BookControllerViewModel.kt	
+@@ -1,8 +1,10 @@
+ package com.gmulbat1301.ebookshelf.Screens
+ 
++import android.content.Context
+ import androidx.lifecycle.ViewModel
+ import com.gmulbat1301.ebookshelf.DataClasses.Book
+ import com.google.firebase.Firebase
++import com.google.firebase.FirebaseApp
+ import com.google.firebase.auth.FirebaseAuth
+ import com.google.firebase.auth.auth
+ import com.google.firebase.firestore.FirebaseFirestore
+@@ -11,15 +13,24 @@
+ 
+ 
+ 
+-    fun saveData(titulo : String, autor : String, sinopsis : String, fechaSalida : String){
++    fun saveData(titulo : String, autor : String, sinopsis : String, fechaSalida : String,
++                 context: Context, onSuccess : () -> Unit, onFailure : () -> Unit){
+         val db = FirebaseFirestore.getInstance()
+         val auth: FirebaseAuth = Firebase.auth
+ 
+         val bookAdd = Book(titulo, autor, sinopsis, fechaSalida)
+ 
+-        db.collection("usersBooks").document(auth.currentUser?.email!!).set(
+-            bookAdd
+-        )
++        if (FirebaseApp.getApps(context).isNotEmpty()) {
++            db.collection("usersBooks").document(auth.currentUser?.email!!).set(
++                bookAdd
++            ).addOnSuccessListener {
++                onSuccess()
++            }.addOnFailureListener {
++                onFailure()
++            }
++        }
++
++
+ 
+     }
+ 
+Index: app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/counters.tab
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>66\r\n0
+===================================================================
+diff --git a/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/counters.tab b/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/counters.tab
+--- a/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/counters.tab	
++++ b/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/counters.tab	
+@@ -1,2 +1,2 @@
+-66
++51
+ 0
+\ No newline at end of file
+Index: app/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>#Tue Feb 27 19:45:00 CET 2024\r\nbase.0=C\\:\\\\Users\\\\guill\\\\OneDrive\\\\Escritorio\\\\ReposGit\\\\EBookShelf\\\\app\\\\build\\\\intermediates\\\\dex\\\\debug\\\\mergeExtDexDebug\\\\classes.dex\r\nbase.1=C\\:\\\\Users\\\\guill\\\\OneDrive\\\\Escritorio\\\\ReposGit\\\\EBookShelf\\\\app\\\\build\\\\intermediates\\\\dex\\\\debug\\\\mergeProjectDexDebug\\\\0\\\\classes.dex\r\nbase.10=C\\:\\\\Users\\\\guill\\\\OneDrive\\\\Escritorio\\\\ReposGit\\\\EBookShelf\\\\app\\\\build\\\\intermediates\\\\dex\\\\debug\\\\mergeProjectDexDebug\\\\9\\\\classes.dex\r\nbase.11=C\\:\\\\Users\\\\guill\\\\OneDrive\\\\Escritorio\\\\ReposGit\\\\EBookShelf\\\\app\\\\build\\\\intermediates\\\\dex\\\\debug\\\\mergeExtDexDebug\\\\classes2.dex\r\nbase.12=C\\:\\\\Users\\\\guill\\\\OneDrive\\\\Escritorio\\\\ReposGit\\\\EBookShelf\\\\app\\\\build\\\\intermediates\\\\dex\\\\debug\\\\mergeExtDexDebug\\\\classes3.dex\r\nbase.2=C\\:\\\\Users\\\\guill\\\\OneDrive\\\\Escritorio\\\\ReposGit\\\\EBookShelf\\\\app\\\\build\\\\intermediates\\\\dex\\\\debug\\\\mergeProjectDexDebug\\\\10\\\\classes.dex\r\nbase.3=C\\:\\\\Users\\\\guill\\\\OneDrive\\\\Escritorio\\\\ReposGit\\\\EBookShelf\\\\app\\\\build\\\\intermediates\\\\dex\\\\debug\\\\mergeProjectDexDebug\\\\11\\\\classes.dex\r\nbase.4=C\\:\\\\Users\\\\guill\\\\OneDrive\\\\Escritorio\\\\ReposGit\\\\EBookShelf\\\\app\\\\build\\\\intermediates\\\\dex\\\\debug\\\\mergeProjectDexDebug\\\\14\\\\classes.dex\r\nbase.5=C\\:\\\\Users\\\\guill\\\\OneDrive\\\\Escritorio\\\\ReposGit\\\\EBookShelf\\\\app\\\\build\\\\intermediates\\\\dex\\\\debug\\\\mergeProjectDexDebug\\\\1\\\\classes.dex\r\nbase.6=C\\:\\\\Users\\\\guill\\\\OneDrive\\\\Escritorio\\\\ReposGit\\\\EBookShelf\\\\app\\\\build\\\\intermediates\\\\dex\\\\debug\\\\mergeProjectDexDebug\\\\3\\\\classes.dex\r\nbase.7=C\\:\\\\Users\\\\guill\\\\OneDrive\\\\Escritorio\\\\ReposGit\\\\EBookShelf\\\\app\\\\build\\\\intermediates\\\\dex\\\\debug\\\\mergeProjectDexDebug\\\\4\\\\classes.dex\r\nbase.8=C\\:\\\\Users\\\\guill\\\\OneDrive\\\\Escritorio\\\\ReposGit\\\\EBookShelf\\\\app\\\\build\\\\intermediates\\\\dex\\\\debug\\\\mergeProjectDexDebug\\\\5\\\\classes.dex\r\nbase.9=C\\:\\\\Users\\\\guill\\\\OneDrive\\\\Escritorio\\\\ReposGit\\\\EBookShelf\\\\app\\\\build\\\\intermediates\\\\dex\\\\debug\\\\mergeProjectDexDebug\\\\6\\\\classes.dex\r\npath.0=classes.dex\r\npath.1=0/classes.dex\r\npath.10=9/classes.dex\r\npath.11=classes2.dex\r\npath.12=classes3.dex\r\npath.2=10/classes.dex\r\npath.3=11/classes.dex\r\npath.4=14/classes.dex\r\npath.5=1/classes.dex\r\npath.6=3/classes.dex\r\npath.7=4/classes.dex\r\npath.8=5/classes.dex\r\npath.9=6/classes.dex\r\nrenamed.0=classes.dex\r\nrenamed.1=classes2.dex\r\nrenamed.10=classes11.dex\r\nrenamed.11=classes12.dex\r\nrenamed.12=classes13.dex\r\nrenamed.2=classes3.dex\r\nrenamed.3=classes4.dex\r\nrenamed.4=classes5.dex\r\nrenamed.5=classes6.dex\r\nrenamed.6=classes7.dex\r\nrenamed.7=classes8.dex\r\nrenamed.8=classes9.dex\r\nrenamed.9=classes10.dex\r\n
+===================================================================
+diff --git a/app/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt b/app/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt
+--- a/app/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt	
++++ b/app/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt	
+@@ -1,17 +1,17 @@
+-#Tue Feb 27 19:45:00 CET 2024
+-base.0=C\:\\Users\\guill\\OneDrive\\Escritorio\\ReposGit\\EBookShelf\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+-base.1=C\:\\Users\\guill\\OneDrive\\Escritorio\\ReposGit\\EBookShelf\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
+-base.10=C\:\\Users\\guill\\OneDrive\\Escritorio\\ReposGit\\EBookShelf\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\9\\classes.dex
+-base.11=C\:\\Users\\guill\\OneDrive\\Escritorio\\ReposGit\\EBookShelf\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
+-base.12=C\:\\Users\\guill\\OneDrive\\Escritorio\\ReposGit\\EBookShelf\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes3.dex
+-base.2=C\:\\Users\\guill\\OneDrive\\Escritorio\\ReposGit\\EBookShelf\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\10\\classes.dex
+-base.3=C\:\\Users\\guill\\OneDrive\\Escritorio\\ReposGit\\EBookShelf\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\11\\classes.dex
+-base.4=C\:\\Users\\guill\\OneDrive\\Escritorio\\ReposGit\\EBookShelf\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\14\\classes.dex
+-base.5=C\:\\Users\\guill\\OneDrive\\Escritorio\\ReposGit\\EBookShelf\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\1\\classes.dex
+-base.6=C\:\\Users\\guill\\OneDrive\\Escritorio\\ReposGit\\EBookShelf\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\3\\classes.dex
+-base.7=C\:\\Users\\guill\\OneDrive\\Escritorio\\ReposGit\\EBookShelf\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\4\\classes.dex
+-base.8=C\:\\Users\\guill\\OneDrive\\Escritorio\\ReposGit\\EBookShelf\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\5\\classes.dex
+-base.9=C\:\\Users\\guill\\OneDrive\\Escritorio\\ReposGit\\EBookShelf\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\6\\classes.dex
++#Tue Feb 27 20:54:34 CET 2024
++base.0=C\:\\Users\\mrano\\AndroidStudioProjects\\EBookShelf\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
++base.1=C\:\\Users\\mrano\\AndroidStudioProjects\\EBookShelf\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
++base.10=C\:\\Users\\mrano\\AndroidStudioProjects\\EBookShelf\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\9\\classes.dex
++base.11=C\:\\Users\\mrano\\AndroidStudioProjects\\EBookShelf\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
++base.12=C\:\\Users\\mrano\\AndroidStudioProjects\\EBookShelf\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes3.dex
++base.2=C\:\\Users\\mrano\\AndroidStudioProjects\\EBookShelf\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\10\\classes.dex
++base.3=C\:\\Users\\mrano\\AndroidStudioProjects\\EBookShelf\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\11\\classes.dex
++base.4=C\:\\Users\\mrano\\AndroidStudioProjects\\EBookShelf\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\14\\classes.dex
++base.5=C\:\\Users\\mrano\\AndroidStudioProjects\\EBookShelf\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\1\\classes.dex
++base.6=C\:\\Users\\mrano\\AndroidStudioProjects\\EBookShelf\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\3\\classes.dex
++base.7=C\:\\Users\\mrano\\AndroidStudioProjects\\EBookShelf\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\4\\classes.dex
++base.8=C\:\\Users\\mrano\\AndroidStudioProjects\\EBookShelf\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\5\\classes.dex
++base.9=C\:\\Users\\mrano\\AndroidStudioProjects\\EBookShelf\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\6\\classes.dex
+ path.0=classes.dex
+ path.1=0/classes.dex
+ path.10=9/classes.dex

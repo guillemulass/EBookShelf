@@ -7,13 +7,21 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
+import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import androidx.navigation.navArgument
 import com.gmulbat1301.ebookshelf.Routes.Routes
-import com.gmulbat1301.ebookshelf.Screens.*
-import com.gmulbat1301.ebookshelf.Screens.LogInViewModel
-import com.gmulbat1301.ebookshelf.Screens.PantallaInicioSesion
+import com.gmulbat1301.ebookshelf.screens.logIn.LogInViewModel
+import com.gmulbat1301.ebookshelf.screens.logIn.PantallaInicioSesion
+import com.gmulbat1301.ebookshelf.screens.register.PantallaCrearCuenta
+import com.gmulbat1301.ebookshelf.screens.register.RegisterViewModel
+import com.gmulbat1301.ebookshelf.screens.showAndCreatePages.PantallaCrearLibro
+import com.gmulbat1301.ebookshelf.screens.showAndCreatePages.PantallaPrincipal
+import com.gmulbat1301.ebookshelf.screens.*
+import com.gmulbat1301.ebookshelf.screens.bookInfo.PantallaInformacionLibro
+import com.gmulbat1301.ebookshelf.screens.showAndCreatePages.BookControllerViewModel
 import com.gmulbat1301.ebookshelf.ui.theme.EBookShelfTheme
 
 class MainActivity : ComponentActivity() {
@@ -66,11 +74,24 @@ class MainActivity : ComponentActivity() {
                             )
                         }
 
-                        composable(Routes.PantallaInformacionLibro.route) {
+                        composable(
+                            Routes.PantallaInformacionLibro.route + "/{titulo}/{autor}/{sinopsis}/{fechaSalida}",
+                            arguments = listOf(
+                                navArgument("titulo") { type = NavType.StringType },
+                                navArgument("autor") { type = NavType.StringType },
+                                navArgument("sinopsis") { type = NavType.StringType },
+                                navArgument("fechaSalida") { type = NavType.StringType }
+                            )
+                        ) { backStackEntry ->
                             PantallaInformacionLibro(
-                                navController
+                                navController,
+                                titulo = backStackEntry.arguments?.getString("titulo") ?: "",
+                                autor = backStackEntry.arguments?.getString("autor") ?: "",
+                                sinopsis = backStackEntry.arguments?.getString("sinopsis") ?: "",
+                                fechaSalida = backStackEntry.arguments?.getString("fechaSalida") ?: ""
                             )
                         }
+
 
                         composable(Routes.PantallaUsuarioSesionIniciada.route) {
                             PantallaUsuarioSesionIniciada(

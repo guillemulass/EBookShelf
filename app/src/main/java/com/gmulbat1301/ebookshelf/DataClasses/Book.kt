@@ -1,8 +1,12 @@
 package com.gmulbat1301.ebookshelf.DataClasses
 
 data class Book(
-    val titulo: String,
-    val autor: String,
-    val sinopsis: String,
-    val fechaSalida: String,
-)
+    var titulo: String = "",
+    var autor: String = "",
+    var sinopsis: String = "",
+    var fechaSalida: String = "",
+    var resenaPersonal: String = "",
+    var comentarios: String = ""
+) {
+    constructor() : this("", "", "", "")
+}

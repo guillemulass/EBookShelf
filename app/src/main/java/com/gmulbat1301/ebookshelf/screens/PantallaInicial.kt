@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
@@ -22,11 +23,25 @@ import com.gmulbat1301.ebookshelf.R
 import com.gmulbat1301.ebookshelf.Routes.Routes
 import com.gmulbat1301.ebookshelf.buttonspantallainicial.ButtonsPantallaInicial
 import com.gmulbat1301.ebookshelf.headerpantallainicial.HeaderPantallaInicial
+import com.google.firebase.Firebase
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.auth
 
 @Composable
 fun PantallaInicial(
-    navController: NavHostController
+    navController: NavHostController,
+    sessionClosed: Boolean
 ){
+
+    val auth: FirebaseAuth = Firebase.auth
+
+    LaunchedEffect(Unit) {
+        val email = auth.currentUser?.uid
+        if (email != null && sessionClosed) {
+            navController.navigate(Routes.PantallaPrincipal.route)
+        }
+    }
+
     Box(
         modifier = Modifier
             .fillMaxSize()
@@ -68,12 +83,8 @@ fun PantallaInicial(
                 },
                 botonCrearCuentaPantallaInicial = {
                     navController.navigate(Routes.PantallaCrearCuenta.route)
-                },
-                botonContinuarInvitadoSesionPantallaInicial = {
-                    navController.navigate(Routes.PantallaPrincipal.route)
                 }
             )
         }
     }
-
 }

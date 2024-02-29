@@ -30,8 +30,7 @@ import com.google.relay.compose.tappable
 fun ButtonsPantallaInicial(
     modifier: Modifier = Modifier,
     botonIniciarSesionPantallaInicial: () -> Unit = {},
-    botonCrearCuentaPantallaInicial: () -> Unit = {},
-    botonContinuarInvitadoSesionPantallaInicial: () -> Unit = {}
+    botonCrearCuentaPantallaInicial: () -> Unit = {}
 ) {
     TopLevel(modifier = modifier) {
         BotonIniciarSesionPantallaInicial(botonIniciarSesionPantallaInicial = botonIniciarSesionPantallaInicial) {
@@ -74,37 +73,16 @@ fun ButtonsPantallaInicial(
                 )
             )
         }
-        BotonContinuarInvitadoSesionPantallaInicial(botonContinuarInvitadoSesionPantallaInicial = botonContinuarInvitadoSesionPantallaInicial) {
-            BotonContinuarInvitadoSesionPantallaInicialFondo(
-                modifier = Modifier.boxAlign(
-                    alignment = Alignment.Center,
-                    offset = DpOffset(
-                        x = 0.0.dp,
-                        y = 0.0.dp
-                    )
-                )
-            )
-            BotonContinuarInvitadoSesionPantallaInicialText(
-                modifier = Modifier.boxAlign(
-                    alignment = Alignment.Center,
-                    offset = DpOffset(
-                        x = 0.0.dp,
-                        y = 0.0.dp
-                    )
-                )
-            )
-        }
     }
 }
 
-@Preview(widthDp = 165, heightDp = 190)
+@Preview(widthDp = 165, heightDp = 120)
 @Composable
 private fun ButtonsPantallaInicialPreview() {
     MaterialTheme {
         ButtonsPantallaInicial(
             botonIniciarSesionPantallaInicial = {},
-            botonCrearCuentaPantallaInicial = {},
-            botonContinuarInvitadoSesionPantallaInicial = {}
+            botonCrearCuentaPantallaInicial = {}
         )
     }
 }
@@ -190,48 +168,6 @@ fun BotonCrearCuentaPantallaInicial(
         radius = 16.0,
         content = content,
         modifier = modifier.tappable(onTap = botonCrearCuentaPantallaInicial).requiredWidth(165.0.dp).requiredHeight(50.0.dp)
-    )
-}
-
-@Composable
-fun BotonContinuarInvitadoSesionPantallaInicialFondo(modifier: Modifier = Modifier) {
-    RelayVector(
-        vector = painterResource(R.drawable.buttons_pantalla_inicial_boton_continuar_invitado_sesion_pantalla_inicial_fondo),
-        modifier = modifier.requiredWidth(165.0.dp).requiredHeight(50.0.dp)
-    )
-}
-
-@Composable
-fun BotonContinuarInvitadoSesionPantallaInicialText(modifier: Modifier = Modifier) {
-    RelayText(
-        content = "Continuar como invitado",
-        fontSize = 17.0.sp,
-        fontFamily = robotoMono,
-        color = Color(
-            alpha = 255,
-            red = 0,
-            green = 0,
-            blue = 0
-        ),
-        height = 1.31884765625.em,
-        fontWeight = FontWeight(700.0.toInt()),
-        maxLines = -1,
-        modifier = modifier.requiredWidth(165.0.dp).requiredHeight(50.0.dp).wrapContentHeight(align = Alignment.CenterVertically)
-    )
-}
-
-@Composable
-fun BotonContinuarInvitadoSesionPantallaInicial(
-    botonContinuarInvitadoSesionPantallaInicial: () -> Unit,
-    modifier: Modifier = Modifier,
-    content: @Composable RelayContainerScope.() -> Unit
-) {
-    RelayContainer(
-        isStructured = false,
-        clipToParent = false,
-        radius = 16.0,
-        content = content,
-        modifier = modifier.tappable(onTap = botonContinuarInvitadoSesionPantallaInicial).requiredWidth(165.0.dp).requiredHeight(50.0.dp)
     )
 }
 

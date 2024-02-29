@@ -20,6 +20,7 @@ import com.google.relay.compose.RelayContainer
 import com.google.relay.compose.RelayContainerScope
 import com.google.relay.compose.RelayText
 import com.google.relay.compose.RelayVector
+import com.google.relay.compose.tappable
 
 /**
  * This composable was generated from the UI Package 'botones_usuario_sesion_iniciada'.
@@ -28,6 +29,8 @@ import com.google.relay.compose.RelayVector
 @Composable
 fun BotonesUsuarioSesionIniciada(
     modifier: Modifier = Modifier,
+    botonCerrarSesion: () -> Unit = {},
+    botonEliminarCuenta: () -> Unit = {},
     nombreUsuarioShowed: String
 ) {
     TopLevel(modifier = modifier) {
@@ -52,7 +55,7 @@ fun BotonesUsuarioSesionIniciada(
                 )
             )
         }
-        BotNCerrarSesion {
+        BotNCerrarSesion(botonCerrarSesion = botonCerrarSesion) {
             FondoCerrarSesion(
                 modifier = Modifier.boxAlign(
                     alignment = Alignment.Center,
@@ -72,7 +75,7 @@ fun BotonesUsuarioSesionIniciada(
                 )
             )
         }
-        BotNEliminarCuenta {
+        BotNEliminarCuenta(botonEliminarCuenta = botonEliminarCuenta) {
             FondoEliminarCuenta(
                 modifier = Modifier.boxAlign(
                     alignment = Alignment.Center,
@@ -99,7 +102,11 @@ fun BotonesUsuarioSesionIniciada(
 @Composable
 private fun BotonesUsuarioSesionIniciadaPreview() {
     MaterialTheme {
-        BotonesUsuarioSesionIniciada(nombreUsuarioShowed = "UserName17Char")
+        BotonesUsuarioSesionIniciada(
+            botonCerrarSesion = {},
+            botonEliminarCuenta = {},
+            nombreUsuarioShowed = "UserName17Char"
+        )
     }
 }
 
@@ -176,6 +183,7 @@ fun TextCerrarSesion(modifier: Modifier = Modifier) {
 
 @Composable
 fun BotNCerrarSesion(
+    botonCerrarSesion: () -> Unit,
     modifier: Modifier = Modifier,
     content: @Composable RelayContainerScope.() -> Unit
 ) {
@@ -184,7 +192,7 @@ fun BotNCerrarSesion(
         clipToParent = false,
         radius = 16.0,
         content = content,
-        modifier = modifier.requiredWidth(165.0.dp).requiredHeight(53.0.dp)
+        modifier = modifier.tappable(onTap = botonCerrarSesion).requiredWidth(165.0.dp).requiredHeight(53.0.dp)
     )
 }
 
@@ -217,6 +225,7 @@ fun TextEliminarCuenta(modifier: Modifier = Modifier) {
 
 @Composable
 fun BotNEliminarCuenta(
+    botonEliminarCuenta: () -> Unit,
     modifier: Modifier = Modifier,
     content: @Composable RelayContainerScope.() -> Unit
 ) {
@@ -225,7 +234,7 @@ fun BotNEliminarCuenta(
         clipToParent = false,
         radius = 16.0,
         content = content,
-        modifier = modifier.requiredWidth(165.0.dp).requiredHeight(53.0.dp)
+        modifier = modifier.tappable(onTap = botonEliminarCuenta).requiredWidth(165.0.dp).requiredHeight(53.0.dp)
     )
 }
 

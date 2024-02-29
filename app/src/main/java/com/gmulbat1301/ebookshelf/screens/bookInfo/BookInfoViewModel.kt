@@ -1,7 +1,5 @@
 package com.gmulbat1301.ebookshelf.screens.bookInfo
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import com.gmulbat1301.ebookshelf.dataClasses.Book
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore

@@ -25,6 +25,8 @@ import com.gmulbat1301.ebookshelf.screens.bookInfo.PantallaInformacionLibro
 import com.gmulbat1301.ebookshelf.screens.bookInfo.PantallaComentarios
 import com.gmulbat1301.ebookshelf.screens.showAndCreatePages.BookControllerViewModel
 import com.gmulbat1301.ebookshelf.ui.theme.EBookShelfTheme
+import com.gmulbat1301.ebookshelf.userSettings.PantallaUsuarioSesionIniciada
+import com.gmulbat1301.ebookshelf.userSettings.UserSettingsViewModel
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,6 +36,7 @@ class MainActivity : ComponentActivity() {
         val registerViewModel = RegisterViewModel()
         val bookControllerViewModel = BookControllerViewModel()
         val bookInfoViewModel = BookInfoViewModel()
+        val userSettingsViewModel = UserSettingsViewModel()
 
 
 
@@ -53,7 +56,8 @@ class MainActivity : ComponentActivity() {
 
                         composable(Routes.PantallaInicial.route) {
                             PantallaInicial(
-                                navController
+                                navController,
+                                true
                             )
                         }
 
@@ -143,6 +147,7 @@ class MainActivity : ComponentActivity() {
 
                         composable(Routes.PantallaUsuarioSesionIniciada.route) {
                             PantallaUsuarioSesionIniciada(
+                                userSettingsViewModel,
                                 navController
                             )
                         }

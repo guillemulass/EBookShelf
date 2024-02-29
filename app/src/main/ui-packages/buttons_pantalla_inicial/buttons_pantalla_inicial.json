@@ -5,7 +5,7 @@
     "type": "figma",
     "file": "f69MssDKV0P88F2aZQS1By",
     "node": "19:1071",
-    "version": "5246644804",
+    "version": "5247061427",
     "component-id": "b228ccbdd80e2219998687eb09df3f871e5a5817"
   },
   "default": "ButtonsPantallaInicial",
@@ -25,10 +25,6 @@
         "id": "Boton Crear Cuenta Pantalla Inicial"
       },
       {
-        "type": "group",
-        "id": "Boton Continuar Invitado Sesion Pantalla Inicial"
-      },
-      {
         "type": "vector",
         "id": "Boton Iniciar Sesion Pantalla InicialFondo"
       },
@@ -43,14 +39,6 @@
       {
         "type": "text",
         "id": "Boton Crear Cuenta Pantalla Inicial Text"
-      },
-      {
-        "type": "vector",
-        "id": "Boton Continuar Invitado Sesion Pantalla Inicial Fondo"
-      },
-      {
-        "type": "text",
-        "id": "Boton Continuar Invitado Sesion Pantalla Inicial Text"
       }
     ],
     "modes": {
@@ -68,8 +56,7 @@
             },
             "children": [
               "Boton Iniciar Sesion Pantalla Inicial",
-              "Boton Crear Cuenta Pantalla Inicial",
-              "Boton Continuar Invitado Sesion Pantalla Inicial"
+              "Boton Crear Cuenta Pantalla Inicial"
             ],
             "item-spacing": "20.0",
             "clip-content": "false"
@@ -113,27 +100,6 @@
             "children": [
               "Boton Crear Cuenta Pantalla Inicial Fondo",
               "Boton Crear Cuenta Pantalla Inicial Text"
-            ],
-            "clip-content": "false"
-          },
-          {
-            "id": "Boton Continuar Invitado Sesion Pantalla Inicial",
-            "border-radius": "16.0",
-            "tap-handler": "$Boton Continuar Invitado Sesion Pantalla Inicial ",
-            "size-constraints": {
-              "width-constraints": {
-                "sizing-mode": "fixed",
-                "value": "165.0"
-              },
-              "height-constraints": {
-                "sizing-mode": "fixed",
-                "value": "50.0"
-              }
-            },
-            "is-structured": "false",
-            "children": [
-              "Boton Continuar Invitado Sesion Pantalla Inicial Fondo",
-              "Boton Continuar Invitado Sesion Pantalla Inicial Text"
             ],
             "clip-content": "false"
           },
@@ -260,68 +226,6 @@
             "text-size": "17.0",
             "line-height": "1.31884765625",
             "typeface": "Roboto Mono"
-          },
-          {
-            "id": "Boton Continuar Invitado Sesion Pantalla Inicial Fondo",
-            "border-radius": "16.0",
-            "alignment": {
-              "horizontal": {
-                "attachment": "center",
-                "offset": "0.0"
-              },
-              "vertical": {
-                "attachment": "center",
-                "offset": "0.0"
-              }
-            },
-            "size-constraints": {
-              "width-constraints": {
-                "sizing-mode": "fixed",
-                "value": "165.0"
-              },
-              "height-constraints": {
-                "sizing-mode": "fixed",
-                "value": "50.0"
-              }
-            },
-            "vector-content": "boton_continuar_invitado_sesion_pantalla_inicial_fondo.svg"
-          },
-          {
-            "id": "Boton Continuar Invitado Sesion Pantalla Inicial Text",
-            "alignment": {
-              "horizontal": {
-                "attachment": "center",
-                "offset": "0.0"
-              },
-              "vertical": {
-                "attachment": "center",
-                "offset": "0.0"
-              }
-            },
-            "size-constraints": {
-              "width-constraints": {
-                "sizing-mode": "fixed",
-                "value": "165.0"
-              },
-              "height-constraints": {
-                "sizing-mode": "fixed",
-                "value": "50.0"
-              }
-            },
-            "font-weight": "700.0",
-            "color": {
-              "alpha": "1.0",
-              "hue": "0.0",
-              "saturation": "0.0",
-              "value": "0.0"
-            },
-            "text-content": "Continuar como invitado",
-            "overflow": "visible",
-            "max-lines": "-1",
-            "text-align-vertical": "center",
-            "text-size": "17.0",
-            "line-height": "1.31884765625",
-            "typeface": "Roboto Mono"
           }
         ]
       }
@@ -337,11 +241,6 @@
       "data-type": "void-callback",
       "required": false,
       "description": ""
-    },
-    "Boton Continuar Invitado Sesion Pantalla Inicial ": {
-      "data-type": "void-callback",
-      "required": false,
-      "description": ""
     }
   },
   "previews": [
@@ -349,7 +248,7 @@
       "design": "ButtonsPantallaInicial",
       "size": {
         "width": 165.0,
-        "height": 190.0
+        "height": 120.0
       }
     }
   ],

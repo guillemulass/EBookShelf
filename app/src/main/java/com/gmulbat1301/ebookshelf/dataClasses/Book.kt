@@ -8,5 +8,5 @@ data class Book(
     var resenaPersonal: String = "",
     var comentarios: String = ""
 ) {
-    constructor() : this("", "", "", "")
+    constructor() : this("", "", "", "","","")
 }

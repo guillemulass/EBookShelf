@@ -1,7 +1,7 @@
-#Thu Feb 29 02:59:29 CET 2024
-base.0=C\:\\Users\\guill\\OneDrive\\Escritorio\\EBookShelf\\app\\build\\intermediates\\dex\\debugAndroidTest\\mergeExtDexDebugAndroidTest\\classes.dex
-base.1=C\:\\Users\\guill\\OneDrive\\Escritorio\\EBookShelf\\app\\build\\intermediates\\dex\\debugAndroidTest\\mergeProjectDexDebugAndroidTest\\0\\classes.dex
-base.2=C\:\\Users\\guill\\OneDrive\\Escritorio\\EBookShelf\\app\\build\\intermediates\\dex\\debugAndroidTest\\mergeProjectDexDebugAndroidTest\\4\\classes.dex
+#Thu Feb 29 04:58:17 CET 2024
+base.0=C\:\\Users\\guill\\OneDrive\\Escritorio\\ebookshelf\\EBookShelf\\app\\build\\intermediates\\dex\\debugAndroidTest\\mergeExtDexDebugAndroidTest\\classes.dex
+base.1=C\:\\Users\\guill\\OneDrive\\Escritorio\\ebookshelf\\EBookShelf\\app\\build\\intermediates\\dex\\debugAndroidTest\\mergeProjectDexDebugAndroidTest\\0\\classes.dex
+base.2=C\:\\Users\\guill\\OneDrive\\Escritorio\\ebookshelf\\EBookShelf\\app\\build\\intermediates\\dex\\debugAndroidTest\\mergeProjectDexDebugAndroidTest\\4\\classes.dex
 path.0=classes.dex
 path.1=0/classes.dex
 path.2=4/classes.dex

@@ -125,7 +125,7 @@ fun BookListLazyColumn(navController: NavController, booksList: List<Book>) {
                     Modifier
                         .width(350.dp)
                         .clickable {
-                            navController.navigate("${Routes.PantallaInformacionLibro.route}?titulo=${book.titulo}&autor=${book.autor}&sinopsis=${book.sinopsis}&fechaSalida=${book.fechaSalida}&resenaPersonal=${book.resenaPersonal}&comentarios=${book.comentarios}")
+                            navController.navigate("${Routes.PantallaInformacionLibro.route}/${book.titulo}/${book.autor}/${book.sinopsis}/${book.fechaSalida}/${book.resenaPersonal}/${book.comentarios}")
                         },
                     tituloLibroCard = book.titulo,
                     sinopsisLibroCard = book.sinopsis

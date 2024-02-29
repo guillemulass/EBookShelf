@@ -22,6 +22,8 @@ import com.gmulbat1301.ebookshelf.R
 import com.gmulbat1301.ebookshelf.Routes.Routes
 import com.gmulbat1301.ebookshelf.botonsmall.BotonSmall
 import com.gmulbat1301.ebookshelf.headergeneral.HeaderGeneral
+//import com.gmulbat1301.ebookshelf.botonsmall.BotonSmall
+//import com.gmulbat1301.ebookshelf.headergeneral.HeaderGeneral
 import com.gmulbat1301.ebookshelf.informacionlibro.InformacionLibro
 
 @Composable
@@ -76,13 +78,12 @@ fun PantallaInformacionLibro(
 
             InformacionLibro(
                 tituloLibro = titulo,
-                portadaLibro = painterResource(R.drawable.informacion_libro_portada_libro),
                 reseAPersonalText = resenaPersonal,
                 comentariosText = comentarios,
                 sinopsisText = sinopsis,
                 autorText = autor,
                 fechaSalidaText = fechaSalida,
-                editTapped = {
+                botonEditarInfo = {
                     navController.navigate(
                         "pantallaComentarios/${titulo}/${autor}/${sinopsis}/${fechaSalida}/${resenaPersonal}/${comentarios}"
                     )

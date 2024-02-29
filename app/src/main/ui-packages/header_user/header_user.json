@@ -1,11 +1,11 @@
 {
   "name": "header_user",
-  "version": 33,
+  "version": 32,
   "source-key": {
     "type": "figma",
     "file": "f69MssDKV0P88F2aZQS1By",
     "node": "49:209",
-    "version": "5245484319",
+    "version": "5246491847",
     "component-id": "38b88887dedec49c7926e5d190c86b301d3cfe3f"
   },
   "default": "HeaderUser",
@@ -50,88 +50,88 @@
         "rules": [
           {
             "id": "top_level",
-            "is-structured": false,
+            "is-structured": "false",
             "children": [
               "User Logo",
               "EBookShelf",
               "Vector"
             ],
-            "clip-content": false
+            "clip-content": "false"
           },
           {
             "id": "User Logo",
             "margin": {
-              "left": 164.0,
-              "top": 64.0,
-              "right": 89.0
+              "left": "164.0",
+              "top": "64.0",
+              "right": "89.0"
             },
-            "is-structured": false,
+            "is-structured": "false",
             "children": [
               "User Logo Body 2",
               "User Logo Body",
               "User Logo Head",
               "User Logo Circunference"
             ],
-            "clip-content": false
+            "clip-content": "false"
           },
           {
             "id": "EBookShelf",
             "margin": {
-              "left": 76.0,
-              "bottom": 65.0
+              "left": "76.0",
+              "bottom": "65.0"
             },
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "proportional",
-                "value": 1.0
+                "value": "1.0"
               },
               "height-constraints": {
                 "sizing-mode": "proportional",
-                "value": 1.0
+                "value": "1.0"
               }
             },
-            "font-weight": 700.0,
+            "font-weight": "700.0",
             "color": {
-              "alpha": 1.0,
-              "hue": 0.0,
-              "saturation": 0.0,
-              "value": 0.8509803921568627
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "0.8509803921568627"
             },
             "text-content": "EBookShelf",
             "overflow": "visible",
-            "max-lines": -1,
+            "max-lines": "-1",
             "text-align-vertical": "center",
-            "text-size": 36.0,
-            "line-height": 1.31884765625,
+            "text-size": "36.0",
+            "line-height": "1.31884765625",
             "typeface": "Roboto Mono"
           },
           {
             "id": "Vector",
             "margin": {
-              "left": 3.8890762329101562,
-              "top": 12.000007629394531,
-              "right": 281.88907623291016,
-              "bottom": 76.99999237060547
+              "left": "3.8890762329101562",
+              "top": "12.000007629394531",
+              "right": "281.88907623291016",
+              "bottom": "76.99999237060547"
             },
             "alignment": {
               "horizontal": {
                 "attachment": "start",
-                "offset": 0.0
+                "offset": "0.0"
               },
               "vertical": {
                 "attachment": "start",
-                "offset": 0.0000152587890625
+                "offset": "0.0000152587890625"
               }
             },
             "tap-handler": "$arrowBackTapped",
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "proportional",
-                "value": 1.0
+                "value": "1.0"
               },
               "height-constraints": {
                 "sizing-mode": "proportional",
-                "value": 1.0
+                "value": "1.0"
               }
             },
             "vector-content": "vector.svg"
@@ -139,19 +139,19 @@
           {
             "id": "User Logo Body 2",
             "margin": {
-              "left": 16.0,
-              "top": 54.0,
-              "right": 16.0,
-              "bottom": 4.0
+              "left": "16.0",
+              "top": "54.0",
+              "right": "16.0",
+              "bottom": "4.0"
             },
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "proportional",
-                "value": 1.0
+                "value": "1.0"
               },
               "height-constraints": {
                 "sizing-mode": "proportional",
-                "value": 1.0
+                "value": "1.0"
               }
             },
             "vector-content": "user_logo_body_2.svg"
@@ -159,19 +159,19 @@
           {
             "id": "User Logo Body",
             "margin": {
-              "left": 11.0,
-              "top": 35.0,
-              "right": 12.0,
-              "bottom": 9.0
+              "left": "11.0",
+              "top": "35.0",
+              "right": "12.0",
+              "bottom": "9.0"
             },
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "proportional",
-                "value": 1.0
+                "value": "1.0"
               },
               "height-constraints": {
                 "sizing-mode": "proportional",
-                "value": 1.0
+                "value": "1.0"
               }
             },
             "vector-content": "user_logo_body.svg"
@@ -179,19 +179,19 @@
           {
             "id": "User Logo Head",
             "margin": {
-              "left": 21.0,
-              "top": 9.0,
-              "right": 21.0,
-              "bottom": 33.0
+              "left": "21.0",
+              "top": "9.0",
+              "right": "21.0",
+              "bottom": "33.0"
             },
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "proportional",
-                "value": 1.0
+                "value": "1.0"
               },
               "height-constraints": {
                 "sizing-mode": "proportional",
-                "value": 1.0
+                "value": "1.0"
               }
             },
             "vector-content": "user_logo_head.svg"
@@ -201,11 +201,11 @@
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "proportional",
-                "value": 1.0
+                "value": "1.0"
               },
               "height-constraints": {
                 "sizing-mode": "proportional",
-                "value": 1.0
+                "value": "1.0"
               }
             },
             "vector-content": "user_logo_circunference.svg"

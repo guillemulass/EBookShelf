@@ -1,11 +1,11 @@
 {
   "name": "header_pantalla_inicial",
-  "version": 33,
+  "version": 32,
   "source-key": {
     "type": "figma",
     "file": "f69MssDKV0P88F2aZQS1By",
     "node": "19:1070",
-    "version": "5245484319",
+    "version": "5245973593",
     "component-id": "b968b3f3027a089f87f966eed00c45cbfb7ede1a"
   },
   "default": "HeaderPantallaInicial",
@@ -34,21 +34,21 @@
         "rules": [
           {
             "id": "top_level",
-            "is-structured": false,
+            "is-structured": "false",
             "children": [
               "mdi:bookshelf",
               "EBookShelf"
             ],
-            "clip-content": false
+            "clip-content": "false"
           },
           {
             "id": "mdi:bookshelf",
             "margin": {
-              "left": 88.0,
-              "top": 64.0,
-              "right": 89.0
+              "left": "88.0",
+              "top": "64.0",
+              "right": "89.0"
             },
-            "is-structured": false,
+            "is-structured": "false",
             "children": [
               "Vector"
             ]
@@ -56,44 +56,44 @@
           {
             "id": "EBookShelf",
             "margin": {
-              "bottom": 65.0
+              "bottom": "65.0"
             },
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "proportional",
-                "value": 1.0
+                "value": "1.0"
               },
               "height-constraints": {
                 "sizing-mode": "proportional",
-                "value": 1.0
+                "value": "1.0"
               }
             },
-            "font-weight": 700.0,
+            "font-weight": "700.0",
             "color": {
-              "alpha": 1.0,
-              "hue": 0.0,
-              "saturation": 0.0,
-              "value": 0.8509803921568627
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "0.8509803921568627"
             },
             "text-content": "EBookShelf",
             "overflow": "visible",
-            "max-lines": -1,
+            "max-lines": "-1",
             "text-align-vertical": "center",
-            "text-size": 36.0,
-            "line-height": 1.31884765625,
+            "text-size": "36.0",
+            "line-height": "1.31884765625",
             "typeface": "Roboto Mono"
           },
           {
             "id": "Vector",
-            "margin": 8.125,
+            "margin": "8.125",
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "proportional",
-                "value": 1.0
+                "value": "1.0"
               },
               "height-constraints": {
                 "sizing-mode": "proportional",
-                "value": 1.0
+                "value": "1.0"
               }
             },
             "vector-content": "vector.svg"

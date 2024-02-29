@@ -1,12 +1,8 @@
 package com.gmulbat1301.ebookshelf.screens.bookInfo
 
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.gmulbat1301.ebookshelf.DataClasses.Book
+import com.gmulbat1301.ebookshelf.dataClasses.Book
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 

@@ -1,7 +1,7 @@
 package com.gmulbat1301.ebookshelf.screens.showAndCreatePages
 
 import androidx.lifecycle.ViewModel
-import com.gmulbat1301.ebookshelf.DataClasses.Book
+import com.gmulbat1301.ebookshelf.dataClasses.Book
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 

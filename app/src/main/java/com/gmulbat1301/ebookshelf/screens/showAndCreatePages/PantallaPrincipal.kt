@@ -21,12 +21,12 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import androidx.navigation.NavHostController
-import com.gmulbat1301.ebookshelf.DataClasses.Book
+import com.gmulbat1301.ebookshelf.dataClasses.Book
 import com.gmulbat1301.ebookshelf.R
 import com.gmulbat1301.ebookshelf.Routes.Routes
-import com.gmulbat1301.ebookshelf.botonsmall.BotonSmall
-import com.gmulbat1301.ebookshelf.headerpaginaprincipal.HeaderPaginaPrincipal
-import com.gmulbat1301.ebookshelf.panellibro.PanelLibro
+//import com.gmulbat1301.ebookshelf.botonsmall.BotonSmall
+//import com.gmulbat1301.ebookshelf.headerpaginaprincipal.HeaderPaginaPrincipal
+//import com.gmulbat1301.ebookshelf.panellibro.PanelLibro
 import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.auth
@@ -34,6 +34,9 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import com.gmulbat1301.ebookshelf.botonsmall.BotonSmall
+import com.gmulbat1301.ebookshelf.headerpaginaprincipal.HeaderPaginaPrincipal
+import com.gmulbat1301.ebookshelf.panellibro.PanelLibro
 
 @Composable
 fun PantallaPrincipal(
@@ -125,8 +128,9 @@ fun BookListLazyColumn(navController: NavController, booksList: List<Book>) {
                         .width(350.dp)
                         .clickable {
                             navController.navigate(
-                                "pantallaInformacionLibro/${book.titulo}/${book.autor}/${book.sinopsis}/${book.fechaSalida}/${book.resenaPersonal}/${book.comentarios}"
+                                "pantallaInformacionLibro?titulo=${book.titulo}&autor=${book.autor}&sinopsis=${book.sinopsis}&fechaSalida=${book.fechaSalida}&resenaPersonal=${book.resenaPersonal}&comentarios=${book.comentarios}"
                             )
+
                         },
                     tituloLibroCard = book.titulo,
                     sinopsisLibroCard = book.sinopsis

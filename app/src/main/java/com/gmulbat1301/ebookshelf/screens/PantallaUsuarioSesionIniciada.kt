@@ -22,6 +22,8 @@ import com.gmulbat1301.ebookshelf.R
 import com.gmulbat1301.ebookshelf.Routes.Routes
 import com.gmulbat1301.ebookshelf.botonesusuariosesioniniciada.BotonesUsuarioSesionIniciada
 import com.gmulbat1301.ebookshelf.headeruser.HeaderUser
+//import com.gmulbat1301.ebookshelf.botonesusuariosesioniniciada.BotonesUsuarioSesionIniciada
+//import com.gmulbat1301.ebookshelf.headeruser.HeaderUser
 import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.auth
@@ -55,6 +57,7 @@ fun PantallaUsuarioSesionIniciada(
                     top = 35.dp
                 )
         ) {
+
             Box(
                 Modifier.padding(end = 65.dp)
             ) {

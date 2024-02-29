@@ -38,11 +38,12 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import com.gmulbat1301.ebookshelf.R
 import com.gmulbat1301.ebookshelf.Routes.Routes
+//import com.gmulbat1301.ebookshelf.botonsmall.BotonSmall
+//import com.gmulbat1301.ebookshelf.headergeneral.HeaderGeneral
+import androidx.compose.ui.platform.LocalContext
 import com.gmulbat1301.ebookshelf.botonsmall.BotonSmall
 import com.gmulbat1301.ebookshelf.headergeneral.HeaderGeneral
-import androidx.compose.ui.platform.LocalContext
 
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun PantallaCrearCuenta(
     registerViewmodel: RegisterViewModel,

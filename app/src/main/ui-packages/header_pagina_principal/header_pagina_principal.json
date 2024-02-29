@@ -1,11 +1,11 @@
 {
   "name": "header_pagina_principal",
-  "version": 33,
+  "version": 32,
   "source-key": {
     "type": "figma",
     "file": "f69MssDKV0P88F2aZQS1By",
     "node": "42:38",
-    "version": "5245484319",
+    "version": "5246515046",
     "component-id": "9a6d95c826fac00993c13b85111f1a9dfe25c38f"
   },
   "default": "Header Pagina Principal",
@@ -68,22 +68,22 @@
               "EBookShelf",
               "User Logo"
             ],
-            "item-spacing": 16.0,
-            "clip-content": false
+            "item-spacing": "16.0",
+            "clip-content": "false"
           },
           {
             "id": "mdi:bookshelf",
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "fixed",
-                "value": 65.0
+                "value": "65.0"
               },
               "height-constraints": {
                 "sizing-mode": "fixed",
-                "value": 65.0
+                "value": "65.0"
               }
             },
-            "is-structured": false,
+            "is-structured": "false",
             "children": [
               "Vector"
             ]
@@ -93,26 +93,26 @@
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "fixed",
-                "value": 217.0
+                "value": "217.0"
               },
               "height-constraints": {
                 "sizing-mode": "fixed",
-                "value": 64.0
+                "value": "64.0"
               }
             },
-            "font-weight": 700.0,
+            "font-weight": "700.0",
             "color": {
-              "alpha": 1.0,
-              "hue": 0.0,
-              "saturation": 0.0,
-              "value": 0.8509803921568627
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "0.8509803921568627"
             },
             "text-content": "EBookShelf",
             "overflow": "visible",
-            "max-lines": -1,
+            "max-lines": "-1",
             "text-align-vertical": "center",
-            "text-size": 36.0,
-            "line-height": 1.31884765625,
+            "text-size": "36.0",
+            "line-height": "1.31884765625",
             "typeface": "Roboto Mono"
           },
           {
@@ -121,33 +121,33 @@
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "fixed",
-                "value": 65.0
+                "value": "65.0"
               },
               "height-constraints": {
                 "sizing-mode": "fixed",
-                "value": 65.0
+                "value": "65.0"
               }
             },
-            "is-structured": false,
+            "is-structured": "false",
             "children": [
               "User Logo Body 2",
               "User Logo Body",
               "User Logo Head",
               "User Logo Circunference"
             ],
-            "clip-content": false
+            "clip-content": "false"
           },
           {
             "id": "Vector",
-            "margin": 8.125,
+            "margin": "8.125",
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "proportional",
-                "value": 1.0
+                "value": "1.0"
               },
               "height-constraints": {
                 "sizing-mode": "proportional",
-                "value": 1.0
+                "value": "1.0"
               }
             },
             "vector-content": "vector.svg"
@@ -157,21 +157,21 @@
             "alignment": {
               "horizontal": {
                 "attachment": "center",
-                "offset": 0.0
+                "offset": "0.0"
               },
               "vertical": {
                 "attachment": "center",
-                "offset": 25.0
+                "offset": "25.0"
               }
             },
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "fixed",
-                "value": 33.0
+                "value": "33.0"
               },
               "height-constraints": {
                 "sizing-mode": "fixed",
-                "value": 7.0
+                "value": "7.0"
               }
             },
             "vector-content": "user_logo_body_2.svg"
@@ -181,21 +181,21 @@
             "alignment": {
               "horizontal": {
                 "attachment": "center",
-                "offset": -0.5
+                "offset": "-0.5"
               },
               "vertical": {
                 "attachment": "center",
-                "offset": 13.0
+                "offset": "13.0"
               }
             },
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "fixed",
-                "value": 42.0
+                "value": "42.0"
               },
               "height-constraints": {
                 "sizing-mode": "fixed",
-                "value": 21.0
+                "value": "21.0"
               }
             },
             "vector-content": "user_logo_body.svg"
@@ -205,21 +205,21 @@
             "alignment": {
               "horizontal": {
                 "attachment": "center",
-                "offset": 0.0
+                "offset": "0.0"
               },
               "vertical": {
                 "attachment": "center",
-                "offset": -12.0
+                "offset": "-12.0"
               }
             },
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "fixed",
-                "value": 23.0
+                "value": "23.0"
               },
               "height-constraints": {
                 "sizing-mode": "fixed",
-                "value": 23.0
+                "value": "23.0"
               }
             },
             "vector-content": "user_logo_head.svg"
@@ -229,21 +229,21 @@
             "alignment": {
               "horizontal": {
                 "attachment": "center",
-                "offset": 0.0
+                "offset": "0.0"
               },
               "vertical": {
                 "attachment": "center",
-                "offset": 0.0
+                "offset": "0.0"
               }
             },
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "fixed",
-                "value": 65.0
+                "value": "65.0"
               },
               "height-constraints": {
                 "sizing-mode": "fixed",
-                "value": 65.0
+                "value": "65.0"
               }
             },
             "vector-content": "user_logo_circunference.svg"

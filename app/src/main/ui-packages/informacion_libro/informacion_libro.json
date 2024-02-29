@@ -1,11 +1,11 @@
 {
   "name": "informacion_libro",
-  "version": 33,
+  "version": 32,
   "source-key": {
     "type": "figma",
     "file": "f69MssDKV0P88F2aZQS1By",
     "node": "51:224",
-    "version": "5245484319",
+    "version": "5245973593",
     "component-id": "9b63a26e508088dcbfc92f5acd56b534c625bd12"
   },
   "default": "InformacionLibro",
@@ -105,72 +105,72 @@
               "InformacionLibroGeneral",
               "BotonEditarInfo"
             ],
-            "item-spacing": 24.0,
-            "clip-content": false
+            "item-spacing": "24.0",
+            "clip-content": "false"
           },
           {
             "id": "TituloLibro",
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "fixed",
-                "value": 330.0
+                "value": "330.0"
               },
               "height-constraints": {
                 "sizing-mode": "shrink"
               }
             },
-            "font-weight": 500.0,
+            "font-weight": "500.0",
             "color": {
-              "alpha": 1.0,
-              "hue": 0.0,
-              "saturation": 0.0,
-              "value": 0.8509803921568627
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "0.8509803921568627"
             },
             "text-content": "$TituloLibro",
             "overflow": "visible",
-            "max-lines": -1,
+            "max-lines": "-1",
             "text-align-vertical": "center",
-            "text-size": 34.0,
-            "line-height": 1.31884765625,
+            "text-size": "34.0",
+            "line-height": "1.31884765625",
             "typeface": "Roboto Mono"
           },
           {
             "id": "Portada Libro",
-            "presence": false,
-            "border-radius": 16.0,
+            "presence": "false",
+            "border-radius": "16.0",
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "fixed",
-                "value": 217.0
+                "value": "217.0"
               },
               "height-constraints": {
                 "sizing-mode": "fixed",
-                "value": 334.0
+                "value": "334.0"
               }
             },
-            "stroke-width": 2.0,
+            "stroke-width": "2.0",
             "stroke-alignment": "outside",
             "stroke-color": {
-              "alpha": 1.0,
-              "hue": 0.0,
-              "saturation": 0.0,
-              "value": 0.8509803921568627
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "0.8509803921568627"
             },
             "scale": "cover"
           },
           {
             "id": "RellenablesPersonales",
             "padding": {
-              "left": 16.0,
-              "top": 8.0,
-              "right": 16.0,
-              "bottom": 8.0
+              "left": "16.0",
+              "top": "8.0",
+              "right": "16.0",
+              "bottom": "8.0"
             },
-            "border-radius": 16.0,
+            "border-radius": "16.0",
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "fixed",
-                "value": 352.0
+                "value": "352.0"
               },
               "height-constraints": {
                 "sizing-mode": "shrink"
@@ -183,23 +183,23 @@
               "Comentarios",
               "ComentariosText"
             ],
-            "item-spacing": 10.0,
+            "item-spacing": "10.0",
             "background-color": {
-              "alpha": 1.0,
-              "hue": 0.0,
-              "saturation": 0.0,
-              "value": 0.8509803921568627
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "0.8509803921568627"
             },
-            "clip-content": false
+            "clip-content": "false"
           },
           {
             "id": "InformacionLibroGeneral",
-            "padding": 8.0,
-            "border-radius": 16.0,
+            "padding": "8.0",
+            "border-radius": "16.0",
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "fixed",
-                "value": 344.0
+                "value": "344.0"
               },
               "height-constraints": {
                 "sizing-mode": "shrink"
@@ -214,51 +214,57 @@
               "FechaSalidaText"
             ],
             "background-color": {
-              "alpha": 1.0,
-              "hue": 0.0,
-              "saturation": 0.0,
-              "value": 0.8509803921568627
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "0.8509803921568627"
             }
           },
           {
             "id": "BotonEditarInfo",
-            "border-radius": 16.0,
+            "border-radius": "16.0",
             "tap-handler": "$BotonEditarInfo",
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "fixed",
-                "value": 165.0
+                "value": "165.0"
               },
               "height-constraints": {
                 "sizing-mode": "fixed",
-                "value": 50.0
+                "value": "50.0"
               }
             },
-            "is-structured": false,
+            "is-structured": "false",
             "children": [
               "Fondo",
               "Text"
             ],
-            "clip-content": false
+            "clip-content": "false"
           },
           {
             "id": "ReseñaPersonal",
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "fixed",
-                "value": 280.0
+                "value": "280.0"
               },
               "height-constraints": {
                 "sizing-mode": "shrink"
               }
             },
-            "font-weight": 500.0,
+            "font-weight": "500.0",
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "0.0"
+            },
             "text-content": "Reseña personal",
             "overflow": "visible",
-            "max-lines": -1,
+            "max-lines": "-1",
             "text-align": "left",
             "text-align-vertical": "center",
-            "text-size": 27.0,
+            "text-size": "27.0",
             "typeface": "Roboto Mono"
           },
           {
@@ -266,20 +272,26 @@
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "fixed",
-                "value": 320.0
+                "value": "320.0"
               },
               "height-constraints": {
                 "sizing-mode": "shrink"
               }
             },
-            "font-weight": 500.0,
+            "font-weight": "500.0",
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "0.0"
+            },
             "text-content": "$ReseñaPersonalText",
             "overflow": "visible",
-            "max-lines": -1,
+            "max-lines": "-1",
             "text-align": "left",
             "text-align-vertical": "center",
-            "text-size": 20.0,
-            "line-height": 1.31884765625,
+            "text-size": "20.0",
+            "line-height": "1.31884765625",
             "typeface": "Roboto Mono"
           },
           {
@@ -287,21 +299,27 @@
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "fixed",
-                "value": 320.0
+                "value": "320.0"
               },
               "height-constraints": {
                 "sizing-mode": "fixed",
-                "value": 53.0
+                "value": "53.0"
               }
             },
-            "font-weight": 500.0,
+            "font-weight": "500.0",
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "0.0"
+            },
             "text-content": "Comentarios",
             "overflow": "visible",
-            "max-lines": -1,
+            "max-lines": "-1",
             "text-align": "left",
             "text-align-vertical": "center",
-            "text-size": 27.0,
-            "line-height": 1.31884765625,
+            "text-size": "27.0",
+            "line-height": "1.31884765625",
             "typeface": "Roboto Mono"
           },
           {
@@ -309,20 +327,26 @@
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "fixed",
-                "value": 320.0
+                "value": "320.0"
               },
               "height-constraints": {
                 "sizing-mode": "shrink"
               }
             },
-            "font-weight": 500.0,
+            "font-weight": "500.0",
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "0.0"
+            },
             "text-content": "$ComentariosText",
             "overflow": "visible",
-            "max-lines": -1,
+            "max-lines": "-1",
             "text-align": "left",
             "text-align-vertical": "center",
-            "text-size": 20.0,
-            "line-height": 1.31884765625,
+            "text-size": "20.0",
+            "line-height": "1.31884765625",
             "typeface": "Roboto Mono"
           },
           {
@@ -330,21 +354,27 @@
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "fixed",
-                "value": 320.0
+                "value": "320.0"
               },
               "height-constraints": {
                 "sizing-mode": "fixed",
-                "value": 52.0
+                "value": "52.0"
               }
             },
-            "font-weight": 500.0,
+            "font-weight": "500.0",
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "0.0"
+            },
             "text-content": "Sinopsis",
             "overflow": "visible",
-            "max-lines": -1,
+            "max-lines": "-1",
             "text-align": "left",
             "text-align-vertical": "center",
-            "text-size": 28.0,
-            "line-height": 1.31884765625,
+            "text-size": "28.0",
+            "line-height": "1.31884765625",
             "typeface": "Roboto Mono"
           },
           {
@@ -352,20 +382,26 @@
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "fixed",
-                "value": 320.0
+                "value": "320.0"
               },
               "height-constraints": {
                 "sizing-mode": "shrink"
               }
             },
-            "font-weight": 500.0,
+            "font-weight": "500.0",
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "0.0"
+            },
             "text-content": "$SinopsisText",
             "overflow": "visible",
-            "max-lines": -1,
+            "max-lines": "-1",
             "text-align": "left",
             "text-align-vertical": "center",
-            "text-size": 15.0,
-            "line-height": 1.31884765625,
+            "text-size": "15.0",
+            "line-height": "1.31884765625",
             "typeface": "Roboto Mono"
           },
           {
@@ -373,21 +409,27 @@
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "fixed",
-                "value": 320.0
+                "value": "320.0"
               },
               "height-constraints": {
                 "sizing-mode": "fixed",
-                "value": 52.0
+                "value": "52.0"
               }
             },
-            "font-weight": 500.0,
+            "font-weight": "500.0",
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "0.0"
+            },
             "text-content": "Autor:",
             "overflow": "visible",
-            "max-lines": -1,
+            "max-lines": "-1",
             "text-align": "left",
             "text-align-vertical": "center",
-            "text-size": 28.0,
-            "line-height": 1.31884765625,
+            "text-size": "28.0",
+            "line-height": "1.31884765625",
             "typeface": "Roboto Mono"
           },
           {
@@ -395,20 +437,26 @@
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "fixed",
-                "value": 320.0
+                "value": "320.0"
               },
               "height-constraints": {
                 "sizing-mode": "shrink"
               }
             },
-            "font-weight": 500.0,
+            "font-weight": "500.0",
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "0.0"
+            },
             "text-content": "$AutorText",
             "overflow": "visible",
-            "max-lines": -1,
+            "max-lines": "-1",
             "text-align": "left",
             "text-align-vertical": "center",
-            "text-size": 20.0,
-            "line-height": 1.31884765625,
+            "text-size": "20.0",
+            "line-height": "1.31884765625",
             "typeface": "Roboto Mono"
           },
           {
@@ -416,21 +464,27 @@
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "fixed",
-                "value": 320.0
+                "value": "320.0"
               },
               "height-constraints": {
                 "sizing-mode": "fixed",
-                "value": 52.0
+                "value": "52.0"
               }
             },
-            "font-weight": 500.0,
+            "font-weight": "500.0",
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "0.0"
+            },
             "text-content": "Fecha de Salida:",
             "overflow": "visible",
-            "max-lines": -1,
+            "max-lines": "-1",
             "text-align": "left",
             "text-align-vertical": "center",
-            "text-size": 28.0,
-            "line-height": 1.31884765625,
+            "text-size": "28.0",
+            "line-height": "1.31884765625",
             "typeface": "Roboto Mono"
           },
           {
@@ -438,43 +492,49 @@
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "fixed",
-                "value": 320.0
+                "value": "320.0"
               },
               "height-constraints": {
                 "sizing-mode": "shrink"
               }
             },
-            "font-weight": 500.0,
+            "font-weight": "500.0",
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "0.0"
+            },
             "text-content": "$FechaSalidaText",
             "overflow": "visible",
-            "max-lines": -1,
+            "max-lines": "-1",
             "text-align": "left",
             "text-align-vertical": "center",
-            "text-size": 20.0,
-            "line-height": 1.31884765625,
+            "text-size": "20.0",
+            "line-height": "1.31884765625",
             "typeface": "Roboto Mono"
           },
           {
             "id": "Fondo",
-            "border-radius": 16.0,
+            "border-radius": "16.0",
             "alignment": {
               "horizontal": {
                 "attachment": "center",
-                "offset": 0.0
+                "offset": "0.0"
               },
               "vertical": {
                 "attachment": "center",
-                "offset": 0.0
+                "offset": "0.0"
               }
             },
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "fixed",
-                "value": 165.0
+                "value": "165.0"
               },
               "height-constraints": {
                 "sizing-mode": "fixed",
-                "value": 50.0
+                "value": "50.0"
               }
             },
             "vector-content": "fondo.svg"
@@ -484,30 +544,36 @@
             "alignment": {
               "horizontal": {
                 "attachment": "center",
-                "offset": 0.0
+                "offset": "0.0"
               },
               "vertical": {
                 "attachment": "center",
-                "offset": 0.0
+                "offset": "0.0"
               }
             },
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "fixed",
-                "value": 165.0
+                "value": "165.0"
               },
               "height-constraints": {
                 "sizing-mode": "fixed",
-                "value": 50.0
+                "value": "50.0"
               }
             },
-            "font-weight": 700.0,
+            "font-weight": "700.0",
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "0.0"
+            },
             "text-content": "Editar Informacion",
             "overflow": "visible",
-            "max-lines": -1,
+            "max-lines": "-1",
             "text-align-vertical": "center",
-            "text-size": 17.0,
-            "line-height": 1.31884765625,
+            "text-size": "17.0",
+            "line-height": "1.31884765625",
             "typeface": "Roboto Mono"
           }
         ]

@@ -11,9 +11,6 @@ class BookInfoViewModel {
     private val db = FirebaseFirestore.getInstance()
     private val auth: FirebaseAuth = FirebaseAuth.getInstance()
 
-    private val _editingTexts  = MutableLiveData<Boolean>()
-    val editingTexts : LiveData<Boolean> = _editingTexts
-
     fun saveData(titulo : String, autor : String, sinopsis : String, fechaSalida : String, resenaPersonal : String, comentarios : String){
         val bookAdd = Book(titulo, autor, sinopsis, fechaSalida, resenaPersonal, comentarios)
 
@@ -37,10 +34,6 @@ class BookInfoViewModel {
 
         // Agregar el libro a la colección "books"
         booksCollectionRef.document(titulo).delete()
-    }
-
-    fun editTexts(){
-        _editingTexts.value = _editingTexts.value != true
     }
 
 

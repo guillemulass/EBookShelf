@@ -87,7 +87,7 @@ fun PantallaInformacionLibro(
                     navController.navigate(
                         "pantallaComentarios/${titulo}/${autor}/${sinopsis}/${fechaSalida}/${resenaPersonal}/${comentarios}"
                     )
-                        }
+                }
             )
 
             Spacer(modifier = Modifier.height(30.dp))

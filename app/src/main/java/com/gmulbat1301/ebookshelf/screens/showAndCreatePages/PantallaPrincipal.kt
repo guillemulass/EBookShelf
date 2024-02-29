@@ -24,9 +24,6 @@ import androidx.navigation.NavHostController
 import com.gmulbat1301.ebookshelf.dataClasses.Book
 import com.gmulbat1301.ebookshelf.R
 import com.gmulbat1301.ebookshelf.Routes.Routes
-//import com.gmulbat1301.ebookshelf.botonsmall.BotonSmall
-//import com.gmulbat1301.ebookshelf.headerpaginaprincipal.HeaderPaginaPrincipal
-//import com.gmulbat1301.ebookshelf.panellibro.PanelLibro
 import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.auth
@@ -37,6 +34,7 @@ import androidx.compose.runtime.setValue
 import com.gmulbat1301.ebookshelf.botonsmall.BotonSmall
 import com.gmulbat1301.ebookshelf.headerpaginaprincipal.HeaderPaginaPrincipal
 import com.gmulbat1301.ebookshelf.panellibro.PanelLibro
+
 
 @Composable
 fun PantallaPrincipal(
@@ -127,10 +125,7 @@ fun BookListLazyColumn(navController: NavController, booksList: List<Book>) {
                     Modifier
                         .width(350.dp)
                         .clickable {
-                            navController.navigate(
-                                "pantallaInformacionLibro?titulo=${book.titulo}&autor=${book.autor}&sinopsis=${book.sinopsis}&fechaSalida=${book.fechaSalida}&resenaPersonal=${book.resenaPersonal}&comentarios=${book.comentarios}"
-                            )
-
+                            navController.navigate("${Routes.PantallaInformacionLibro.route}?titulo=${book.titulo}&autor=${book.autor}&sinopsis=${book.sinopsis}&fechaSalida=${book.fechaSalida}&resenaPersonal=${book.resenaPersonal}&comentarios=${book.comentarios}")
                         },
                     tituloLibroCard = book.titulo,
                     sinopsisLibroCard = book.sinopsis

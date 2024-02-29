@@ -73,7 +73,6 @@ fun PantallaUsuarioSesionIniciada(
 
             Spacer(modifier = Modifier.height(50.dp))
 
-
             val auth: FirebaseAuth = Firebase.auth
 
             BotonesUsuarioSesionIniciada(

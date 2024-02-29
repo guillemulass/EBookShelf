@@ -77,6 +77,21 @@ class MainActivity : ComponentActivity() {
                                 navController
                             )
                         }
+/*
+                        composable(Routes.PantallaInformacionLibro.route) {
+                            PantallaInformacionLibro(
+                                bookControllerViewModel,
+                                navController
+                            )
+                        }
+
+                        composable(Routes.PantallaComentarios.route) {
+                            PantallaComentarios(
+                                bookControllerViewModel,
+                                navController
+                            )
+                        }
+ */
 
                         composable(
                             Routes.PantallaInformacionLibro.route + "/{titulo}/{autor}/{sinopsis}/{fechaSalida}/{resenaPersonal}/{comentarios}",

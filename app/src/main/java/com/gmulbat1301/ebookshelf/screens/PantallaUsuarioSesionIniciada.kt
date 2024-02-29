@@ -79,10 +79,7 @@ fun PantallaUsuarioSesionIniciada(
                 Modifier
                     .width(330.dp)
                     .height(209.dp),
-                nombreUsuarioShowed = auth.currentUser?.email!!,
-                editTapped = {
-                    TODO()
-                }
+                nombreUsuarioShowed = auth.currentUser?.email.toString(),
             )
 
             Spacer(modifier = Modifier.height(30.dp))

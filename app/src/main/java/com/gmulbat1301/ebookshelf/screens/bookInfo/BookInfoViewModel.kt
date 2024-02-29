@@ -15,7 +15,7 @@ class BookInfoViewModel {
         val bookAdd = Book(titulo, autor, sinopsis, fechaSalida, resenaPersonal, comentarios)
 
         // Obtener una referencia a la colección "usersBooks" para el usuario actual
-        val userBooksRef = db.collection("users").document(auth.currentUser?.email!!)
+        val userBooksRef = db.collection("Users").document(auth.currentUser?.email!!)
 
         // Crear una colección llamada "books" dentro del documento del usuario
         val booksCollectionRef = userBooksRef.collection("books")
@@ -27,7 +27,7 @@ class BookInfoViewModel {
 
     fun deleteData(titulo : String){
         // Obtener una referencia a la colección "usersBooks" para el usuario actual
-        val userBooksRef = db.collection("users").document(auth.currentUser?.email!!)
+        val userBooksRef = db.collection("Users").document(auth.currentUser?.email!!)
 
         // Crear una colección llamada "books" dentro del documento del usuario
         val booksCollectionRef = userBooksRef.collection("books")

@@ -1,9 +1,5 @@
 package com.gmulbat1301.ebookshelf.botonesusuariosesioniniciada
 
-import androidx.compose.foundation.layout.PaddingValues
-import androidx.compose.foundation.layout.fillMaxHeight
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.requiredHeight
 import androidx.compose.foundation.layout.requiredWidth
 import androidx.compose.foundation.layout.wrapContentHeight
@@ -24,7 +20,6 @@ import com.google.relay.compose.RelayContainer
 import com.google.relay.compose.RelayContainerScope
 import com.google.relay.compose.RelayText
 import com.google.relay.compose.RelayVector
-import com.google.relay.compose.tappable
 
 /**
  * This composable was generated from the UI Package 'botones_usuario_sesion_iniciada'.
@@ -33,8 +28,7 @@ import com.google.relay.compose.tappable
 @Composable
 fun BotonesUsuarioSesionIniciada(
     modifier: Modifier = Modifier,
-    nombreUsuarioShowed: String,
-    editTapped: () -> Unit = {}
+    nombreUsuarioShowed: String
 ) {
     TopLevel(modifier = modifier) {
         MostadorNombreUsuario {
@@ -52,25 +46,11 @@ fun BotonesUsuarioSesionIniciada(
                 modifier = Modifier.boxAlign(
                     alignment = Alignment.Center,
                     offset = DpOffset(
-                        x = -14.0.dp,
+                        x = 0.0.dp,
                         y = 0.0.dp
                     )
                 )
             )
-            FluentEdit32Regular(
-                modifier = Modifier.boxAlign(
-                    alignment = Alignment.TopStart,
-                    offset = DpOffset(
-                        x = 288.0.dp,
-                        y = 7.0.dp
-                    )
-                )
-            ) {
-                Vector(
-                    editTapped = editTapped,
-                    modifier = Modifier.rowWeight(1.0f).columnWeight(1.0f)
-                )
-            }
         }
         BotNCerrarSesion {
             FondoCerrarSesion(
@@ -119,10 +99,7 @@ fun BotonesUsuarioSesionIniciada(
 @Composable
 private fun BotonesUsuarioSesionIniciadaPreview() {
     MaterialTheme {
-        BotonesUsuarioSesionIniciada(
-            nombreUsuarioShowed = "UserName17Char",
-            editTapped = {}
-        )
+        BotonesUsuarioSesionIniciada(nombreUsuarioShowed = "UserName17Char")
     }
 }
 
@@ -152,37 +129,7 @@ fun NombreUsuario(
         height = 1.31884765625.em,
         fontWeight = FontWeight(700.0.toInt()),
         maxLines = -1,
-        modifier = modifier.requiredWidth(274.0.dp).requiredHeight(53.0.dp).wrapContentHeight(align = Alignment.CenterVertically)
-    )
-}
-
-@Composable
-fun Vector(
-    editTapped: () -> Unit,
-    modifier: Modifier = Modifier
-) {
-    RelayVector(
-        vector = painterResource(R.drawable.botones_usuario_sesion_iniciada_vector),
-        modifier = modifier.padding(
-            paddingValues = PaddingValues(
-                start = 2.37451171875.dp,
-                top = 2.37689208984375.dp,
-                end = 0.62548828125.dp,
-                bottom = 0.62310791015625.dp
-            )
-        ).tappable(onTap = editTapped).fillMaxWidth(1.0f).fillMaxHeight(1.0f)
-    )
-}
-
-@Composable
-fun FluentEdit32Regular(
-    modifier: Modifier = Modifier,
-    content: @Composable RelayContainerScope.() -> Unit
-) {
-    RelayContainer(
-        isStructured = false,
-        content = content,
-        modifier = modifier.requiredWidth(38.0.dp).requiredHeight(38.0.dp)
+        modifier = modifier.requiredWidth(330.0.dp).requiredHeight(53.0.dp).wrapContentHeight(align = Alignment.CenterVertically)
     )
 }
 
@@ -194,6 +141,7 @@ fun MostadorNombreUsuario(
     RelayContainer(
         isStructured = false,
         clipToParent = false,
+        radius = 16.0,
         content = content,
         modifier = modifier.requiredWidth(330.0.dp).requiredHeight(53.0.dp)
     )

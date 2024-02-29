@@ -29,7 +29,7 @@ com.gmulbat1301.ebookshelf.test.app-startup-runtime-1.1.1-27 C:\Users\guill\.gra
 com.gmulbat1301.ebookshelf.test.app-lifecycle-viewmodel-savedstate-2.7.0-28 C:\Users\guill\.gradle\caches\transforms-3\eb7b2eefa1978c79d4f994812049092c\transformed\lifecycle-viewmodel-savedstate-2.7.0\res
 com.gmulbat1301.ebookshelf.test.app-savedstate-ktx-1.2.1-29 C:\Users\guill\.gradle\caches\transforms-3\eb8227700e7366c7cfc85037dd6afb66\transformed\savedstate-ktx-1.2.1\res
 com.gmulbat1301.ebookshelf.test.app-activity-compose-1.8.2-30 C:\Users\guill\.gradle\caches\transforms-3\fb8e2ffb24646a2e9ba2dfc7fb587438\transformed\activity-compose-1.8.2\res
-com.gmulbat1301.ebookshelf.test.app-androidTest-31 C:\Users\guill\OneDrive\Escritorio\EBookShelf\app\build\generated\res\resValues\androidTest\debug
-com.gmulbat1301.ebookshelf.test.app-mergeDebugAndroidTestResources-32 C:\Users\guill\OneDrive\Escritorio\EBookShelf\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
-com.gmulbat1301.ebookshelf.test.app-mergeDebugAndroidTestResources-33 C:\Users\guill\OneDrive\Escritorio\EBookShelf\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
-com.gmulbat1301.ebookshelf.test.app-merged_res-34 C:\Users\guill\OneDrive\Escritorio\EBookShelf\app\build\intermediates\merged_res\debugAndroidTest
+com.gmulbat1301.ebookshelf.test.app-androidTest-31 C:\Users\guill\OneDrive\Escritorio\ebookshelf\EBookShelf\app\build\generated\res\resValues\androidTest\debug
+com.gmulbat1301.ebookshelf.test.app-mergeDebugAndroidTestResources-32 C:\Users\guill\OneDrive\Escritorio\ebookshelf\EBookShelf\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.gmulbat1301.ebookshelf.test.app-mergeDebugAndroidTestResources-33 C:\Users\guill\OneDrive\Escritorio\ebookshelf\EBookShelf\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.gmulbat1301.ebookshelf.test.app-merged_res-34 C:\Users\guill\OneDrive\Escritorio\ebookshelf\EBookShelf\app\build\intermediates\merged_res\debugAndroidTest

@@ -23,6 +23,7 @@ class RegisterViewModel : ViewModel() {
         private set
     var email by mutableStateOf("")
         private set
+
     private var passw by mutableStateOf("")
 
     fun registerUser(
@@ -30,12 +31,10 @@ class RegisterViewModel : ViewModel() {
         onFailure:() -> Unit
     ) {
 
-        saveUserName()
-
         viewModelScope.launch {
             try {
                 auth.createUserWithEmailAndPassword(email,passw).addOnCompleteListener {
-                    saveUser(UserModel(username, email))
+                    saveUser(UserModel(email, username))
                     onSuccess()
                 }.addOnFailureListener {
                     onFailure()
@@ -49,14 +48,6 @@ class RegisterViewModel : ViewModel() {
 
     }
 
-    private fun saveUserName(){
-
-        // Obtener una referencia a la colección "usersBooks" para el usuario actual
-        val userBooksRef = db.collection("users").document(auth.currentUser?.email!!)
-
-        // Agregar el libro a la colección "books"
-        userBooksRef.set(username)
-    }
 
     private fun saveUser(userToAdd:UserModel) {
         viewModelScope.launch {

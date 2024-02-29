@@ -5,7 +5,7 @@
     "type": "figma",
     "file": "f69MssDKV0P88F2aZQS1By",
     "node": "49:213",
-    "version": "5246644804",
+    "version": "5246924934",
     "component-id": "428b1c3ec1e4949d32c1b7b7d843cec03b7b3fca"
   },
   "default": "Botones Usuario Sesion Iniciada",
@@ -35,14 +35,6 @@
       {
         "type": "text",
         "id": "Nombre Usuario"
-      },
-      {
-        "type": "group",
-        "id": "fluent:edit-32-regular"
-      },
-      {
-        "type": "vector",
-        "id": "Vector"
       },
       {
         "type": "vector",
@@ -84,6 +76,7 @@
           },
           {
             "id": "Mostador Nombre Usuario",
+            "border-radius": "16.0",
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "fixed",
@@ -97,8 +90,7 @@
             "is-structured": "false",
             "children": [
               "Fondo Nombre Usuario",
-              "Nombre Usuario",
-              "fluent:edit-32-regular"
+              "Nombre Usuario"
             ],
             "clip-content": "false"
           },
@@ -172,7 +164,7 @@
             "alignment": {
               "horizontal": {
                 "attachment": "center",
-                "offset": "-14.0"
+                "offset": "0.0"
               },
               "vertical": {
                 "attachment": "center",
@@ -182,7 +174,7 @@
             "size-constraints": {
               "width-constraints": {
                 "sizing-mode": "fixed",
-                "value": "274.0"
+                "value": "330.0"
               },
               "height-constraints": {
                 "sizing-mode": "fixed",
@@ -203,54 +195,6 @@
             "text-size": "26.0",
             "line-height": "1.31884765625",
             "typeface": "Roboto Mono"
-          },
-          {
-            "id": "fluent:edit-32-regular",
-            "alignment": {
-              "horizontal": {
-                "attachment": "start",
-                "offset": "288.0"
-              },
-              "vertical": {
-                "attachment": "start",
-                "offset": "7.0"
-              }
-            },
-            "size-constraints": {
-              "width-constraints": {
-                "sizing-mode": "fixed",
-                "value": "38.0"
-              },
-              "height-constraints": {
-                "sizing-mode": "fixed",
-                "value": "38.0"
-              }
-            },
-            "is-structured": "false",
-            "children": [
-              "Vector"
-            ]
-          },
-          {
-            "id": "Vector",
-            "margin": {
-              "left": "2.37451171875",
-              "top": "2.37689208984375",
-              "right": "0.62548828125",
-              "bottom": "0.62310791015625"
-            },
-            "tap-handler": "$EditTapped",
-            "size-constraints": {
-              "width-constraints": {
-                "sizing-mode": "proportional",
-                "value": "1.0"
-              },
-              "height-constraints": {
-                "sizing-mode": "proportional",
-                "value": "1.0"
-              }
-            },
-            "vector-content": "vector.svg"
           },
           {
             "id": "Fondo  Cerrar Sesion",
@@ -383,11 +327,6 @@
   "parameters": {
     "NombreUsuarioShowed": {
       "data-type": "text",
-      "required": false,
-      "description": ""
-    },
-    "EditTapped": {
-      "data-type": "void-callback",
       "required": false,
       "description": ""
     }

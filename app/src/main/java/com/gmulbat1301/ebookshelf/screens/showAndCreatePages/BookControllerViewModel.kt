@@ -14,7 +14,7 @@ class BookControllerViewModel: ViewModel() {
         val bookAdd = Book(titulo, autor, sinopsis, fechaSalida)
 
         // Obtener una referencia a la colección "usersBooks" para el usuario actual
-        val userBooksRef = db.collection("users").document(auth.currentUser?.email!!)
+        val userBooksRef = db.collection("Users").document(auth.currentUser?.email!!)
 
         // Crear una colección llamada "books" dentro del documento del usuario
         val booksCollectionRef = userBooksRef.collection("books")
@@ -25,7 +25,7 @@ class BookControllerViewModel: ViewModel() {
 
     fun getData(onSuccess: (List<Book>) -> Unit, onFailure: (Exception) -> Unit) {
         // Obtener una referencia a la colección "usersBooks" para el usuario actual
-        val userBooksRef = db.collection("users").document(auth.currentUser?.email!!)
+        val userBooksRef = db.collection("Users").document(auth.currentUser?.email!!)
 
         // Obtener una referencia a la colección "books" dentro del documento del usuario
         val booksCollectionRef = userBooksRef.collection("books")
@@ -39,12 +39,9 @@ class BookControllerViewModel: ViewModel() {
                     val book = document.toObject(Book::class.java)
                     booksList.add(book)
                 }
-                println("bazanero")
-                println(booksList)
                 onSuccess(booksList)
             }
             .addOnFailureListener { exception ->
-                println("bazanero")
                 onFailure(exception)
             }
     }

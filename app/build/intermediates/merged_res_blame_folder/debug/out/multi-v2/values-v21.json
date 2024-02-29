@@ -4,7 +4,7 @@
             "outputFile": "com.gmulbat1301.ebookshelf.app-mergeDebugResources-63:/values-v21/values-v21.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\mrano\\.gradle\\caches\\transforms-3\\06ef6c1542dd280b0e6a9b3cc0412ae7\\transformed\\core-1.12.0\\res\\values-v21\\values-v21.xml",
+                    "source": "C:\\Users\\guill\\.gradle\\caches\\transforms-3\\06ef6c1542dd280b0e6a9b3cc0412ae7\\transformed\\core-1.12.0\\res\\values-v21\\values-v21.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,13",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4",

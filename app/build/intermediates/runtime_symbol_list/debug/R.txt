@@ -175,11 +175,6 @@ int drawable notification_template_icon_bg 0x7f04003f
 int drawable notification_template_icon_low_bg 0x7f040040
 int drawable notification_tile_bg 0x7f040041
 int drawable notify_panel_notification_icon_bg 0x7f040042
-int drawable panel_libro_image_1 0x7f040043
-int drawable panel_libro_imagen_libro 0x7f040044
-int drawable panel_libro_imagen_libro1 0x7f040045
-int drawable panel_libro_imagen_libro2 0x7f040046
-int drawable panel_libro_imagen_libro3 0x7f040047
 int font relay_roboto_mono_bold 0x7f050000
 int font relay_roboto_mono_bold_italic 0x7f050001
 int font relay_roboto_mono_extralight 0x7f050002

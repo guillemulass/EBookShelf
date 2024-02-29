@@ -57,7 +57,7 @@ class MainActivity : ComponentActivity() {
                         composable(Routes.PantallaInicial.route) {
                             PantallaInicial(
                                 navController,
-                                true
+                                false
                             )
                         }
 
@@ -81,9 +81,10 @@ class MainActivity : ComponentActivity() {
                                 navController
                             )
                         }
-/*
+
                         composable(Routes.PantallaInformacionLibro.route) {
                             PantallaInformacionLibro(
+                                bookInfoViewModel,
                                 bookControllerViewModel,
                                 navController
                             )
@@ -91,55 +92,9 @@ class MainActivity : ComponentActivity() {
 
                         composable(Routes.PantallaComentarios.route) {
                             PantallaComentarios(
+                                bookInfoViewModel,
                                 bookControllerViewModel,
                                 navController
-                            )
-                        }
- */
-
-                        composable(
-                            Routes.PantallaInformacionLibro.route + "/{titulo}/{autor}/{sinopsis}/{fechaSalida}/{resenaPersonal}/{comentarios}",
-                            arguments = listOf(
-                                navArgument("titulo") { type = NavType.StringType },
-                                navArgument("autor") { type = NavType.StringType },
-                                navArgument("sinopsis") { type = NavType.StringType },
-                                navArgument("fechaSalida") { type = NavType.StringType },
-                                navArgument("resenaPersonal") { type = NavType.StringType },
-                                navArgument("comentarios") { type = NavType.StringType },
-                            )
-                        ) { backStackEntry ->
-                            PantallaInformacionLibro(
-                                bookInfoViewModel,
-                                navController,
-                                titulo = backStackEntry.arguments?.getString("titulo") ?: "",
-                                autor = backStackEntry.arguments?.getString("autor") ?: "",
-                                sinopsis = backStackEntry.arguments?.getString("sinopsis") ?: "",
-                                fechaSalida = backStackEntry.arguments?.getString("fechaSalida") ?: "",
-                                resenaPersonal = backStackEntry.arguments?.getString("resenaPersonal") ?: "",
-                                comentarios = backStackEntry.arguments?.getString("comentarios") ?: ""
-                            )
-                        }
-
-                        composable(
-                            Routes.PantallaComentarios.route + "/{titulo}/{autor}/{sinopsis}/{fechaSalida}/{resenaPersonal}/{comentarios}",
-                            arguments = listOf(
-                                navArgument("titulo") { type = NavType.StringType },
-                                navArgument("autor") { type = NavType.StringType },
-                                navArgument("sinopsis") { type = NavType.StringType },
-                                navArgument("fechaSalida") { type = NavType.StringType },
-                                navArgument("resenaPersonal") { type = NavType.StringType },
-                                navArgument("comentarios") { type = NavType.StringType },
-                            )
-                        ) { backStackEntry ->
-                            PantallaComentarios(
-                                bookInfoViewModel,
-                                navController,
-                                titulo = backStackEntry.arguments?.getString("titulo") ?: "",
-                                autor = backStackEntry.arguments?.getString("autor") ?: "",
-                                sinopsis = backStackEntry.arguments?.getString("sinopsis") ?: "",
-                                fechaSalida = backStackEntry.arguments?.getString("fechaSalida") ?: "",
-                                resenaPersonal = backStackEntry.arguments?.getString("resenaPersonal") ?: "",
-                                comentarios = backStackEntry.arguments?.getString("comentarios") ?: ""
                             )
                         }
 

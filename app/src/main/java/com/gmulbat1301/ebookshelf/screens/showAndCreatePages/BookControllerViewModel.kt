@@ -1,5 +1,7 @@
 package com.gmulbat1301.ebookshelf.screens.showAndCreatePages
 
+import androidx.compose.runtime.MutableState
+import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import com.gmulbat1301.ebookshelf.dataClasses.Book
 import com.google.firebase.auth.FirebaseAuth
@@ -9,6 +11,8 @@ class BookControllerViewModel: ViewModel() {
 
     private val db = FirebaseFirestore.getInstance()
     private val auth: FirebaseAuth = FirebaseAuth.getInstance()
+
+    val book : MutableState<Book> = mutableStateOf(Book())
 
     fun saveData(titulo : String, autor : String, sinopsis : String, fechaSalida : String){
         val bookAdd = Book(titulo, autor, sinopsis, fechaSalida)
@@ -44,6 +48,10 @@ class BookControllerViewModel: ViewModel() {
             .addOnFailureListener { exception ->
                 onFailure(exception)
             }
+    }
+
+    fun saveBook(book : Book){
+        this.book.value = book
     }
 
 

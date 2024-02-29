@@ -34,6 +34,7 @@ import com.gmulbat1301.ebookshelf.R
 import com.gmulbat1301.ebookshelf.Routes.Routes
 import com.gmulbat1301.ebookshelf.botonsmall.BotonSmall
 import com.gmulbat1301.ebookshelf.headergeneral.HeaderGeneral
+import com.gmulbat1301.ebookshelf.screens.showAndCreatePages.BookControllerViewModel
 
 //import com.gmulbat1301.ebookshelf.botonsmall.BotonSmall
 //import com.gmulbat1301.ebookshelf.headergeneral.HeaderGeneral
@@ -41,21 +42,18 @@ import com.gmulbat1301.ebookshelf.headergeneral.HeaderGeneral
 @Composable
 fun PantallaComentarios(
     bookInfoViewModel: BookInfoViewModel,
+    bookControllerViewModel: BookControllerViewModel,
     navController: NavHostController,
-    titulo: String,
-    autor: String,
-    sinopsis: String,
-    fechaSalida: String,
-    resenaPersonal: String,
-    comentarios: String,
+){
 
-    ){
-    var _titulo by remember { mutableStateOf(titulo) }
-    var _autor by remember { mutableStateOf(autor) }
-    var _sinopsis by remember { mutableStateOf(sinopsis) }
-    var _fechaSalida by remember { mutableStateOf(fechaSalida) }
-    var _resenaPersonal by remember { mutableStateOf(resenaPersonal) }
-    var _comentarios by remember { mutableStateOf(comentarios) }
+    val book = bookControllerViewModel.book
+
+    var _titulo by remember { mutableStateOf(book.value.titulo) }
+    var _autor by remember { mutableStateOf(book.value.autor) }
+    var _sinopsis by remember { mutableStateOf(book.value.sinopsis) }
+    var _fechaSalida by remember { mutableStateOf(book.value.fechaSalida) }
+    var _resenaPersonal by remember { mutableStateOf(book.value.resenaPersonal) }
+    var _comentarios by remember { mutableStateOf(book.value.comentarios) }
 
 
     Box(
@@ -217,15 +215,13 @@ fun PantallaComentarios(
                     .height(50.dp),
                 text = "Guardar Cambios",
                 botonSmallTapped = {
-                    bookInfoViewModel.deleteData(titulo)
+                    bookInfoViewModel.deleteData(book.value.titulo)
                     bookInfoViewModel.saveData(
                         _titulo, _autor,
                         _sinopsis, _fechaSalida,
                         _resenaPersonal, _comentarios
                     )
-                    navController.navigate(
-                        "pantallaInformacionLibro/${_titulo}/${_autor}/${_sinopsis}/${_fechaSalida}/${_resenaPersonal}/${_comentarios}"
-                    )
+                    navController.navigate(Routes.PantallaInformacionLibro.route)
                 }
             )
 

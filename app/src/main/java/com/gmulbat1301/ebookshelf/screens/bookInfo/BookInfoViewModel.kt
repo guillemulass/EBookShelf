@@ -1,10 +1,11 @@
 package com.gmulbat1301.ebookshelf.screens.bookInfo
 
+import androidx.lifecycle.ViewModel
 import com.gmulbat1301.ebookshelf.dataClasses.Book
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 
-class BookInfoViewModel {
+class BookInfoViewModel : ViewModel() {
 
     private val db = FirebaseFirestore.getInstance()
     private val auth: FirebaseAuth = FirebaseAuth.getInstance()

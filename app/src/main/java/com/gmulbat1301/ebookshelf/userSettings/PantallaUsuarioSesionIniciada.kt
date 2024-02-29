@@ -83,6 +83,7 @@ fun PantallaUsuarioSesionIniciada(
                 nombreUsuarioShowed = userSettingsViewModel.getNickName(),
                 botonEliminarCuenta = {
                     auth.currentUser?.delete()
+
                     userSettingsViewModel.emptyData()
                     navController.navigate(Routes.PantallaInicial.route)
                 },

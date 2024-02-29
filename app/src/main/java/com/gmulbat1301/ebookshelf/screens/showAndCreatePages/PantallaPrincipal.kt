@@ -104,7 +104,7 @@ fun PantallaPrincipal(
                 }
             )
 
-            BookListLazyColumn(navController, booksList)
+            BookListLazyColumn(navController, booksList, bookControllerViewModel)
 
         }
     }
@@ -112,7 +112,7 @@ fun PantallaPrincipal(
 
 
 @Composable
-fun BookListLazyColumn(navController: NavController, booksList: List<Book>) {
+fun BookListLazyColumn(navController: NavController, booksList: List<Book>, bookControllerViewModel: BookControllerViewModel) {
     Column(Modifier.padding(16.dp)) {
 
         Spacer(modifier = Modifier.height(16.dp))
@@ -125,7 +125,8 @@ fun BookListLazyColumn(navController: NavController, booksList: List<Book>) {
                     Modifier
                         .width(350.dp)
                         .clickable {
-                            navController.navigate("${Routes.PantallaInformacionLibro.route}/${book.titulo}/${book.autor}/${book.sinopsis}/${book.fechaSalida}/${book.resenaPersonal}/${book.comentarios}")
+                            bookControllerViewModel.saveBook(book)
+                            navController.navigate(Routes.PantallaInformacionLibro.route)
                         },
                     tituloLibroCard = book.titulo,
                     sinopsisLibroCard = book.sinopsis

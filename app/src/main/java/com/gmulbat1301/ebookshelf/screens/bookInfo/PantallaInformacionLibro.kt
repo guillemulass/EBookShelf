@@ -25,19 +25,16 @@ import com.gmulbat1301.ebookshelf.headergeneral.HeaderGeneral
 //import com.gmulbat1301.ebookshelf.botonsmall.BotonSmall
 //import com.gmulbat1301.ebookshelf.headergeneral.HeaderGeneral
 import com.gmulbat1301.ebookshelf.informacionlibro.InformacionLibro
+import com.gmulbat1301.ebookshelf.screens.showAndCreatePages.BookControllerViewModel
 
 @Composable
 fun PantallaInformacionLibro(
     bookInfoViewModel: BookInfoViewModel,
+    bookControllerViewModel: BookControllerViewModel,
     navController: NavHostController,
-    titulo: String,
-    autor: String,
-    sinopsis: String,
-    fechaSalida: String,
-    resenaPersonal: String,
-    comentarios: String
 ){
 
+    val book = bookControllerViewModel.book
 
     Box(
         modifier = Modifier
@@ -77,16 +74,14 @@ fun PantallaInformacionLibro(
             }
 
             InformacionLibro(
-                tituloLibro = titulo,
-                reseAPersonalText = resenaPersonal,
-                comentariosText = comentarios,
-                sinopsisText = sinopsis,
-                autorText = autor,
-                fechaSalidaText = fechaSalida,
+                tituloLibro = book.value.titulo,
+                reseAPersonalText = book.value.resenaPersonal,
+                comentariosText = book.value.comentarios,
+                sinopsisText = book.value.sinopsis,
+                autorText = book.value.autor,
+                fechaSalidaText = book.value.fechaSalida,
                 botonEditarInfo = {
-                    navController.navigate(
-                        "pantallaComentarios/${titulo}/${autor}/${sinopsis}/${fechaSalida}/${resenaPersonal}/${comentarios}"
-                    )
+                    navController.navigate(Routes.PantallaComentarios.route)
                 }
             )
 
@@ -98,7 +93,7 @@ fun PantallaInformacionLibro(
                     .height(50.dp),
                 text = "Eliminar Libro",
                 botonSmallTapped = {
-                    bookInfoViewModel.deleteData(titulo)
+                    bookInfoViewModel.deleteData(book.value.titulo)
                     navController.navigate(Routes.PantallaPrincipal.route)
                 }
             )

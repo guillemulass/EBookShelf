@@ -29,6 +29,7 @@ import com.google.firebase.auth.auth
 
 @Composable
 fun PantallaInicial(
+
     navController: NavHostController,
     sessionClosed: Boolean
 ){

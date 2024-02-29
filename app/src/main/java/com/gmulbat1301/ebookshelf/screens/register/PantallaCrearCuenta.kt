@@ -195,21 +195,25 @@ fun PantallaCrearCuenta(
                     .height(50.dp),
                 text = "Crear Cuenta",
                 botonSmallTapped = {
-                    if (password.length>=6 || passwordConfirmation.length>=6){
-                        if (password == passwordConfirmation){
-                            registerViewmodel.changePassw(passwordConfirmation)
-                            warningText = ""
-                            registerViewmodel.registerUser(
-                                onSuccess = { navController.navigate(Routes.PantallaPrincipal.route) },
-                                onFailure = { Toast.makeText(context,"Error al crear la cuenta, intentelo de nuevo",Toast.LENGTH_SHORT).show()  }
-                            )
-                        } else
-                        {
-                            warningText = "Las contraseñas no coinciden"
+                    if (registerViewmodel.email.contains("@")){
+                        if (password.length>=6 || passwordConfirmation.length>=6){
+                            if (password == passwordConfirmation){
+                                registerViewmodel.changePassw(passwordConfirmation)
+                                warningText = ""
+                                registerViewmodel.registerUser(
+                                    onSuccess = { navController.navigate(Routes.PantallaPrincipal.route) },
+                                    onFailure = { Toast.makeText(context,"Error al crear la cuenta, intentelo de nuevo",Toast.LENGTH_SHORT).show()  }
+                                )
+                            } else
+                            {
+                                warningText = "Las contraseñas no coinciden"
+                            }
                         }
-                    }
-                    else{
-                        warningText = "La contraseña debe tener al menos 6 caracteres"
+                        else{
+                            warningText = "La contraseña debe tener al menos 6 caracteres"
+                        }
+                    } else{
+                        warningText = "Introduzca un email valido"
                     }
                 }
             )

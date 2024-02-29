@@ -15,10 +15,6 @@ import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -31,25 +27,16 @@ import com.gmulbat1301.ebookshelf.Routes.Routes
 import com.gmulbat1301.ebookshelf.botonsmall.BotonSmall
 import com.gmulbat1301.ebookshelf.headergeneral.HeaderGeneral
 
-//import com.gmulbat1301.ebookshelf.botonsmall.BotonSmall
-//import com.gmulbat1301.ebookshelf.headergeneral.HeaderGeneral
-
 @Composable
 fun PantallaCrearLibro(
     bookControllerViewModel: BookControllerViewModel,
     navController: NavHostController
 ){
 
-    var titulo by remember { mutableStateOf("") }
-    var autor by remember { mutableStateOf("") }
-    var fechaSalida by remember { mutableStateOf("") }
-    var sinopnsis by remember { mutableStateOf("") }
-    var stateText by remember { mutableStateOf("") }
-
     Box(
-        modifier = Modifier
-            .fillMaxSize()
+        modifier = Modifier.fillMaxSize()
     ) {
+        // Fondo de pantalla
         Image(
             painter = painterResource(id = R.drawable.backgroundpaginainicial),
             contentDescription = null,
@@ -70,6 +57,7 @@ fun PantallaCrearLibro(
                     top = 35.dp
                 )
         ) {
+            // Encabezado
             Box (
                 Modifier.padding(end = 45.dp)
             ){
@@ -83,11 +71,10 @@ fun PantallaCrearLibro(
                 )
             }
 
+            // Campos de texto para ingresar los detalles del libro
             TextField (
-                value = titulo,
-                onValueChange = { newText ->
-                    titulo = newText
-                },
+                value = bookControllerViewModel.titulo,
+                onValueChange = { bookControllerViewModel.changeTitulo(it) },
                 label = { Text("Titulo") },
                 modifier = Modifier
                     .width(330.dp)
@@ -103,11 +90,10 @@ fun PantallaCrearLibro(
                 singleLine = false
             )
 
+            // Campos de texto para autor, fecha de salida y sinopsis
             TextField (
-                value = autor,
-                onValueChange = { newText ->
-                    autor = newText
-                },
+                value = bookControllerViewModel.autor,
+                onValueChange = { bookControllerViewModel.changeAutor(it) },
                 label = { Text("Autor") },
                 modifier = Modifier
                     .width(330.dp)
@@ -124,10 +110,8 @@ fun PantallaCrearLibro(
             )
 
             TextField (
-                value = fechaSalida,
-                onValueChange = { newText ->
-                    fechaSalida = newText
-                },
+                value = bookControllerViewModel.fechaSalida,
+                onValueChange = { bookControllerViewModel.changefechaSalida(it) },
                 label = { Text("Fecha Salida") },
                 modifier = Modifier
                     .width(330.dp)
@@ -144,11 +128,9 @@ fun PantallaCrearLibro(
             )
 
             TextField (
-                value = sinopnsis,
-                onValueChange = { newText ->
-                    sinopnsis = newText
-                },
-                label = { Text("Sinopnsis") },
+                value = bookControllerViewModel.sinopsis,
+                onValueChange = { bookControllerViewModel.changeSinopsis(it) },
+                label = { Text("Sinopsis") },
                 modifier = Modifier
                     .width(330.dp)
                     .padding(top = 30.dp),
@@ -165,25 +147,29 @@ fun PantallaCrearLibro(
 
             Spacer(modifier = Modifier.height(30.dp))
 
+            // Botón para crear el libro
             BotonSmall(
                 modifier = Modifier
                     .width(165.dp)
                     .height(50.dp),
                 text = "Crear Libro",
                 botonSmallTapped = {
-                    stateText = if (autor.isNotEmpty() && titulo.isNotEmpty() && sinopnsis.isNotEmpty() && fechaSalida.isNotEmpty()){
-                        bookControllerViewModel.saveData(titulo,autor,sinopnsis,fechaSalida)
-                        "$titulo Creado"
+                    // Validar que los campos no estén vacíos antes de crear el libro
+                    if (bookControllerViewModel.autor.isNotEmpty() && bookControllerViewModel.titulo.isNotEmpty() && bookControllerViewModel.sinopsis.isNotEmpty() && bookControllerViewModel.fechaSalida.isNotEmpty()){
+                        bookControllerViewModel.changestateText("${bookControllerViewModel.titulo} Creado")
+                        bookControllerViewModel.saveData(bookControllerViewModel.titulo, bookControllerViewModel.autor, bookControllerViewModel.sinopsis, bookControllerViewModel.fechaSalida)
+
                     } else{
-                        "Ningun parametro puede estar vacío"
+                        bookControllerViewModel.changestateText("Ningún parámetro puede estar vacío")
                     }
                 }
             )
 
+            // Mostrar un mensaje de estado después de crear el libro
             Text(
-                text = stateText,
-                color = Color.White)
-
+                text = bookControllerViewModel.stateText,
+                color = Color.White
+            )
         }
     }
 }

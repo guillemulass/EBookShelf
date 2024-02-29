@@ -32,28 +32,28 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        // Inicialización de ViewModels para cada pantalla
         val logInViewModel = LogInViewModel()
         val registerViewModel = RegisterViewModel()
         val bookControllerViewModel = BookControllerViewModel()
         val bookInfoViewModel = BookInfoViewModel()
         val userSettingsViewModel = UserSettingsViewModel()
 
-
-
         setContent {
             EBookShelfTheme {
-                // A surface container using the 'background' color from the theme
+                // Contenedor principal de la pantalla
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
+                    // NavController para manejar la navegación entre las pantallas
                     val navController = rememberNavController()
 
                     NavHost(
                         navController = navController,
                         startDestination = Routes.PantallaInicial.route
                     ) {
-
+                        // Definición de las pantallas y sus composable asociados
                         composable(Routes.PantallaInicial.route) {
                             PantallaInicial(
                                 navController,
@@ -98,8 +98,6 @@ class MainActivity : ComponentActivity() {
                             )
                         }
 
-
-
                         composable(Routes.PantallaUsuarioSesionIniciada.route) {
                             PantallaUsuarioSesionIniciada(
                                 userSettingsViewModel,
@@ -113,7 +111,6 @@ class MainActivity : ComponentActivity() {
                                 navController
                             )
                         }
-
                     }
                 }
             }

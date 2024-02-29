@@ -29,30 +29,35 @@ import com.google.firebase.auth.auth
 
 @Composable
 fun PantallaInicial(
-
     navController: NavHostController,
     sessionClosed: Boolean
-){
-
+) {
+    // Inicializar FirebaseAuth
     val auth: FirebaseAuth = Firebase.auth
 
+    // Reaccionar a cambios en la autenticación
+    // Sirve para saltar a la siguiente pagina si la sesion esta iniciada
     LaunchedEffect(Unit) {
         val email = auth.currentUser?.uid
         if (email != null && sessionClosed) {
+            // Si hay una sesión activa y se cerró, navega a la pantalla principal
             navController.navigate(Routes.PantallaPrincipal.route)
         }
     }
 
+    // Contenedor principal de la pantalla inicial
     Box(
-        modifier = Modifier
-            .fillMaxSize()
+        modifier = Modifier.fillMaxSize()
     ) {
+        // Fondo de pantalla
         Image(
             painter = painterResource(id = R.drawable.backgroundpaginainicial),
             contentDescription = null,
             modifier = Modifier.fillMaxSize(),
             contentScale = ContentScale.FillBounds
         )
+
+        // Columna para organizar elementos verticales
         Column(
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Top,
@@ -67,14 +72,17 @@ fun PantallaInicial(
                     top = 35.dp
                 )
         ) {
+            // Encabezado de la pantalla inicial
             HeaderPantallaInicial(
                 modifier = Modifier
                     .width(242.dp)
                     .height(129.dp)
             )
 
+            // Espacio vertical entre el encabezado y los botones
             Spacer(modifier = Modifier.height(50.dp))
 
+            // Botones de la pantalla inicial para iniciar sesión y crear cuenta
             ButtonsPantallaInicial(
                 modifier = Modifier
                     .width(165.dp)

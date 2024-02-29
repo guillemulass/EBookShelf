@@ -22,8 +22,6 @@ import com.gmulbat1301.ebookshelf.R
 import com.gmulbat1301.ebookshelf.Routes.Routes
 import com.gmulbat1301.ebookshelf.botonsmall.BotonSmall
 import com.gmulbat1301.ebookshelf.headergeneral.HeaderGeneral
-//import com.gmulbat1301.ebookshelf.botonsmall.BotonSmall
-//import com.gmulbat1301.ebookshelf.headergeneral.HeaderGeneral
 import com.gmulbat1301.ebookshelf.informacionlibro.InformacionLibro
 import com.gmulbat1301.ebookshelf.screens.showAndCreatePages.BookControllerViewModel
 
@@ -34,12 +32,14 @@ fun PantallaInformacionLibro(
     navController: NavHostController,
 ){
 
+    // Obtener el libro actualmente seleccionado desde el ViewModel
     val book = bookControllerViewModel.book
 
     Box(
         modifier = Modifier
             .fillMaxSize()
     ) {
+        // Fondo de pantalla
         Image(
             painter = painterResource(id = R.drawable.backgroundpaginainicial),
             contentDescription = null,
@@ -68,11 +68,12 @@ fun PantallaInformacionLibro(
                         .width(306.dp)
                         .height(129.dp),
                     arrowBack = {
-                        navController.navigate(Routes.PantallaPrincipal .route)
+                        navController.navigate(Routes.PantallaPrincipal.route)
                     }
                 )
             }
 
+            // Información del libro
             InformacionLibro(
                 tituloLibro = book.value.titulo,
                 reseAPersonalText = book.value.resenaPersonal,
@@ -87,6 +88,7 @@ fun PantallaInformacionLibro(
 
             Spacer(modifier = Modifier.height(30.dp))
 
+            // Botón para eliminar el libro
             BotonSmall(
                 modifier = Modifier
                     .width(165.dp)

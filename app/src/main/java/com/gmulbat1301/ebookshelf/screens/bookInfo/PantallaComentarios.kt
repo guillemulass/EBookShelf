@@ -11,18 +11,11 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.AccountCircle
-import androidx.compose.material.icons.filled.Create
-import androidx.compose.material3.Icon
 import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -36,8 +29,6 @@ import com.gmulbat1301.ebookshelf.botonsmall.BotonSmall
 import com.gmulbat1301.ebookshelf.headergeneral.HeaderGeneral
 import com.gmulbat1301.ebookshelf.screens.showAndCreatePages.BookControllerViewModel
 
-//import com.gmulbat1301.ebookshelf.botonsmall.BotonSmall
-//import com.gmulbat1301.ebookshelf.headergeneral.HeaderGeneral
 
 @Composable
 fun PantallaComentarios(
@@ -45,15 +36,12 @@ fun PantallaComentarios(
     bookControllerViewModel: BookControllerViewModel,
     navController: NavHostController,
 ){
-
     val book = bookControllerViewModel.book
 
-    var _titulo by remember { mutableStateOf(book.value.titulo) }
-    var _autor by remember { mutableStateOf(book.value.autor) }
-    var _sinopsis by remember { mutableStateOf(book.value.sinopsis) }
-    var _fechaSalida by remember { mutableStateOf(book.value.fechaSalida) }
-    var _resenaPersonal by remember { mutableStateOf(book.value.resenaPersonal) }
-    var _comentarios by remember { mutableStateOf(book.value.comentarios) }
+    LaunchedEffect(Unit) {
+        bookControllerViewModel.updateParametersByBook(book.value)
+    }
+
 
 
     Box(
@@ -93,11 +81,31 @@ fun PantallaComentarios(
                 )
             }
 
+            Spacer(modifier = Modifier.height(16.dp))
+
+            BotonSmall(
+                modifier = Modifier
+                    .width(165.dp)
+                    .height(50.dp),
+                text = "Guardar Cambios",
+                botonSmallTapped = {
+                    bookInfoViewModel.deleteData(book.value.titulo)
+                    bookInfoViewModel.saveData(
+                        bookControllerViewModel.titulo, bookControllerViewModel.autor,
+                        bookControllerViewModel.sinopsis, bookControllerViewModel.fechaSalida,
+                        bookControllerViewModel.resenaPersonal, bookControllerViewModel.comentarios
+                    )
+                    navController.navigate(Routes.PantallaPrincipal.route)
+                }
+            )
+
+            Spacer(modifier = Modifier.height(16.dp))
+
+            // TextFields para cambiar los parametros del libro
+
             TextField (
-                value = _resenaPersonal,
-                onValueChange = { newValue ->
-                    _resenaPersonal = newValue
-                },
+                value = bookControllerViewModel.resenaPersonal,
+                onValueChange = { bookControllerViewModel.changeResenaPersonal(it) },
                 label = { Text("Reseña Personal") },
                 modifier = Modifier
                     .width(330.dp)
@@ -113,10 +121,8 @@ fun PantallaComentarios(
             )
 
             TextField (
-                value = _comentarios,
-                onValueChange = { newValue ->
-                    _comentarios = newValue
-                },
+                value = bookControllerViewModel.comentarios,
+                onValueChange = { bookControllerViewModel.changeComentarios(it) },
                 label = { Text("Comentarios") },
                 modifier = Modifier
                     .width(330.dp)
@@ -132,10 +138,8 @@ fun PantallaComentarios(
             )
 
             TextField (
-                value = _titulo,
-                onValueChange = { newValue ->
-                    _titulo = newValue
-                },
+                value = bookControllerViewModel.titulo,
+                onValueChange = { bookControllerViewModel.changeTitulo(it) },
                 label = { Text("Titulo") },
                 modifier = Modifier
                     .width(330.dp)
@@ -151,10 +155,8 @@ fun PantallaComentarios(
             )
 
             TextField (
-                value = _autor,
-                onValueChange = { newValue ->
-                    _autor = newValue
-                },
+                value = bookControllerViewModel.autor,
+                onValueChange = { bookControllerViewModel.changeAutor(it)},
                 label = { Text("Autor") },
                 modifier = Modifier
                     .width(330.dp)
@@ -170,10 +172,8 @@ fun PantallaComentarios(
             )
 
             TextField (
-                value = _sinopsis,
-                onValueChange = { newValue ->
-                    _sinopsis = newValue
-                },
+                value = bookControllerViewModel.sinopsis,
+                onValueChange = { bookControllerViewModel.changeSinopsis(it)},
                 label = { Text("Sinopsis") },
                 modifier = Modifier
                     .width(330.dp)
@@ -189,10 +189,8 @@ fun PantallaComentarios(
             )
 
             TextField (
-                value = _fechaSalida,
-                onValueChange = { newValue ->
-                    _fechaSalida = newValue
-                },
+                value = bookControllerViewModel.fechaSalida,
+                onValueChange = { bookControllerViewModel.changefechaSalida(it) },
                 label = { Text("Fecha Salida") },
                 modifier = Modifier
                     .width(330.dp)
@@ -207,23 +205,7 @@ fun PantallaComentarios(
                 )
             )
 
-            Spacer(modifier = Modifier.height(30.dp))
 
-            BotonSmall(
-                modifier = Modifier
-                    .width(165.dp)
-                    .height(50.dp),
-                text = "Guardar Cambios",
-                botonSmallTapped = {
-                    bookInfoViewModel.deleteData(book.value.titulo)
-                    bookInfoViewModel.saveData(
-                        _titulo, _autor,
-                        _sinopsis, _fechaSalida,
-                        _resenaPersonal, _comentarios
-                    )
-                    navController.navigate(Routes.PantallaInformacionLibro.route)
-                }
-            )
 
         }
     }

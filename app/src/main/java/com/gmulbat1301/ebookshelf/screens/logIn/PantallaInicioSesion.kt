@@ -34,17 +34,15 @@ import com.gmulbat1301.ebookshelf.Routes.Routes
 import com.gmulbat1301.ebookshelf.botonsmall.BotonSmall
 import com.gmulbat1301.ebookshelf.headergeneral.HeaderGeneral
 
-
 @Composable
 fun PantallaInicioSesion(
     logInViewModel: LogInViewModel,
     navController: NavHostController
-){
-
+) {
     Box(
-        modifier = Modifier
-            .fillMaxSize()
+        modifier = Modifier.fillMaxSize()
     ) {
+        // Fondo de pantalla
         Image(
             painter = painterResource(id = R.drawable.backgroundpaginainicial),
             contentDescription = null,
@@ -65,6 +63,7 @@ fun PantallaInicioSesion(
                     top = 35.dp
                 )
         ) {
+            // Encabezado
             Box (
                 Modifier.padding(end = 45.dp)
             ){
@@ -72,12 +71,14 @@ fun PantallaInicioSesion(
                     modifier = Modifier
                         .width(306.dp)
                         .height(129.dp),
+                    // Flecha de retroceso para volver a la pantalla inicial
                     arrowBack = {
                         navController.navigate(Routes.PantallaInicial.route)
                     }
                 )
             }
 
+            // Campo de texto para el email
             TextField (
                 value = logInViewModel.email,
                 onValueChange = { logInViewModel.changeEmail(it) },
@@ -101,6 +102,7 @@ fun PantallaInicioSesion(
 
             )
 
+            // Campo de texto para la contraseña
             TextField(
                 value = logInViewModel.password,
                 onValueChange = { logInViewModel.changePassword(it) },
@@ -125,6 +127,7 @@ fun PantallaInicioSesion(
 
             Spacer(modifier = Modifier.height(60.dp))
 
+            // Botón para iniciar sesión
             BotonSmall(
                 modifier = Modifier
                     .width(165.dp)

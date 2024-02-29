@@ -1,6 +1,7 @@
 package com.gmulbat1301.ebookshelf.screens.showAndCreatePages
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -31,10 +32,10 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.graphics.Color
 import com.gmulbat1301.ebookshelf.botonsmall.BotonSmall
 import com.gmulbat1301.ebookshelf.headerpaginaprincipal.HeaderPaginaPrincipal
 import com.gmulbat1301.ebookshelf.panellibro.PanelLibro
-
 
 @Composable
 fun PantallaPrincipal(
@@ -45,6 +46,8 @@ fun PantallaPrincipal(
     val auth: FirebaseAuth = Firebase.auth
     var booksList by remember { mutableStateOf(emptyList<Book>()) }
 
+    // LaunchedEffect es como un init, al iniciarse la pantalla se ejecuta lo que haya dentro
+    // Obtener la lista de libros del ViewModel cuando se lanza la pantalla
     LaunchedEffect(Unit) {
         val userId = auth.currentUser?.uid
         if (userId != null) {
@@ -63,29 +66,29 @@ fun PantallaPrincipal(
         modifier = Modifier
             .fillMaxSize()
     ) {
+        // Fondo de pantalla
         Image(
             painter = painterResource(id = R.drawable.backgroundpaginainicial),
             contentDescription = null,
             modifier = Modifier.fillMaxSize(),
             contentScale = ContentScale.FillBounds
         )
+
         Column(
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Top,
             modifier = Modifier
                 .fillMaxSize()
-
-                .padding(
-                    top = 35.dp
-                )
+                .padding(top = 35.dp)
         ) {
-            Box(
-                Modifier.padding(end = 45.dp)
-            ) {
+            // Encabezado
+            Box(Modifier.padding(end = 45.dp)) {
                 HeaderPaginaPrincipal(
                     modifier = Modifier
                         .width(379.dp)
-                        .height(65.dp),
+                        .height(65.dp)
+                        .background(Color.Transparent)
+                    ,
                     userLogoTapped = {
                         navController.navigate(Routes.PantallaUsuarioSesionIniciada.route)
                     }
@@ -94,23 +97,27 @@ fun PantallaPrincipal(
 
             Spacer(modifier = Modifier.height(30.dp))
 
+            // Botón para agregar un libro nuevo
             BotonSmall(
                 modifier = Modifier
                     .width(165.dp)
-                    .height(50.dp),
+                    .height(50.dp)
+                    .background(Color.Transparent)
+                ,
                 text = "Añadir Libro",
                 botonSmallTapped = {
+                    bookControllerViewModel.emptyParameters()
                     navController.navigate(Routes.PantallaCrearLibro.route)
                 }
             )
 
+            // Lista de libros
             BookListLazyColumn(navController, booksList, bookControllerViewModel)
-
         }
     }
 }
 
-
+// Composable para mostrar la lista de libros usando LazyColumn
 @Composable
 fun BookListLazyColumn(navController: NavController, booksList: List<Book>, bookControllerViewModel: BookControllerViewModel) {
     Column(Modifier.padding(16.dp)) {

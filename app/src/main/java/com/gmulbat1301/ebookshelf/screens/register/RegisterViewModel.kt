@@ -2,7 +2,10 @@ package com.gmulbat1301.ebookshelf.screens.register
 
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.gmulbat1301.ebookshelf.dataClasses.UserModel
@@ -17,11 +20,17 @@ class RegisterViewModel : ViewModel() {
 
     private val auth: FirebaseAuth = Firebase.auth
     private val firestore = Firebase.firestore
-    private val db = FirebaseFirestore.getInstance()
+
 
     var username by mutableStateOf("")
         private set
     var email by mutableStateOf("")
+        private set
+    var passwordConfirmation1 by mutableStateOf("")
+        private set
+    var passwordConfirmation2 by mutableStateOf("")
+        private set
+    var warningText by mutableStateOf("")
         private set
 
     private var passw by mutableStateOf("")
@@ -34,6 +43,7 @@ class RegisterViewModel : ViewModel() {
         viewModelScope.launch {
             try {
                 auth.createUserWithEmailAndPassword(email,passw).addOnCompleteListener {
+                    // Guardo el nombre de ususario para mostrarlo posteriormente
                     saveUser(UserModel(email, username))
                     onSuccess()
                 }.addOnFailureListener {
@@ -68,5 +78,16 @@ class RegisterViewModel : ViewModel() {
     fun changePassw(passw:String) {
         this.passw = passw
     }
+    fun changePasswordConfirmation1(passwordConfirmation1:String) {
+        this.passwordConfirmation1 = passwordConfirmation1
+    }
+    fun changePasswordConfirmation2(passwordConfirmation2:String) {
+        this.passwordConfirmation2 = passwordConfirmation2
+    }
+    fun changeWarningText(warningText:String) {
+        this.warningText = warningText
+    }
+
+
 
 }

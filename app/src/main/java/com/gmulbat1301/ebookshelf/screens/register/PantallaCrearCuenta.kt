@@ -17,7 +17,6 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.AccountCircle
 import androidx.compose.material.icons.filled.Email
 import androidx.compose.material.icons.filled.Lock
-import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Text
@@ -38,8 +37,6 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import com.gmulbat1301.ebookshelf.R
 import com.gmulbat1301.ebookshelf.Routes.Routes
-//import com.gmulbat1301.ebookshelf.botonsmall.BotonSmall
-//import com.gmulbat1301.ebookshelf.headergeneral.HeaderGeneral
 import androidx.compose.ui.platform.LocalContext
 import com.gmulbat1301.ebookshelf.botonsmall.BotonSmall
 import com.gmulbat1301.ebookshelf.headergeneral.HeaderGeneral
@@ -50,9 +47,6 @@ fun PantallaCrearCuenta(
     navController: NavHostController
 ){
 
-    var password by remember { mutableStateOf("") }
-    var passwordConfirmation by remember { mutableStateOf("") }
-    var warningText by remember { mutableStateOf("") }
     val context = LocalContext.current
 
     Box(
@@ -136,10 +130,8 @@ fun PantallaCrearCuenta(
             )
 
             TextField(
-                value = password,
-                onValueChange = { newText ->
-                    password = newText
-                },
+                value = registerViewmodel.passwordConfirmation1,
+                onValueChange = { registerViewmodel.changePasswordConfirmation1(it) },
                 label = { Text("Contraseña") },
                 modifier = Modifier
                     .width(330.dp)
@@ -160,10 +152,8 @@ fun PantallaCrearCuenta(
             )
 
             TextField(
-                value = passwordConfirmation,
-                onValueChange = { newText ->
-                    passwordConfirmation = newText
-                },
+                value = registerViewmodel.passwordConfirmation2,
+                onValueChange = { registerViewmodel.changePasswordConfirmation2(it) },
                 label = { Text("Confirmar contraseña") },
                 modifier = Modifier
                     .width(330.dp)
@@ -185,35 +175,43 @@ fun PantallaCrearCuenta(
 
             Spacer(modifier = Modifier.height(30.dp))
 
-            Text(text = warningText)
+            // Mostrar advertencia si hay problemas con la creación de la cuenta
+            Text(text = registerViewmodel.warningText)
 
             Spacer(modifier = Modifier.height(30.dp))
 
+            // Botón para crear cuenta
             BotonSmall(
                 modifier = Modifier
                     .width(165.dp)
                     .height(50.dp),
                 text = "Crear Cuenta",
                 botonSmallTapped = {
+                    // Compurebo que el campo gmail tenga un @ para que sea un correo electronico
                     if (registerViewmodel.email.contains("@")){
-                        if (password.length>=6 || passwordConfirmation.length>=6){
-                            if (password == passwordConfirmation){
-                                registerViewmodel.changePassw(passwordConfirmation)
-                                warningText = ""
+
+                        // Controlo el error de la contraseña menor que 6 caracteres
+                        if (registerViewmodel.passwordConfirmation1.length>=6 || registerViewmodel.passwordConfirmation2.length>=6){
+
+                            // Compruebo que ambas contraseñas son iguales
+                            if (registerViewmodel.passwordConfirmation1 == registerViewmodel.passwordConfirmation2){
+
+                                registerViewmodel.changePassw(registerViewmodel.passwordConfirmation2)
+                                registerViewmodel.changeWarningText("")
                                 registerViewmodel.registerUser(
                                     onSuccess = { navController.navigate(Routes.PantallaPrincipal.route) },
                                     onFailure = { Toast.makeText(context,"Error al crear la cuenta, intentelo de nuevo",Toast.LENGTH_SHORT).show()  }
                                 )
-                            } else
-                            {
-                                warningText = "Las contraseñas no coinciden"
+                            } else {
+                                registerViewmodel.changeWarningText("Las contraseñas no coinciden")
                             }
+
+                        } else{
+                            registerViewmodel.changeWarningText("La contraseña debe tener al menos 6 caracteres")
                         }
-                        else{
-                            warningText = "La contraseña debe tener al menos 6 caracteres"
-                        }
+
                     } else{
-                        warningText = "Introduzca un email valido"
+                        registerViewmodel.changeWarningText("Introduzca un email valido")
                     }
                 }
             )

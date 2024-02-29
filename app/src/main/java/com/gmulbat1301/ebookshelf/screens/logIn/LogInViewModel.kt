@@ -17,8 +17,6 @@ class LogInViewModel: ViewModel() {
         private set
     var password by mutableStateOf("")
         private set
-    var userName by mutableStateOf("")
-        private set
 
     private val auth: FirebaseAuth = Firebase.auth
 
